@@ -16,12 +16,21 @@ class PageContentViewController: UIViewController {
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var subheaderLabel: UILabel!
     
+    // MARK: - Stored Properties
+    
+    var pageIndex = 0
+    var headerDescription = ""
+    var subheaderDescription = ""
+    var imageFile = ""
+    
     // MARK: - UIViewController Methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        imageView.image = UIImage(named: imageFile)
+        headerLabel.text = headerDescription
+        subheaderLabel.text = subheaderDescription
     }
 
 }
