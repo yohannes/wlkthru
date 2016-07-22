@@ -28,9 +28,9 @@ class PageContentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        imageView.image = UIImage(named: imageFile)
-        headerLabel.text = headerDescription
-        subheaderLabel.text = subheaderDescription
+        self.imageView.image = UIImage(named: self.imageFile)
+        self.headerLabel.text = self.headerDescription
+        self.subheaderLabel.text = self.subheaderDescription
     }
 
 }
