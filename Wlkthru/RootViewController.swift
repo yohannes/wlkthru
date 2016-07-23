@@ -21,6 +21,12 @@ class RootViewController: UIViewController, UIPageViewControllerDataSource {
                                   "Synchronize your data across iOS devices seamlessly."]
     
     let images = ["Photo1", "Photo2", "Photo3"]
+    
+    // MARK: - IBOutlet Properties
+    
+    @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var pageControl: UIPageControl!
 
     // MARK: - IBAction Methods
     
@@ -37,7 +43,11 @@ class RootViewController: UIViewController, UIPageViewControllerDataSource {
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         guard let validPageContentViewController = viewController as? PageContentViewController else { return nil }
         var pageIndex = validPageContentViewController.pageIndex
-        guard pageIndex > 0 else { return nil }
+        guard pageIndex > 0 else {
+            self.pageControl.currentPage = 0
+            return nil
+        }
+        self.pageControl.currentPage = pageIndex
         pageIndex = pageIndex - 1
         
         return self.viewControllerAtIndex(pageIndex)
@@ -46,19 +56,14 @@ class RootViewController: UIViewController, UIPageViewControllerDataSource {
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         guard let validPageContentViewController = viewController as? PageContentViewController else { return nil }
         var pageIndex = validPageContentViewController.pageIndex
-        guard pageIndex < self.headerDescriptions.count - 1 else { return nil }
+        guard pageIndex < self.headerDescriptions.count - 1 else {
+            self.pageControl.currentPage = self.headerDescriptions.count - 1
+            return nil
+        }
+        self.pageControl.currentPage = pageIndex
         pageIndex = pageIndex + 1
         
         return self.viewControllerAtIndex(pageIndex)
-    }
-    
-    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
-        guard let validStoryboard = self.storyboard, validPageContentViewController = validStoryboard.instantiateViewControllerWithIdentifier("PageContentViewController") as? PageContentViewController else { return 0 }
-        return validPageContentViewController.pageIndex
-    }
-    
-    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return self.headerDescriptions.count
     }
     
     // MARK: - UIViewController Methods
@@ -74,12 +79,13 @@ class RootViewController: UIViewController, UIPageViewControllerDataSource {
         
         validPageViewController.setViewControllers([validPageContentViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
         
-        validPageViewController.view.frame = CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height - 70)
+        validPageViewController.view.frame = CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height)
         
         self.addChildViewController(validPageViewController)
         self.view.addSubview(validPageViewController.view)
         validPageViewController.didMoveToParentViewController(self)
-        
+        self.view.bringSubviewToFront(self.stackView)
+        self.view.bringSubviewToFront(self.headerLabel)
     }
     
     // MARK - Helper Methods
