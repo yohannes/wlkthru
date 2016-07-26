@@ -15,8 +15,9 @@
             <string>AvenirNext-Regular</string>
             <string>AvenirNext-Regular</string>
             <string>AvenirNext-Regular</string>
+            <string>AvenirNext-Medium</string>
             <string>AvenirNext-Regular</string>
-            <string>AvenirNext-Regular</string>
+            <string>AvenirNext-Medium</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -125,20 +126,31 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By registering, you agree to our Terms &amp; Conditions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MR8-xI-h2V">
-                                <rect key="frame" x="171" y="272" width="259" height="16"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="11"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="XIM-FA-vyZ">
+                                <rect key="frame" x="171" y="272" width="259" height="28"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By registering, you agree to our" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MR8-xI-h2V">
+                                        <rect key="frame" x="0.0" y="0.0" width="159" height="28"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="11"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HtK-iC-SRz">
+                                        <rect key="frame" x="160" y="0.0" width="99" height="28"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="11"/>
+                                        <state key="normal" title="Terms &amp; Conditions">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="MR8-xI-h2V" firstAttribute="centerX" secondItem="6D6-6Z-pFB" secondAttribute="centerX" id="1Zr-hY-NWh"/>
                             <constraint firstItem="LyC-DS-q4d" firstAttribute="trailing" secondItem="6D6-6Z-pFB" secondAttribute="trailingMargin" constant="-8" id="6HT-gp-HDt"/>
-                            <constraint firstItem="MR8-xI-h2V" firstAttribute="top" secondItem="q2L-qf-oH0" secondAttribute="bottom" constant="16" id="H94-cL-Rs5"/>
                             <constraint firstItem="xv3-R7-S1C" firstAttribute="trailing" secondItem="6D6-6Z-pFB" secondAttribute="trailingMargin" constant="-8" id="QbN-LH-FKa"/>
                             <constraint firstItem="a1k-T7-Cd0" firstAttribute="trailing" secondItem="6D6-6Z-pFB" secondAttribute="trailingMargin" constant="-8" id="Qyt-xr-TaO"/>
+                            <constraint firstItem="XIM-FA-vyZ" firstAttribute="centerX" secondItem="6D6-6Z-pFB" secondAttribute="centerX" id="ReC-j2-UFK"/>
                             <constraint firstItem="q2L-qf-oH0" firstAttribute="top" secondItem="a1k-T7-Cd0" secondAttribute="bottom" constant="16" id="RnL-hm-qQ6"/>
                             <constraint firstItem="a1k-T7-Cd0" firstAttribute="top" secondItem="xv3-R7-S1C" secondAttribute="bottom" constant="16" id="SS1-mM-aCU"/>
                             <constraint firstItem="xv3-R7-S1C" firstAttribute="top" secondItem="LyC-DS-q4d" secondAttribute="bottom" constant="16" id="U3O-eI-MiQ"/>
@@ -147,6 +159,7 @@
                             <constraint firstItem="xv3-R7-S1C" firstAttribute="leading" secondItem="6D6-6Z-pFB" secondAttribute="leadingMargin" constant="-8" id="Wys-jj-wcP"/>
                             <constraint firstItem="a1k-T7-Cd0" firstAttribute="leading" secondItem="6D6-6Z-pFB" secondAttribute="leadingMargin" constant="-8" id="ah8-42-AWK"/>
                             <constraint firstItem="q2L-qf-oH0" firstAttribute="centerX" secondItem="6D6-6Z-pFB" secondAttribute="centerX" id="lZs-69-Egi"/>
+                            <constraint firstItem="XIM-FA-vyZ" firstAttribute="top" secondItem="q2L-qf-oH0" secondAttribute="bottom" constant="16" id="wjn-bx-BxV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create a New Account" id="GLa-qf-X7b">
@@ -184,8 +197,8 @@
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d4s-dg-zoi">
-                                <rect key="frame" x="12" y="136" width="560" height="26"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d4s-dg-zoi">
+                                <rect key="frame" x="12" y="136" width="576" height="26"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
@@ -200,12 +213,16 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Forgot Your Password?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lw1-HG-Wbr">
-                                <rect key="frame" x="171" y="230" width="259" height="16"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="11"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZG-VA-e8m">
+                                <rect key="frame" x="171" y="230" width="259" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="259" id="xLu-Fb-VRE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="11"/>
+                                <state key="normal" title="Forgot Your Password?">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -213,9 +230,9 @@
                             <constraint firstItem="A4F-Bs-yKa" firstAttribute="top" secondItem="d4s-dg-zoi" secondAttribute="bottom" constant="16" id="NE7-b9-UbJ"/>
                             <constraint firstItem="d4s-dg-zoi" firstAttribute="leading" secondItem="rx3-BR-Vmo" secondAttribute="leadingMargin" constant="-8" id="T2G-q0-oKn"/>
                             <constraint firstItem="Btt-Y6-0iG" firstAttribute="top" secondItem="xbu-YW-F5t" secondAttribute="bottom" constant="30" id="ffz-AM-xjO"/>
+                            <constraint firstItem="bZG-VA-e8m" firstAttribute="top" secondItem="A4F-Bs-yKa" secondAttribute="bottom" constant="16" id="lPf-yY-XoZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Btt-Y6-0iG" secondAttribute="trailing" constant="-8" id="lvc-K7-OTa"/>
-                            <constraint firstItem="lw1-HG-Wbr" firstAttribute="centerX" secondItem="rx3-BR-Vmo" secondAttribute="centerX" id="o3V-kc-y07"/>
-                            <constraint firstItem="lw1-HG-Wbr" firstAttribute="top" secondItem="A4F-Bs-yKa" secondAttribute="bottom" constant="16" id="r1c-fL-7hR"/>
+                            <constraint firstItem="bZG-VA-e8m" firstAttribute="centerX" secondItem="rx3-BR-Vmo" secondAttribute="centerX" id="n1X-Le-GWa"/>
                             <constraint firstItem="d4s-dg-zoi" firstAttribute="top" secondItem="Btt-Y6-0iG" secondAttribute="bottom" constant="16" id="sGg-lX-4LX"/>
                             <constraint firstItem="Btt-Y6-0iG" firstAttribute="leading" secondItem="rx3-BR-Vmo" secondAttribute="leadingMargin" constant="-8" id="tfI-eE-6BF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="d4s-dg-zoi" secondAttribute="trailing" constant="-8" id="uw1-jg-v5K"/>
