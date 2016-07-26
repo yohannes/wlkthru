@@ -14,6 +14,7 @@
 		652984FE1D41D9E900592F8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 652984FC1D41D9E900592F8A /* LaunchScreen.storyboard */; };
 		652985061D41E9B200592F8A /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652985051D41E9B200592F8A /* PageContentViewController.swift */; };
 		653A70361D47514600F061DB /* NewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A70351D47514600F061DB /* NewAccountViewController.swift */; };
+		653A70381D4765A700F061DB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A70371D4765A700F061DB /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		652984FF1D41D9E900592F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		652985051D41E9B200592F8A /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
 		653A70351D47514600F061DB /* NewAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAccountViewController.swift; sourceTree = "<group>"; };
+		653A70371D4765A700F061DB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				652984F31D41D9E900592F8A /* AppDelegate.swift */,
 				652984F51D41D9E900592F8A /* RootViewController.swift */,
 				652984F71D41D9E900592F8A /* Main.storyboard */,
+				653A70371D4765A700F061DB /* LoginViewController.swift */,
 				653A70351D47514600F061DB /* NewAccountViewController.swift */,
 				652985051D41E9B200592F8A /* PageContentViewController.swift */,
 				652984FA1D41D9E900592F8A /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 				652985061D41E9B200592F8A /* PageContentViewController.swift in Sources */,
 				652984F61D41D9E900592F8A /* RootViewController.swift in Sources */,
 				652984F41D41D9E900592F8A /* AppDelegate.swift in Sources */,
+				653A70381D4765A700F061DB /* LoginViewController.swift in Sources */,
 				653A70361D47514600F061DB /* NewAccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
