@@ -20,6 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         pageControl.currentPageIndicatorTintColor = UIColor(red:0.95, green:0.25, blue:0.44, alpha:1.00)
         pageControl.backgroundColor = UIColor.clearColor()
         
+        UINavigationBar.appearance().barTintColor = UIColor(red: 0.95, green: 0.25, blue: 0.44, alpha: 1.00)
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        guard let validNavigationBarCustomFont = UIFont(name: "AvenirNext-Medium", size: 22.00) else { return false }
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: validNavigationBarCustomFont]
+        
         return true
     }
 

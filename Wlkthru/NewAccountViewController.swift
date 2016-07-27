@@ -29,7 +29,7 @@ class NewAccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.emailTextField.becomeFirstResponder()
     }
 
