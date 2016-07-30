@@ -31,6 +31,7 @@ class NewAccountViewController: UIViewController {
         super.viewDidLoad()
         
         self.emailTextField.becomeFirstResponder()
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
     }
 
 }
