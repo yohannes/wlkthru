@@ -6,6 +6,8 @@
 //  Copyright © 2016 Yohannes Wijaya. All rights reserved.
 //
 
+//  TODO: implement email verification logic here
+
 import UIKit
 
 class NewAccountViewController: UIViewController {

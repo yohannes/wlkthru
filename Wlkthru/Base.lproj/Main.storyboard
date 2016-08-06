@@ -266,6 +266,9 @@
                                 <state key="normal" title="LOG IN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonDidTouch:" destination="vze-nd-wRs" eventType="touchUpInside" id="10f-1j-Gvc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZG-VA-e8m">
                                 <rect key="frame" x="171" y="230" width="259" height="28"/>
@@ -278,7 +281,7 @@
                                 </state>
                                 <connections>
                                     <action selector="forgotPasswordButtonDidTouch:" destination="vze-nd-wRs" eventType="touchUpInside" id="YiV-OT-LbS"/>
-                                    <segue destination="pVv-qT-F58" kind="show" id="7WW-V1-kmM"/>
+                                    <segue destination="pVv-qT-F58" kind="show" identifier="ForgotMyPasswordSegue" id="7WW-V1-kmM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -325,11 +328,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RHN-Am-Mpc">
-                                <rect key="frame" x="12" y="94" width="576" height="26"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3I-Ey-Ife">
                                 <rect key="frame" x="171" y="136" width="259" height="36"/>
                                 <color key="backgroundColor" red="0.3921568627" green="0.80392156859999997" blue="0.69803921570000005" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
@@ -340,6 +338,9 @@
                                 <state key="normal" title="Reset My Password">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="resetPasswordButtonDidTouch:" destination="pVv-qT-F58" eventType="touchUpInside" id="Op5-Jb-CPT"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Check Your Email for Verification Link" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="327-FM-OaM">
                                 <rect key="frame" x="171" y="188" width="259" height="16"/>
@@ -350,21 +351,27 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ql-Xp-RFJ">
+                                <rect key="frame" x="20" y="94" width="560" height="26"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.8666666666666667" green="1" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="RHN-Am-Mpc" secondAttribute="trailing" constant="-8" id="4VI-Kz-S3N"/>
+                            <constraint firstItem="2Ql-Xp-RFJ" firstAttribute="top" secondItem="58O-eI-zMJ" secondAttribute="bottom" constant="30" id="4nM-gN-qXz"/>
                             <constraint firstItem="327-FM-OaM" firstAttribute="centerX" secondItem="wtr-db-emX" secondAttribute="centerX" id="MEG-3a-PT1"/>
-                            <constraint firstItem="RHN-Am-Mpc" firstAttribute="leading" secondItem="wtr-db-emX" secondAttribute="leadingMargin" constant="-8" id="QsJ-wK-sHS"/>
                             <constraint firstItem="j3I-Ey-Ife" firstAttribute="centerX" secondItem="wtr-db-emX" secondAttribute="centerX" id="S9H-sZ-pEc"/>
-                            <constraint firstItem="RHN-Am-Mpc" firstAttribute="top" secondItem="58O-eI-zMJ" secondAttribute="bottom" constant="30" id="V8q-TA-DyM"/>
                             <constraint firstItem="327-FM-OaM" firstAttribute="top" secondItem="j3I-Ey-Ife" secondAttribute="bottom" constant="16" id="Wf0-KY-O3u"/>
-                            <constraint firstItem="j3I-Ey-Ife" firstAttribute="top" secondItem="RHN-Am-Mpc" secondAttribute="bottom" constant="16" id="kMN-AR-T5h"/>
+                            <constraint firstItem="2Ql-Xp-RFJ" firstAttribute="leading" secondItem="wtr-db-emX" secondAttribute="leading" constant="20" id="cLW-aC-giw"/>
+                            <constraint firstItem="j3I-Ey-Ife" firstAttribute="top" secondItem="2Ql-Xp-RFJ" secondAttribute="bottom" constant="16" id="uPK-4G-otA"/>
+                            <constraint firstAttribute="trailing" secondItem="2Ql-Xp-RFJ" secondAttribute="trailing" constant="20" id="vco-g9-jHR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Forgot My Password" id="2AB-cf-Mbz"/>
                     <connections>
-                        <outlet property="emailTextField" destination="RHN-Am-Mpc" id="PSE-LQ-cIt"/>
+                        <outlet property="emailLabel" destination="2Ql-Xp-RFJ" id="ikk-rv-3Hz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lX2-CA-tZM" userLabel="First Responder" sceneMemberID="firstResponder"/>
