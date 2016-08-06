@@ -96,7 +96,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Helper Methods
     
     private func validateEmail(emailString: NSString) -> Bool {
-        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+        let emailRegex = "[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}"
         let emailText = NSPredicate(format: "SELF MATCHES [c]%@", emailRegex)
         return (emailText.evaluateWithObject(emailString))
     }
