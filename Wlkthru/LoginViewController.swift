@@ -77,8 +77,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        
-        self.emailTextField.becomeFirstResponder()
+
+        if NSString(string: self.emailTextField.text!).length > 0 {
+            self.passwordTextField.becomeFirstResponder()
+        }
+        else {
+            self.emailTextField.becomeFirstResponder()
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
