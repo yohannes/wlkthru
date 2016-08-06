@@ -6,8 +6,6 @@
 //  Copyright © 2016 Yohannes Wijaya. All rights reserved.
 //
 
-// TODO: 2) once reset password button is pressed, display alert controller, and return to parent controller
-
 import UIKit
 
 class ForgotPasswordViewController: UIViewController {
@@ -23,7 +21,12 @@ class ForgotPasswordViewController: UIViewController {
     // MARK: - IBAction Properties
     
     @IBAction func resetPasswordButtonDidTouch(sender: UIButton) {
-        
+        let alertController = UIAlertController(title: "Request Sent", message: "Please check \(self.emailAddress) for verification link.", preferredStyle: .Alert)
+        let alertAction = UIAlertAction(title: "OK", style: .Default) { [unowned self] (_) in
+            self.navigationController?.popViewControllerAnimated(true)
+        }
+        alertController.addAction(alertAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
     
     // MARK: - UIViewController Methods

@@ -6,6 +6,9 @@
 //  Copyright © 2016 Yohannes Wijaya. All rights reserved.
 //
 
+// FIXME: tap close to get out but no email address will launch alert controller
+
+
 import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
