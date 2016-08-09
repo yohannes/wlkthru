@@ -23,8 +23,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func cancelButtonDidTouch(sender: UIBarButtonItem) {
         self.emailTextField.resignFirstResponder()
         self.passwordTextField.resignFirstResponder()
-        
-        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func forgotPasswordButtonDidTouch(sender: UIButton) {
@@ -41,14 +39,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldEndEditing(textField: UITextField) -> Bool {
         guard self.validateEmail(self.emailTextField.text!) else {
-            let alertController = UIAlertController(title: "Warning", message: "Please enter a valid email address", preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-            // FIXME:
-            self.presentViewController(alertController, animated: true, completion: nil)
-            self.emailTextField.becomeFirstResponder()
+            if self.presentedViewController == nil {
+                let alertController = UIAlertController(title: "Invalid Email Address", message: "Please try again.", preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                self.presentViewController(alertController, animated: true, completion: nil)
+            }
             return false
         }
-        
         return true
     }
     
