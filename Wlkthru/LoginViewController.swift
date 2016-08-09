@@ -6,12 +6,13 @@
 //  Copyright © 2016 Yohannes Wijaya. All rights reserved.
 //
 
-// FIXME: tap close to get out but no email address will launch alert controller
-
-
 import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
+    
+    // MARK: - Stored Properties
+    
+    var isCancelButtonTouched: Bool!
 
     // MARK: - IBOutlet Properties
     
@@ -21,6 +22,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     // MARK: - IBAction Properties
     
     @IBAction func cancelButtonDidTouch(sender: UIBarButtonItem) {
+        self.isCancelButtonTouched = true
         self.emailTextField.resignFirstResponder()
         self.passwordTextField.resignFirstResponder()
     }
@@ -38,6 +40,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     // MARK: - UITextFieldDelegate Methods
     
     func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+        if self.isCancelButtonTouched == true {
+            self.dismissViewControllerAnimated(true, completion: nil)
+            return true
+        }
         guard self.validateEmail(self.emailTextField.text!) else {
             if self.presentedViewController == nil {
                 let alertController = UIAlertController(title: "Invalid Email Address", message: "Please try again.", preferredStyle: UIAlertControllerStyle.Alert)
@@ -67,6 +73,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
+        
+        self.isCancelButtonTouched = false
 
         self.emailTextField.becomeFirstResponder()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
