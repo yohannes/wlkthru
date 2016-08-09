@@ -37,6 +37,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.passwordTextField.resignFirstResponder()
     }
     
+    @IBAction func unwindToLoginViewController(segue: UIStoryboardSegue) {}
+    
     // MARK: - UITextFieldDelegate Methods
     
     func textFieldShouldEndEditing(textField: UITextField) -> Bool {

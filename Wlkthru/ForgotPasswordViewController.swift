@@ -23,7 +23,7 @@ class ForgotPasswordViewController: UIViewController {
     @IBAction func resetPasswordButtonDidTouch(sender: UIButton) {
         let alertController = UIAlertController(title: "Request Sent", message: "Please check \(self.emailAddress) for verification link.", preferredStyle: .Alert)
         let alertAction = UIAlertAction(title: "OK", style: .Default) { [unowned self] (_) in
-            self.navigationController?.popViewControllerAnimated(true)
+            self.performSegueWithIdentifier("unwindToLoginViewController", sender: self)
         }
         alertController.addAction(alertAction)
         self.presentViewController(alertController, animated: true, completion: nil)
