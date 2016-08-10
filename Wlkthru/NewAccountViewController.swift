@@ -10,7 +10,7 @@
 
 import UIKit
 
-class NewAccountViewController: UIViewController {
+class NewAccountViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - IBOutlet Methods
     
@@ -21,11 +21,13 @@ class NewAccountViewController: UIViewController {
     // MARK: - IBAction Methods
     
     @IBAction func cancelButtonDidTouch(sender: UIBarButtonItem) {
-        self.emailTextField.resignFirstResponder()
-        self.passwordTextField.resignFirstResponder()
-        self.passwordConfirmationTextField.resignFirstResponder()
+        self.view.endEditing(true)
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    // MARK: - UITextFieldDelegate Methods
+    
+    
     
     // MARK: - UIViewController Methods
 

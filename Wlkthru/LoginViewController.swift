@@ -23,18 +23,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func cancelButtonDidTouch(sender: UIBarButtonItem) {
         self.isCancelButtonTouched = true
-        self.emailTextField.resignFirstResponder()
-        self.passwordTextField.resignFirstResponder()
+        self.view.endEditing(true)
     }
     
     @IBAction func forgotPasswordButtonDidTouch(sender: UIButton) {
-        self.emailTextField.resignFirstResponder()
-        self.passwordTextField.resignFirstResponder()
+        self.view.endEditing(true)
     }
     
     @IBAction func loginButtonDidTouch(sender: UIButton) {
-        self.emailTextField.resignFirstResponder()
-        self.passwordTextField.resignFirstResponder()
+        self.view.endEditing(true)
     }
     
     @IBAction func unwindToLoginViewController(segue: UIStoryboardSegue) {}
@@ -59,8 +56,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         if !(self.emailTextField.text?.isEmpty)! && !(self.passwordTextField.text?.isEmpty)! {
-            self.emailTextField.resignFirstResponder()
-            self.passwordTextField.resignFirstResponder()
+            self.view.endEditing(true)
         }
         else if !(self.emailTextField.text?.isEmpty)! {
             self.passwordTextField.becomeFirstResponder()
