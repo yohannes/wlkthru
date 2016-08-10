@@ -36,6 +36,7 @@
 		6541D43F1D4A0870008FFA3C /* MarkdownLevelElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541D42C1D4A0870008FFA3C /* MarkdownLevelElement.swift */; };
 		6541D4401D4A0870008FFA3C /* MarkdownLinkElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541D42D1D4A0870008FFA3C /* MarkdownLinkElement.swift */; };
 		6541D4411D4A0870008FFA3C /* MarkdownStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541D42E1D4A0870008FFA3C /* MarkdownStyle.swift */; };
+		65BF83091D5AF6A900C6DE89 /* EmailValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BF83081D5AF6A900C6DE89 /* EmailValidationHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		6541D42C1D4A0870008FFA3C /* MarkdownLevelElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownLevelElement.swift; sourceTree = "<group>"; };
 		6541D42D1D4A0870008FFA3C /* MarkdownLinkElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownLinkElement.swift; sourceTree = "<group>"; };
 		6541D42E1D4A0870008FFA3C /* MarkdownStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownStyle.swift; sourceTree = "<group>"; };
+		65BF83081D5AF6A900C6DE89 /* EmailValidationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidationHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				650095E11D49C4ED009C35F3 /* TermsAndConditionsViewController.swift */,
 				653A70391D48964E00F061DB /* ForgotPasswordViewController.swift */,
 				653A70371D4765A700F061DB /* LoginViewController.swift */,
+				65BF83081D5AF6A900C6DE89 /* EmailValidationHelper.swift */,
 				653A70351D47514600F061DB /* NewAccountViewController.swift */,
 				652985051D41E9B200592F8A /* PageContentViewController.swift */,
 				652984FA1D41D9E900592F8A /* Assets.xcassets */,
@@ -290,6 +293,7 @@
 				650095E21D49C4ED009C35F3 /* TermsAndConditionsViewController.swift in Sources */,
 				6541D4401D4A0870008FFA3C /* MarkdownLinkElement.swift in Sources */,
 				6541D4341D4A0870008FFA3C /* MarkdownBold.swift in Sources */,
+				65BF83091D5AF6A900C6DE89 /* EmailValidationHelper.swift in Sources */,
 				6541D43B1D4A0870008FFA3C /* String+UTF16.swift in Sources */,
 				6541D43A1D4A0870008FFA3C /* MarkdownQuote.swift in Sources */,
 				6541D4411D4A0870008FFA3C /* MarkdownStyle.swift in Sources */,

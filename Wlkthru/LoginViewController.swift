@@ -46,7 +46,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             self.dismissViewControllerAnimated(true, completion: nil)
             return true
         }
-        guard self.validateEmail(self.emailTextField.text!) else {
+        guard let validText = self.emailTextField.text where EmailValidationHelper.check(validText) else {
             if self.presentedViewController == nil {
                 let alertController = UIAlertController(title: "Invalid Email Address", message: "Please try again.", preferredStyle: UIAlertControllerStyle.Alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
@@ -98,13 +98,5 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             guard let validForgotPasswordViewController = segue.destinationViewController as? ForgotPasswordViewController else { return }
             validForgotPasswordViewController.emailAddress = self.emailTextField.text!
         }
-    }
-
-    // MARK: - Helper Methods
-    
-    private func validateEmail(emailString: NSString) -> Bool {
-        let emailRegex = "[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}"
-        let emailText = NSPredicate(format: "SELF MATCHES [c]%@", emailRegex)
-        return (emailText.evaluateWithObject(emailString))
     }
 }
