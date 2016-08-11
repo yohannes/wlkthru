@@ -6,21 +6,27 @@
 //  Copyright © 2016 Yohannes Wijaya. All rights reserved.
 //
 
-//  TODO: implement email verification logic here
+//  TODO: 1) check password reentry verification upon register button click event instead at textfield delegate method
 
 import UIKit
 
 class NewAccountViewController: UIViewController, UITextFieldDelegate {
+    
+    // MARK: - Stored Properties
+    
+    var isCancelButtonTouched: Bool!
     
     // MARK: - IBOutlet Methods
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordConfirmationTextField: UITextField!
+    @IBOutlet weak var registerButton: UIButton!
     
     // MARK: - IBAction Methods
     
     @IBAction func cancelButtonDidTouch(sender: UIBarButtonItem) {
+        self.isCancelButtonTouched = true
         self.view.endEditing(true)
         self.dismissViewControllerAnimated(true, completion: nil)
     }
@@ -28,6 +34,9 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
     // MARK: - UITextFieldDelegate Methods
     
     func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+        if self.isCancelButtonTouched == true {
+            return true
+        }
         guard let nonBlankEmailEntry = self.emailTextField.text where EmailValidationHelper.check(nonBlankEmailEntry) else {
             if self.presentedViewController == nil {
                 let emailEntryAlertController = UIAlertController(title: "Invalid Email Address", message: "Please double check and enter again.", preferredStyle: UIAlertControllerStyle.Alert)
@@ -61,14 +70,15 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        if !(self.emailTextField.text?.isEmpty)! && !(self.passwordTextField.text?.isEmpty)! && !(self.passwordConfirmationTextField.text?.isEmpty)! {
-            self.view.endEditing(true)
+        if case 0 = textField.tag {
+            self.passwordTextField.becomeFirstResponder()
         }
-        else if !(self.emailTextField.text?.isEmpty)! && !(self.passwordTextField.text?.isEmpty)! {
+        else if case 1 = textField.tag {
             self.passwordConfirmationTextField.becomeFirstResponder()
         }
-        else if !(self.emailTextField.text?.isEmpty)! {
-            self.passwordTextField.becomeFirstResponder()
+        else if case 2 = textField.tag {
+            self.registerButton.becomeFirstResponder()
+            self.view.endEditing(true)
         }
         return true
     }
@@ -77,6 +87,8 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.isCancelButtonTouched = false
         
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self

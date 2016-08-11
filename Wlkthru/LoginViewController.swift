@@ -25,6 +25,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func cancelButtonDidTouch(sender: UIBarButtonItem) {
         self.isCancelButtonTouched = true
         self.view.endEditing(true)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func forgotPasswordButtonDidTouch(sender: UIButton) {
@@ -41,7 +42,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldEndEditing(textField: UITextField) -> Bool {
         if self.isCancelButtonTouched == true {
-            self.dismissViewControllerAnimated(true, completion: nil)
             return true
         }
         guard let nonBlankEmailEntry = self.emailTextField.text where EmailValidationHelper.check(nonBlankEmailEntry) else {
