@@ -18,6 +18,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
     // MARK: - IBAction Properties
     
@@ -43,14 +44,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             self.dismissViewControllerAnimated(true, completion: nil)
             return true
         }
-        guard let validText = self.emailTextField.text where EmailValidationHelper.check(validText) else {
+        guard let nonBlankEmailEntry = self.emailTextField.text where EmailValidationHelper.check(nonBlankEmailEntry) else {
             if self.presentedViewController == nil {
-                let alertController = UIAlertController(title: "Invalid Email Address", message: "Please try again.", preferredStyle: UIAlertControllerStyle.Alert)
+                let alertController = UIAlertController(title: "Invalid Email Address", message: "Please double check and enter again.", preferredStyle: UIAlertControllerStyle.Alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
                 self.presentViewController(alertController, animated: true, completion: nil)
             }
             return false
         }
+        self.passwordTextField.addTarget(self, action: #selector(LoginViewController.checkPasswordTextFieldIsEmpty), forControlEvents: UIControlEvents.EditingChanged)
         return true
     }
     
@@ -73,6 +75,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.passwordTextField.delegate = self
         
         self.isCancelButtonTouched = false
+        self.loginButton.enabled = false
 
         self.emailTextField.becomeFirstResponder()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
@@ -94,5 +97,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             guard let validForgotPasswordViewController = segue.destinationViewController as? ForgotPasswordViewController else { return }
             validForgotPasswordViewController.emailAddress = self.emailTextField.text!
         }
+    }
+    
+    // MARK: - Helper Methods
+
+    func checkPasswordTextFieldIsEmpty() {
+        self.loginButton.enabled = self.passwordTextField.text?.isEmpty == true ? false : true
     }
 }
