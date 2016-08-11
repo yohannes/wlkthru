@@ -15,6 +15,7 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Stored Properties
     
     var isCancelButtonTouched: Bool!
+    var isTermsConditionsButtonTouched: Bool!
     
     // MARK: - IBOutlet Methods
     
@@ -22,6 +23,7 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordConfirmationTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var termsConditionsButton: UIButton!
     
     // MARK: - IBAction Methods
     
@@ -31,10 +33,19 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func termsAndConditionsButtonDidTouch(sender: UIButton) {
+        self.isTermsConditionsButtonTouched = true
+        self.view.endEditing(true)
+        
+        self.emailTextField.text = ""
+        self.passwordTextField.text = ""
+        self.passwordConfirmationTextField.text = ""
+    }
+    
     // MARK: - UITextFieldDelegate Methods
     
     func textFieldShouldEndEditing(textField: UITextField) -> Bool {
-        if self.isCancelButtonTouched == true {
+        if self.isCancelButtonTouched == true || self.isTermsConditionsButtonTouched == true {
             return true
         }
         guard let nonBlankEmailEntry = self.emailTextField.text where EmailValidationHelper.check(nonBlankEmailEntry) else {
@@ -89,6 +100,7 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         self.isCancelButtonTouched = false
+        self.isTermsConditionsButtonTouched = false
         
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
@@ -97,5 +109,11 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
         self.emailTextField.becomeFirstResponder()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
     }
-
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        
+        self.isTermsConditionsButtonTouched = false
+        self.emailTextField.becomeFirstResponder()
+    }
 }

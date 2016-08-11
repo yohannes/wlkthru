@@ -144,7 +144,8 @@
                                             <color key="titleColor" red="0.3921568627" green="0.80392156859999997" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="GgE-0r-yZl" kind="show" id="zbD-Ji-V50"/>
+                                            <action selector="termsAndConditionsButtonDidTouch:" destination="Rve-Hq-OqS" eventType="touchUpInside" id="Tvt-Je-lOZ"/>
+                                            <segue destination="GgE-0r-yZl" kind="show" identifier="termsConditionsSegue" id="zbD-Ji-V50"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -180,6 +181,7 @@
                         <outlet property="passwordConfirmationTextField" destination="a1k-T7-Cd0" id="S1l-62-ZHW"/>
                         <outlet property="passwordTextField" destination="xv3-R7-S1C" id="Mv8-0w-pQW"/>
                         <outlet property="registerButton" destination="q2L-qf-oH0" id="QhJ-sj-L2t"/>
+                        <outlet property="termsConditionsButton" destination="HtK-iC-SRz" id="eVk-SH-LN1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ulM-nr-7HY" userLabel="First Responder" sceneMemberID="firstResponder"/>
