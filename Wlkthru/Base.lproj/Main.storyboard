@@ -127,6 +127,9 @@
                                 <state key="normal" title="REGISTER">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerButtonDidTouch:" destination="Rve-Hq-OqS" eventType="touchUpInside" id="MXO-Iu-NrG"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="XIM-FA-vyZ">
                                 <rect key="frame" x="171" y="272" width="259" height="28"/>
@@ -257,6 +260,9 @@
                                 <rect key="frame" x="12" y="136" width="576" height="26"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="checkPasswordTextFieldIsFilled:" destination="vze-nd-wRs" eventType="editingChanged" id="ZOO-jj-2Ux"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4F-Bs-yKa">
                                 <rect key="frame" x="171" y="178" width="259" height="36"/>

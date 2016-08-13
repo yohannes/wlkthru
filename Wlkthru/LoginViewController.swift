@@ -28,6 +28,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func checkPasswordTextFieldIsFilled(sender: UITextField) {
+        self.loginButton.enabled = (sender.text?.isEmpty)! ? false : true
+    }
+    
     @IBAction func forgotPasswordButtonDidTouch(sender: UIButton) {
         self.view.endEditing(true)
     }
@@ -52,7 +56,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
             return false
         }
-        self.passwordTextField.addTarget(self, action: #selector(LoginViewController.checkPasswordTextFieldIsEmpty), forControlEvents: UIControlEvents.EditingChanged)
         return true
     }
     
@@ -97,11 +100,5 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             guard let validForgotPasswordViewController = segue.destinationViewController as? ForgotPasswordViewController else { return }
             validForgotPasswordViewController.emailAddress = self.emailTextField.text!
         }
-    }
-    
-    // MARK: - Helper Methods
-
-    func checkPasswordTextFieldIsEmpty() {
-        self.loginButton.enabled = self.passwordTextField.text?.isEmpty == true ? false : true
     }
 }
