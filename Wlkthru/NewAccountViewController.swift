@@ -43,54 +43,7 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func registerButtonDidTouch(sender: UIButton) {
-        guard let nonBlankEmailEntry = self.emailTextField.text where EmailValidationHelper.check(nonBlankEmailEntry) else {
-            if self.presentedViewController == nil {
-                self.emailTextField.becomeFirstResponder()
-                
-                let emailEntryAlertController = UIAlertController(title: "Invalid Email Address", message: "Please double check and enter again.", preferredStyle: UIAlertControllerStyle.Alert)
-                let emailEntryAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
-                emailEntryAlertController.addAction(emailEntryAlertAction)
-                
-                self.presentViewController(emailEntryAlertController, animated: true, completion: nil)
-            }
-            return
-        }
-
-        guard let nonBlankPasswordEntry = self.passwordTextField.text where nonBlankPasswordEntry.characters.count >= 6 else {
-            if self.presentedViewController == nil {
-                self.passwordTextField.becomeFirstResponder()
-                
-                let passwordEntryAlertController = UIAlertController(title: "Invalid Password Length", message: "Please enter 6 or more characters", preferredStyle: .Alert)
-                passwordEntryAlertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-                
-                self.presentViewController(passwordEntryAlertController, animated: true, completion: nil)
-            }
-            return
-        }
-        
-        guard let nonBlankPasswordConfirmationEntry = self.passwordConfirmationTextField.text where self.passwordTextField.text == nonBlankPasswordConfirmationEntry else {
-            if self.presentedViewController == nil {
-                self.passwordConfirmationTextField.becomeFirstResponder()
-                
-                let passwordReentryAlertController = UIAlertController(title: "Password is Not the Same", message: "Please double check and enter again.", preferredStyle: .Alert)
-                passwordReentryAlertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-                
-                self.presentViewController(passwordReentryAlertController, animated: true, completion: nil)
-            }
-            return
-        }
-        
-        self.view.endEditing(true)
-        
-        if self.presentedViewController == nil {
-            let successfulAccountCreationAlertController = UIAlertController(title: "Account Successfully Created", message: "Please check your email for verification.", preferredStyle: .Alert)
-            successfulAccountCreationAlertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (_) in
-                self.dismissViewControllerAnimated(true, completion: nil)
-            }))
-
-            self.presentViewController(successfulAccountCreationAlertController, animated: true, completion: nil)
-        }
-        
+        self.validateAllTextFieldsAndConfirmAccountCreation()
     }
     
     // MARK: - UITextFieldDelegate Methods
@@ -115,8 +68,7 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
             self.passwordConfirmationTextField.becomeFirstResponder()
         }
         else if case 2 = textField.tag {
-            self.registerButton.becomeFirstResponder()
-            self.view.endEditing(true)
+            self.validateAllTextFieldsAndConfirmAccountCreation()
         }
         return true
     }
@@ -149,5 +101,55 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
     
     func checkAllPasswordTextFieldsAreFilled() {
         self.registerButton.enabled = (self.emailTextField.text?.isEmpty)! == true || (self.passwordTextField.text?.isEmpty)! == true || (self.passwordConfirmationTextField.text?.isEmpty)! == true ? false : true
+    }
+    
+    private func validateAllTextFieldsAndConfirmAccountCreation() {
+        guard let nonBlankEmailEntry = self.emailTextField.text where EmailValidationHelper.check(nonBlankEmailEntry) else {
+            if self.presentedViewController == nil {
+                self.emailTextField.becomeFirstResponder()
+                
+                let emailEntryAlertController = UIAlertController(title: "Invalid Email Address", message: "Please double check and enter again.", preferredStyle: UIAlertControllerStyle.Alert)
+                let emailEntryAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
+                emailEntryAlertController.addAction(emailEntryAlertAction)
+                
+                self.presentViewController(emailEntryAlertController, animated: true, completion: nil)
+            }
+            return
+        }
+        
+        guard let nonBlankPasswordEntry = self.passwordTextField.text where nonBlankPasswordEntry.characters.count >= 6 else {
+            if self.presentedViewController == nil {
+                self.passwordTextField.becomeFirstResponder()
+                
+                let passwordEntryAlertController = UIAlertController(title: "Invalid Password Length", message: "Please enter 6 or more characters", preferredStyle: .Alert)
+                passwordEntryAlertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                
+                self.presentViewController(passwordEntryAlertController, animated: true, completion: nil)
+            }
+            return
+        }
+        
+        guard let nonBlankPasswordConfirmationEntry = self.passwordConfirmationTextField.text where self.passwordTextField.text == nonBlankPasswordConfirmationEntry else {
+            if self.presentedViewController == nil {
+                self.passwordConfirmationTextField.becomeFirstResponder()
+                
+                let passwordReentryAlertController = UIAlertController(title: "Password is Not the Same", message: "Please double check and enter again.", preferredStyle: .Alert)
+                passwordReentryAlertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                
+                self.presentViewController(passwordReentryAlertController, animated: true, completion: nil)
+            }
+            return
+        }
+        
+        self.view.endEditing(true)
+        
+        if self.presentedViewController == nil {
+            let successfulAccountCreationAlertController = UIAlertController(title: "Account Successfully Created", message: "Please check your email for verification.", preferredStyle: .Alert)
+            successfulAccountCreationAlertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (_) in
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }))
+            
+            self.presentViewController(successfulAccountCreationAlertController, animated: true, completion: nil)
+        }
     }
 }
