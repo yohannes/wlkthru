@@ -81,6 +81,16 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
         }
         
         self.view.endEditing(true)
+        
+        if self.presentedViewController == nil {
+            let successfulAccountCreationAlertController = UIAlertController(title: "Account Successfully Created", message: "Please check your email for verification.", preferredStyle: .Alert)
+            successfulAccountCreationAlertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (_) in
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }))
+
+            self.presentViewController(successfulAccountCreationAlertController, animated: true, completion: nil)
+        }
+        
     }
     
     // MARK: - UITextFieldDelegate Methods
