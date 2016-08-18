@@ -83,6 +83,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Helper Methods
     
+    // FIXME: Console log error: "pushViewController:animated: called on <UINavigationController 0x7fa0d3866000> while an existing transition or presentation is occurring; the navigation stack will not be updated."
+    
     private func validateEmailEntry() {
         guard let nonBlankEmailEntry = self.emailTextField.text where EmailValidationHelper.check(nonBlankEmailEntry) else {
             let alertController = UIAlertController(title: "Invalid Email Address", message: "Please double check and enter again.", preferredStyle: UIAlertControllerStyle.Alert)
