@@ -9,10 +9,6 @@
 import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
-    
-    // MARK: - Stored Properties
-    
-    var isCancelButtonTouched: Bool!
 
     // MARK: - IBOutlet Properties
     
@@ -23,7 +19,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     // MARK: - IBAction Properties
     
     @IBAction func cancelButtonDidTouch(sender: UIBarButtonItem) {
-        self.isCancelButtonTouched = true
         self.view.endEditing(true)
         self.dismissViewControllerAnimated(true, completion: nil)
     }
@@ -33,31 +28,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func forgotPasswordButtonDidTouch(sender: UIButton) {
-        self.view.endEditing(true)
+        self.validateEmailEntry()
     }
     
     @IBAction func loginButtonDidTouch(sender: UIButton) {
-        self.view.endEditing(true)
+        self.validateEmailEntry()
     }
     
     @IBAction func unwindToLoginViewController(segue: UIStoryboardSegue) {}
     
     // MARK: - UITextFieldDelegate Methods
-    
-    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
-        if self.isCancelButtonTouched == true {
-            return true
-        }
-        guard let nonBlankEmailEntry = self.emailTextField.text where EmailValidationHelper.check(nonBlankEmailEntry) else {
-            if self.presentedViewController == nil {
-                let alertController = UIAlertController(title: "Invalid Email Address", message: "Please double check and enter again.", preferredStyle: UIAlertControllerStyle.Alert)
-                alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-                self.presentViewController(alertController, animated: true, completion: nil)
-            }
-            return false
-        }
-        return true
-    }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         if !(self.emailTextField.text?.isEmpty)! && !(self.passwordTextField.text?.isEmpty)! {
@@ -77,7 +57,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
         
-        self.isCancelButtonTouched = false
         self.loginButton.enabled = false
 
         self.emailTextField.becomeFirstResponder()
@@ -100,5 +79,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             guard let validForgotPasswordViewController = segue.destinationViewController as? ForgotPasswordViewController else { return }
             validForgotPasswordViewController.emailAddress = self.emailTextField.text!
         }
+    }
+    
+    // MARK: - Helper Methods
+    
+    private func validateEmailEntry() {
+        guard let nonBlankEmailEntry = self.emailTextField.text where EmailValidationHelper.check(nonBlankEmailEntry) else {
+            if self.presentedViewController == nil {
+                let alertController = UIAlertController(title: "Invalid Email Address", message: "Please double check and enter again.", preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: { [unowned self] (_) in
+                    self.emailTextField.becomeFirstResponder()
+                }))
+                self.presentViewController(alertController, animated: true, completion: nil)
+            }
+            return
+        }
+        self.view.endEditing(true)
     }
 }
