@@ -85,13 +85,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     private func validateEmailEntry() {
         guard let nonBlankEmailEntry = self.emailTextField.text where EmailValidationHelper.check(nonBlankEmailEntry) else {
-            if self.presentedViewController == nil {
-                let alertController = UIAlertController(title: "Invalid Email Address", message: "Please double check and enter again.", preferredStyle: UIAlertControllerStyle.Alert)
-                alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: { [unowned self] (_) in
-                    self.emailTextField.becomeFirstResponder()
-                }))
-                self.presentViewController(alertController, animated: true, completion: nil)
-            }
+            let alertController = UIAlertController(title: "Invalid Email Address", message: "Please double check and enter again.", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: { [unowned self] (_) in
+                self.emailTextField.becomeFirstResponder()
+            }))
+            self.presentViewController(alertController, animated: true, completion: nil)
             return
         }
         self.view.endEditing(true)
