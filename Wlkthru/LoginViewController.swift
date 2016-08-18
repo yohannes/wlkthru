@@ -27,8 +27,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.loginButton.enabled = (sender.text?.isEmpty)! ? false : true
     }
     
-    @IBAction func forgotPasswordButtonDidTouch(sender: UIButton) {
+    @IBAction func forgotPasswordButtonDidTouch(sender: UITapGestureRecognizer) {
         self.validateEmailEntry()
+        self.performSegueWithIdentifier("ForgotMyPasswordSegue", sender: self)
     }
     
     @IBAction func loginButtonDidTouch(sender: UIButton) {

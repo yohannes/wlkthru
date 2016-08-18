@@ -17,9 +17,9 @@
             <string>AvenirNext-Regular</string>
             <string>AvenirNext-Regular</string>
             <string>AvenirNext-Regular</string>
+            <string>AvenirNext-Regular</string>
+            <string>AvenirNext-Regular</string>
             <string>AvenirNext-Medium</string>
-            <string>AvenirNext-Regular</string>
-            <string>AvenirNext-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -278,34 +278,42 @@
                                     <action selector="loginButtonDidTouch:" destination="vze-nd-wRs" eventType="touchUpInside" id="10f-1j-Gvc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZG-VA-e8m">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Your Password?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjJ-2G-dyS">
                                 <rect key="frame" x="171" y="230" width="259" height="28"/>
+                                <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="259" id="xLu-Fb-VRE"/>
+                                    <constraint firstAttribute="width" constant="259" id="e14-rb-6RU"/>
+                                    <constraint firstAttribute="height" constant="28" id="gmh-s8-tcV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="11"/>
-                                <state key="normal" title="Forgot Your Password?">
-                                    <color key="titleColor" red="0.3921568627" green="0.80392156859999997" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <color key="textColor" red="0.1764705882" green="0.85098039219999999" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
                                 <connections>
-                                    <action selector="forgotPasswordButtonDidTouch:" destination="vze-nd-wRs" eventType="touchUpInside" id="YiV-OT-LbS"/>
-                                    <segue destination="pVv-qT-F58" kind="show" identifier="ForgotMyPasswordSegue" id="7WW-V1-kmM"/>
+                                    <outletCollection property="gestureRecognizers" destination="3a8-AO-3sR" appends="YES" id="AZo-4O-0b4"/>
                                 </connections>
-                            </button>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.8666666666666667" green="1" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="A4F-Bs-yKa" firstAttribute="centerX" secondItem="rx3-BR-Vmo" secondAttribute="centerX" id="0bs-oS-KYP"/>
+                            <constraint firstItem="CjJ-2G-dyS" firstAttribute="leading" secondItem="rx3-BR-Vmo" secondAttribute="leadingMargin" constant="151" id="0xt-eT-miY"/>
+                            <constraint firstItem="CjJ-2G-dyS" firstAttribute="top" secondItem="A4F-Bs-yKa" secondAttribute="bottom" constant="16" id="BAW-1V-3d2"/>
                             <constraint firstItem="A4F-Bs-yKa" firstAttribute="top" secondItem="d4s-dg-zoi" secondAttribute="bottom" constant="16" id="NE7-b9-UbJ"/>
                             <constraint firstItem="d4s-dg-zoi" firstAttribute="leading" secondItem="rx3-BR-Vmo" secondAttribute="leadingMargin" constant="-8" id="T2G-q0-oKn"/>
                             <constraint firstItem="Btt-Y6-0iG" firstAttribute="top" secondItem="xbu-YW-F5t" secondAttribute="bottom" constant="30" id="ffz-AM-xjO"/>
-                            <constraint firstItem="bZG-VA-e8m" firstAttribute="top" secondItem="A4F-Bs-yKa" secondAttribute="bottom" constant="16" id="lPf-yY-XoZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Btt-Y6-0iG" secondAttribute="trailing" constant="-8" id="lvc-K7-OTa"/>
-                            <constraint firstItem="bZG-VA-e8m" firstAttribute="centerX" secondItem="rx3-BR-Vmo" secondAttribute="centerX" id="n1X-Le-GWa"/>
                             <constraint firstItem="d4s-dg-zoi" firstAttribute="top" secondItem="Btt-Y6-0iG" secondAttribute="bottom" constant="16" id="sGg-lX-4LX"/>
                             <constraint firstItem="Btt-Y6-0iG" firstAttribute="leading" secondItem="rx3-BR-Vmo" secondAttribute="leadingMargin" constant="-8" id="tfI-eE-6BF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="d4s-dg-zoi" secondAttribute="trailing" constant="-8" id="uw1-jg-v5K"/>
+                            <constraint firstItem="CjJ-2G-dyS" firstAttribute="trailing" secondItem="rx3-BR-Vmo" secondAttribute="trailingMargin" constant="-150" id="vAT-9A-U4a"/>
+                            <constraint firstItem="CjJ-2G-dyS" firstAttribute="centerX" secondItem="rx3-BR-Vmo" secondAttribute="centerX" id="vAh-6z-Gd0"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0xt-eT-miY"/>
+                                <exclude reference="vAT-9A-U4a"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Log In" id="5tz-YE-MdS">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="GTY-rh-iBx">
@@ -319,9 +327,15 @@
                         <outlet property="emailTextField" destination="Btt-Y6-0iG" id="SWD-A8-xQi"/>
                         <outlet property="loginButton" destination="A4F-Bs-yKa" id="T5f-jC-9Uh"/>
                         <outlet property="passwordTextField" destination="d4s-dg-zoi" id="O3P-N7-wKT"/>
+                        <segue destination="pVv-qT-F58" kind="show" identifier="ForgotMyPasswordSegue" id="mYz-Z6-BZh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6WP-X4-OVi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3a8-AO-3sR">
+                    <connections>
+                        <action selector="forgotPasswordButtonDidTouch:" destination="vze-nd-wRs" id="bYX-2i-VCI"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1898" y="-181"/>
         </scene>
