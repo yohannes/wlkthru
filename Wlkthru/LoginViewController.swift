@@ -23,10 +23,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func checkPasswordTextFieldIsFilled(_ sender: UITextField) {
-        self.loginButton.isEnabled = (sender.text?.isEmpty)! ? false : true
-    }
-    
     @IBAction func forgotPasswordButtonDidTouch(_ sender: UITapGestureRecognizer) {
         self.validateEmailEntry()
         self.performSegue(withIdentifier: "ForgotMyPasswordSegue", sender: self)
@@ -40,12 +36,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - UITextFieldDelegate Methods
     
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        self.emailTextField.addTarget(self, action: #selector(LoginViewController.checkAllTextFieldsAreFilled), for: UIControlEvents.editingChanged)
+        self.passwordTextField.addTarget(self, action: #selector(LoginViewController.checkAllTextFieldsAreFilled), for: .editingChanged)
+        return true
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if !(self.emailTextField.text?.isEmpty)! && !(self.passwordTextField.text?.isEmpty)! {
-            self.view.endEditing(true)
-        }
-        else if !(self.emailTextField.text?.isEmpty)! {
+        if case 0 = textField.tag {
             self.passwordTextField.becomeFirstResponder()
+        }
+        else if case 1 = textField.tag {
+            self.validateEmailEntry()
         }
         return true
     }
@@ -84,6 +86,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Helper Methods
     
+    func checkAllTextFieldsAreFilled() {
+        self.loginButton.isEnabled = (self.emailTextField.text?.isEmpty)! == true || (self.passwordTextField.text?.isEmpty)! == true ? false : true
+    }
+    
     fileprivate func validateEmailEntry() {
         guard let nonBlankEmailEntry = self.emailTextField.text, EmailValidationHelper.check(nonBlankEmailEntry) else {
             let alertController = UIAlertController(title: "Invalid Email Address", message: "Please double check and enter again.", preferredStyle: UIAlertControllerStyle.alert)
@@ -93,6 +99,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             self.present(alertController, animated: true, completion: nil)
             return
         }
+        
+        guard let nonBlankPasswordEntry = self.passwordTextField.text, nonBlankPasswordEntry.characters.count >= 6 else {
+            let passwordEntryAlertController = UIAlertController(title: "Invalid Password Length", message: "Please enter 6 or more characters", preferredStyle: .alert)
+            passwordEntryAlertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { [unowned self] (_) in
+                self.passwordTextField.becomeFirstResponder()
+            }))
+            self.present(passwordEntryAlertController, animated: true, completion: nil)
+            return
+        }
+        
         self.view.endEditing(true)
+        self.dismiss(animated: true, completion: nil)
     }
 }

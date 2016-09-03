@@ -10,29 +10,21 @@ import UIKit
 
 class NewAccountViewController: UIViewController, UITextFieldDelegate {
     
-    // MARK: - Stored Properties
-    
-    var isCancelButtonTouched: Bool!
-    var isTermsConditionsButtonTouched: Bool!
-    
     // MARK: - IBOutlet Methods
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordConfirmationTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
-    @IBOutlet weak var termsConditionsButton: UIButton!
     
     // MARK: - IBAction Methods
     
     @IBAction func cancelButtonDidTouch(_ sender: UIBarButtonItem) {
-        self.isCancelButtonTouched = true
         self.view.endEditing(true)
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func termsAndConditionsButtonDidTouch(_ sender: UIButton) {
-        self.isTermsConditionsButtonTouched = true
         self.view.endEditing(true)
         
         self.emailTextField.text = ""
@@ -49,13 +41,9 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
     // MARK: - UITextFieldDelegate Methods
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        if self.isCancelButtonTouched == true || self.isTermsConditionsButtonTouched == true {
-            return true
-        }
-        
-        self.emailTextField.addTarget(self, action: #selector(NewAccountViewController.checkAllPasswordTextFieldsAreFilled), for: UIControlEvents.editingChanged)
-        self.passwordConfirmationTextField.addTarget(self, action: #selector(NewAccountViewController.checkAllPasswordTextFieldsAreFilled), for: .editingChanged)
-        self.passwordTextField.addTarget(self, action: #selector(NewAccountViewController.checkAllPasswordTextFieldsAreFilled), for: .editingChanged)
+        self.emailTextField.addTarget(self, action: #selector(NewAccountViewController.checkAllTextFieldsAreFilled), for: UIControlEvents.editingChanged)
+        self.passwordConfirmationTextField.addTarget(self, action: #selector(NewAccountViewController.checkAllTextFieldsAreFilled), for: .editingChanged)
+        self.passwordTextField.addTarget(self, action: #selector(NewAccountViewController.checkAllTextFieldsAreFilled), for: .editingChanged)
         
         return true
     }
@@ -78,9 +66,6 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.isCancelButtonTouched = false
-        self.isTermsConditionsButtonTouched = false
-        
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
         self.passwordConfirmationTextField.delegate = self
@@ -93,13 +78,12 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        self.isTermsConditionsButtonTouched = false
         self.emailTextField.becomeFirstResponder()
     }
     
     // MARK: - Helper Methods
     
-    func checkAllPasswordTextFieldsAreFilled() {
+    func checkAllTextFieldsAreFilled() {
         self.registerButton.isEnabled = (self.emailTextField.text?.isEmpty)! == true || (self.passwordTextField.text?.isEmpty)! == true || (self.passwordConfirmationTextField.text?.isEmpty)! == true ? false : true
     }
     
