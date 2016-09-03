@@ -25,13 +25,13 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - IBAction Methods
     
-    @IBAction func cancelButtonDidTouch(sender: UIBarButtonItem) {
+    @IBAction func cancelButtonDidTouch(_ sender: UIBarButtonItem) {
         self.isCancelButtonTouched = true
         self.view.endEditing(true)
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func termsAndConditionsButtonDidTouch(sender: UIButton) {
+    @IBAction func termsAndConditionsButtonDidTouch(_ sender: UIButton) {
         self.isTermsConditionsButtonTouched = true
         self.view.endEditing(true)
         
@@ -39,28 +39,28 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
         self.passwordTextField.text = ""
         self.passwordConfirmationTextField.text = ""
         
-        self.registerButton.enabled = false
+        self.registerButton.isEnabled = false
     }
     
-    @IBAction func registerButtonDidTouch(sender: UIButton) {
+    @IBAction func registerButtonDidTouch(_ sender: UIButton) {
         self.validateAllTextFieldsAndConfirmAccountCreation()
     }
     
     // MARK: - UITextFieldDelegate Methods
     
-    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         if self.isCancelButtonTouched == true || self.isTermsConditionsButtonTouched == true {
             return true
         }
         
-        self.emailTextField.addTarget(self, action: #selector(NewAccountViewController.checkAllPasswordTextFieldsAreFilled), forControlEvents: UIControlEvents.EditingChanged)
-        self.passwordConfirmationTextField.addTarget(self, action: #selector(NewAccountViewController.checkAllPasswordTextFieldsAreFilled), forControlEvents: .EditingChanged)
-        self.passwordTextField.addTarget(self, action: #selector(NewAccountViewController.checkAllPasswordTextFieldsAreFilled), forControlEvents: .EditingChanged)
+        self.emailTextField.addTarget(self, action: #selector(NewAccountViewController.checkAllPasswordTextFieldsAreFilled), for: UIControlEvents.editingChanged)
+        self.passwordConfirmationTextField.addTarget(self, action: #selector(NewAccountViewController.checkAllPasswordTextFieldsAreFilled), for: .editingChanged)
+        self.passwordTextField.addTarget(self, action: #selector(NewAccountViewController.checkAllPasswordTextFieldsAreFilled), for: .editingChanged)
         
         return true
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if case 0 = textField.tag {
             self.passwordTextField.becomeFirstResponder()
         }
@@ -86,11 +86,11 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
         self.passwordConfirmationTextField.delegate = self
         
         self.emailTextField.becomeFirstResponder()
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
-        self.registerButton.enabled = false
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
+        self.registerButton.isEnabled = false
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
         self.isTermsConditionsButtonTouched = false
@@ -100,43 +100,43 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Helper Methods
     
     func checkAllPasswordTextFieldsAreFilled() {
-        self.registerButton.enabled = (self.emailTextField.text?.isEmpty)! == true || (self.passwordTextField.text?.isEmpty)! == true || (self.passwordConfirmationTextField.text?.isEmpty)! == true ? false : true
+        self.registerButton.isEnabled = (self.emailTextField.text?.isEmpty)! == true || (self.passwordTextField.text?.isEmpty)! == true || (self.passwordConfirmationTextField.text?.isEmpty)! == true ? false : true
     }
     
-    private func validateAllTextFieldsAndConfirmAccountCreation() {
-        guard let nonBlankEmailEntry = self.emailTextField.text where EmailValidationHelper.check(nonBlankEmailEntry) else {
+    fileprivate func validateAllTextFieldsAndConfirmAccountCreation() {
+        guard let nonBlankEmailEntry = self.emailTextField.text, EmailValidationHelper.check(nonBlankEmailEntry) else {
             if self.presentedViewController == nil {
                 self.emailTextField.becomeFirstResponder()
                 
-                let emailEntryAlertController = UIAlertController(title: "Invalid Email Address", message: "Please double check and enter again.", preferredStyle: UIAlertControllerStyle.Alert)
-                let emailEntryAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
+                let emailEntryAlertController = UIAlertController(title: "Invalid Email Address", message: "Please double check and enter again.", preferredStyle: UIAlertControllerStyle.alert)
+                let emailEntryAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
                 emailEntryAlertController.addAction(emailEntryAlertAction)
                 
-                self.presentViewController(emailEntryAlertController, animated: true, completion: nil)
+                self.present(emailEntryAlertController, animated: true, completion: nil)
             }
             return
         }
         
-        guard let nonBlankPasswordEntry = self.passwordTextField.text where nonBlankPasswordEntry.characters.count >= 6 else {
+        guard let nonBlankPasswordEntry = self.passwordTextField.text, nonBlankPasswordEntry.characters.count >= 6 else {
             if self.presentedViewController == nil {
                 self.passwordTextField.becomeFirstResponder()
                 
-                let passwordEntryAlertController = UIAlertController(title: "Invalid Password Length", message: "Please enter 6 or more characters", preferredStyle: .Alert)
-                passwordEntryAlertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                let passwordEntryAlertController = UIAlertController(title: "Invalid Password Length", message: "Please enter 6 or more characters", preferredStyle: .alert)
+                passwordEntryAlertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 
-                self.presentViewController(passwordEntryAlertController, animated: true, completion: nil)
+                self.present(passwordEntryAlertController, animated: true, completion: nil)
             }
             return
         }
         
-        guard let nonBlankPasswordConfirmationEntry = self.passwordConfirmationTextField.text where self.passwordTextField.text == nonBlankPasswordConfirmationEntry else {
+        guard let nonBlankPasswordConfirmationEntry = self.passwordConfirmationTextField.text, self.passwordTextField.text == nonBlankPasswordConfirmationEntry else {
             if self.presentedViewController == nil {
                 self.passwordConfirmationTextField.becomeFirstResponder()
                 
-                let passwordReentryAlertController = UIAlertController(title: "Password is Not the Same", message: "Please double check and enter again.", preferredStyle: .Alert)
-                passwordReentryAlertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                let passwordReentryAlertController = UIAlertController(title: "Password is Not the Same", message: "Please double check and enter again.", preferredStyle: .alert)
+                passwordReentryAlertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 
-                self.presentViewController(passwordReentryAlertController, animated: true, completion: nil)
+                self.present(passwordReentryAlertController, animated: true, completion: nil)
             }
             return
         }
@@ -145,12 +145,12 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
         
         if self.presentedViewController == nil {
             guard let validEmail = self.emailTextField.text else { return }
-            let successfulAccountCreationAlertController = UIAlertController(title: "Account Successfully Created", message: "Please check \(validEmail) for email verification.", preferredStyle: .Alert)
-            successfulAccountCreationAlertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (_) in
-                self.dismissViewControllerAnimated(true, completion: nil)
+            let successfulAccountCreationAlertController = UIAlertController(title: "Account Successfully Created", message: "Please check \(validEmail) for email verification.", preferredStyle: .alert)
+            successfulAccountCreationAlertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
+                self.dismiss(animated: true, completion: nil)
             }))
             
-            self.presentViewController(successfulAccountCreationAlertController, animated: true, completion: nil)
+            self.present(successfulAccountCreationAlertController, animated: true, completion: nil)
         }
     }
 }

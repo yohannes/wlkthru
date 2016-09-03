@@ -30,17 +30,17 @@ class RootViewController: UIViewController, UIPageViewControllerDataSource {
 
     // MARK: - IBAction Methods
     
-    @IBAction func registerButtonDidTouch(sender: UIButton) {
+    @IBAction func registerButtonDidTouch(_ sender: UIButton) {
         
     }
     
-    @IBAction func logInButtonDidTouch(sender: UIButton) {
+    @IBAction func logInButtonDidTouch(_ sender: UIButton) {
         
     }
     
     // MARK: - UIPageViewControllerDataSource Methods
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let validPageContentViewController = viewController as? PageContentViewController else { return nil }
         var pageIndex = validPageContentViewController.pageIndex
         guard pageIndex > 0 else {
@@ -53,7 +53,7 @@ class RootViewController: UIViewController, UIPageViewControllerDataSource {
         return self.viewControllerAtIndex(pageIndex)
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let validPageContentViewController = viewController as? PageContentViewController else { return nil }
         var pageIndex = validPageContentViewController.pageIndex
         guard pageIndex < self.headerDescriptions.count - 1 else {
@@ -71,28 +71,28 @@ class RootViewController: UIViewController, UIPageViewControllerDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let validStoryboard = self.storyboard, validPageViewController = validStoryboard.instantiateViewControllerWithIdentifier("PageViewController") as? UIPageViewController else { return }
+        guard let validStoryboard = self.storyboard, let validPageViewController = validStoryboard.instantiateViewController(withIdentifier: "PageViewController") as? UIPageViewController else { return }
         
         validPageViewController.dataSource = self
         
         guard let validPageContentViewController = self.viewControllerAtIndex(0) else { return }
         
-        validPageViewController.setViewControllers([validPageContentViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
+        validPageViewController.setViewControllers([validPageContentViewController], direction: UIPageViewControllerNavigationDirection.forward, animated: true, completion: nil)
         
-        validPageViewController.view.frame = CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height)
+        validPageViewController.view.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height)
         
         self.addChildViewController(validPageViewController)
         self.view.addSubview(validPageViewController.view)
-        validPageViewController.didMoveToParentViewController(self)
-        self.view.bringSubviewToFront(self.stackView)
-        self.view.bringSubviewToFront(self.headerLabel)
+        validPageViewController.didMove(toParentViewController: self)
+        self.view.bringSubview(toFront: self.stackView)
+        self.view.bringSubview(toFront: self.headerLabel)
     }
     
     // MARK - Helper Methods
     
-    private func viewControllerAtIndex(index: Int) -> PageContentViewController? {
+    fileprivate func viewControllerAtIndex(_ index: Int) -> PageContentViewController? {
         guard index != NSNotFound || (index >= 0 && index < self.headerDescriptions.count) else { return nil }
-        guard let validStoryboard = self.storyboard, validPageContentViewController = validStoryboard.instantiateViewControllerWithIdentifier("PageContentViewController") as? PageContentViewController else { return nil }
+        guard let validStoryboard = self.storyboard, let validPageContentViewController = validStoryboard.instantiateViewController(withIdentifier: "PageContentViewController") as? PageContentViewController else { return nil }
         
         validPageContentViewController.pageIndex = index
         validPageContentViewController.headerDescription = self.headerDescriptions[index]

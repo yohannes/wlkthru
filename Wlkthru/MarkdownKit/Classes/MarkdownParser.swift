@@ -14,9 +14,9 @@ public class MarkdownParser {
   private var escapingElements: [MarkdownElement]
   private var defaultElements: [MarkdownElement]
   private var unescapingElements: [MarkdownElement]
-  
+
   public var customElements: [MarkdownElement]
-  
+
   // MARK: Basic Elements
   public var header = MarkdownHeader()
   public var list = MarkdownList()
@@ -26,13 +26,14 @@ public class MarkdownParser {
   public var bold = MarkdownBold()
   public var italic = MarkdownItalic()
   public var code = MarkdownCode()
-  
+
   // MARK: Escaping Elements
   private var codeEscaping = MarkdownCodeEscaping()
   private var escaping = MarkdownEscaping()
   private var unescaping = MarkdownUnescaping()
-  
+
   // MARK: Configuration
+  /// Enables or disables detection of URLs even without Markdown format
   public var automaticLinkDetectionEnabled: Bool = true
 
   // MARK: Initializer
@@ -43,34 +44,38 @@ public class MarkdownParser {
     self.unescapingElements = [code, unescaping]
     self.customElements = customElements
   }
-  
+
   // MARK: Element Extensibility
   public func addCustomElement(element: MarkdownElement) {
     customElements.append(element)
   }
-  
+
   public func removeCustomElement(element: MarkdownElement) {
-    guard let index = customElements.indexOf({ someElement -> Bool in
+    guard let index = customElements.index(where: { someElement -> Bool in
       return element === someElement
     }) else {
       return
     }
-    customElements.removeAtIndex(index)
+    customElements.remove(at: index)
   }
-  
+
   // MARK: Parsing
   public func parse(markdown: String) -> NSAttributedString {
-    return parse(NSAttributedString(string: markdown))
+    return parse(markdown: NSAttributedString(string: markdown))
   }
-  
+
   public func parse(markdown: NSAttributedString) -> NSAttributedString {
     let attributedString = NSMutableAttributedString(attributedString: markdown)
-    (escapingElements + defaultElements + customElements + unescapingElements).forEach { element in
-      if automaticLinkDetectionEnabled || element.dynamicType != MarkdownAutomaticLink.self {
-        element.parse(attributedString)
+    var elements: [MarkdownElement] = escapingElements
+    elements.append(contentsOf: defaultElements)
+    elements.append(contentsOf: customElements)
+    elements.append(contentsOf: unescapingElements)
+    elements.forEach { element in
+      if automaticLinkDetectionEnabled || type(of: element) != MarkdownAutomaticLink.self {
+        element.parse(attributedString: attributedString)
       }
     }
     return attributedString
   }
-  
+
 }

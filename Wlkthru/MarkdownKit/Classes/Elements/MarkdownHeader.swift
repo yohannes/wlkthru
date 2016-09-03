@@ -9,37 +9,37 @@
 import UIKit
 
 public class MarkdownHeader: MarkdownLevelElement {
-  
+
   private static let regex = "^(#{1,%@})\\s*(.+)$"
-  
+
   public var maxLevel: Int
   public var font: UIFont?
   public var color: UIColor?
   public var fontIncrease: Int
-  
+
   public var regex: String {
-    let level = maxLevel > 0 ? "\(maxLevel)" : ""
+    let level: String = maxLevel > 0 ? "\(maxLevel)" : ""
     return String(format: MarkdownHeader.regex, level)
   }
-  
+
   public init(maxLevel: Int = 0,
-              font: UIFont? = UIFont.boldSystemFontOfSize(UIFont.smallSystemFontSize()),
+              font: UIFont? = UIFont.boldSystemFont(ofSize: UIFont.smallSystemFontSize),
               fontIncrease: Int = 2, color: UIColor? = nil) {
     self.maxLevel = maxLevel
     self.font = font
     self.color = color
     self.fontIncrease = fontIncrease
   }
-  
+
   public func formatText(attributedString: NSMutableAttributedString, range: NSRange, level: Int) {
-      attributedString.deleteCharactersInRange(range)
+      attributedString.deleteCharacters(in: range)
   }
-  
+
   public func attributesForLevel(level: Int) -> [String: AnyObject] {
     var attributes = self.attributes
     if let font = font {
       let headerFontSize: CGFloat = font.pointSize + (CGFloat(level) * CGFloat(fontIncrease))
-      attributes[NSFontAttributeName] = font.fontWithSize(headerFontSize)
+      attributes[NSFontAttributeName] = font.withSize(headerFontSize)
     }
     return attributes
   }

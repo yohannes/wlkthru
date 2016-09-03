@@ -51,6 +51,6 @@ class TermsAndConditionsViewController: UIViewController {
         super.viewDidLoad()
 
         let markdownParser = MarkdownParser()
-        self.termsAndConditionsLabel.attributedText = markdownParser.parse(termsAndConditions)
+        self.termsAndConditionsLabel.attributedText = markdownParser.parse(markdown: termsAndConditions)
     }
 }

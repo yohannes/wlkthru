@@ -17,25 +17,25 @@
 		653A70361D47514600F061DB /* NewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A70351D47514600F061DB /* NewAccountViewController.swift */; };
 		653A70381D4765A700F061DB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A70371D4765A700F061DB /* LoginViewController.swift */; };
 		653A703A1D48964E00F061DB /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A70391D48964E00F061DB /* ForgotPasswordViewController.swift */; };
-		6541D42F1D4A0870008FFA3C /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 6541D4181D4A0870008FFA3C /* .gitkeep */; };
-		6541D4301D4A0870008FFA3C /* MarkdownCodeEscaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541D41B1D4A0870008FFA3C /* MarkdownCodeEscaping.swift */; };
-		6541D4311D4A0870008FFA3C /* MarkdownEscaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541D41C1D4A0870008FFA3C /* MarkdownEscaping.swift */; };
-		6541D4321D4A0870008FFA3C /* MarkdownUnescaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541D41D1D4A0870008FFA3C /* MarkdownUnescaping.swift */; };
-		6541D4331D4A0870008FFA3C /* MarkdownAutomaticLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541D41E1D4A0870008FFA3C /* MarkdownAutomaticLink.swift */; };
-		6541D4341D4A0870008FFA3C /* MarkdownBold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541D41F1D4A0870008FFA3C /* MarkdownBold.swift */; };
-		6541D4351D4A0870008FFA3C /* MarkdownCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541D4201D4A0870008FFA3C /* MarkdownCode.swift */; };
-		6541D4361D4A0870008FFA3C /* MarkdownHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541D4211D4A0870008FFA3C /* MarkdownHeader.swift */; };
-		6541D4371D4A0870008FFA3C /* MarkdownItalic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541D4221D4A0870008FFA3C /* MarkdownItalic.swift */; };
-		6541D4381D4A0870008FFA3C /* MarkdownLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541D4231D4A0870008FFA3C /* MarkdownLink.swift */; };
-		6541D4391D4A0870008FFA3C /* MarkdownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541D4241D4A0870008FFA3C /* MarkdownList.swift */; };
-		6541D43A1D4A0870008FFA3C /* MarkdownQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541D4251D4A0870008FFA3C /* MarkdownQuote.swift */; };
-		6541D43B1D4A0870008FFA3C /* String+UTF16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541D4271D4A0870008FFA3C /* String+UTF16.swift */; };
-		6541D43C1D4A0870008FFA3C /* MarkdownParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541D4281D4A0870008FFA3C /* MarkdownParser.swift */; };
-		6541D43D1D4A0870008FFA3C /* MarkdownCommonElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541D42A1D4A0870008FFA3C /* MarkdownCommonElement.swift */; };
-		6541D43E1D4A0870008FFA3C /* MarkdownElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541D42B1D4A0870008FFA3C /* MarkdownElement.swift */; };
-		6541D43F1D4A0870008FFA3C /* MarkdownLevelElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541D42C1D4A0870008FFA3C /* MarkdownLevelElement.swift */; };
-		6541D4401D4A0870008FFA3C /* MarkdownLinkElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541D42D1D4A0870008FFA3C /* MarkdownLinkElement.swift */; };
-		6541D4411D4A0870008FFA3C /* MarkdownStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541D42E1D4A0870008FFA3C /* MarkdownStyle.swift */; };
+		656150431D7962CE00E3608F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 6561502C1D7962CE00E3608F /* .gitkeep */; };
+		656150441D7962CE00E3608F /* MarkdownCodeEscaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6561502F1D7962CE00E3608F /* MarkdownCodeEscaping.swift */; };
+		656150451D7962CE00E3608F /* MarkdownEscaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150301D7962CE00E3608F /* MarkdownEscaping.swift */; };
+		656150461D7962CE00E3608F /* MarkdownUnescaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150311D7962CE00E3608F /* MarkdownUnescaping.swift */; };
+		656150471D7962CE00E3608F /* MarkdownAutomaticLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150321D7962CE00E3608F /* MarkdownAutomaticLink.swift */; };
+		656150481D7962CE00E3608F /* MarkdownBold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150331D7962CE00E3608F /* MarkdownBold.swift */; };
+		656150491D7962CE00E3608F /* MarkdownCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150341D7962CE00E3608F /* MarkdownCode.swift */; };
+		6561504A1D7962CE00E3608F /* MarkdownHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150351D7962CE00E3608F /* MarkdownHeader.swift */; };
+		6561504B1D7962CE00E3608F /* MarkdownItalic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150361D7962CE00E3608F /* MarkdownItalic.swift */; };
+		6561504C1D7962CE00E3608F /* MarkdownLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150371D7962CE00E3608F /* MarkdownLink.swift */; };
+		6561504D1D7962CE00E3608F /* MarkdownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150381D7962CE00E3608F /* MarkdownList.swift */; };
+		6561504E1D7962CE00E3608F /* MarkdownQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150391D7962CE00E3608F /* MarkdownQuote.swift */; };
+		6561504F1D7962CE00E3608F /* String+UTF16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6561503B1D7962CE00E3608F /* String+UTF16.swift */; };
+		656150501D7962CE00E3608F /* MarkdownParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6561503C1D7962CE00E3608F /* MarkdownParser.swift */; };
+		656150511D7962CE00E3608F /* MarkdownCommonElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6561503E1D7962CE00E3608F /* MarkdownCommonElement.swift */; };
+		656150521D7962CE00E3608F /* MarkdownElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6561503F1D7962CE00E3608F /* MarkdownElement.swift */; };
+		656150531D7962CE00E3608F /* MarkdownLevelElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150401D7962CE00E3608F /* MarkdownLevelElement.swift */; };
+		656150541D7962CE00E3608F /* MarkdownLinkElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150411D7962CE00E3608F /* MarkdownLinkElement.swift */; };
+		656150551D7962CE00E3608F /* MarkdownStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150421D7962CE00E3608F /* MarkdownStyle.swift */; };
 		65BF83091D5AF6A900C6DE89 /* EmailValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BF83081D5AF6A900C6DE89 /* EmailValidationHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,25 +52,25 @@
 		653A70351D47514600F061DB /* NewAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAccountViewController.swift; sourceTree = "<group>"; };
 		653A70371D4765A700F061DB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		653A70391D48964E00F061DB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
-		6541D4181D4A0870008FFA3C /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		6541D41B1D4A0870008FFA3C /* MarkdownCodeEscaping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownCodeEscaping.swift; sourceTree = "<group>"; };
-		6541D41C1D4A0870008FFA3C /* MarkdownEscaping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownEscaping.swift; sourceTree = "<group>"; };
-		6541D41D1D4A0870008FFA3C /* MarkdownUnescaping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownUnescaping.swift; sourceTree = "<group>"; };
-		6541D41E1D4A0870008FFA3C /* MarkdownAutomaticLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownAutomaticLink.swift; sourceTree = "<group>"; };
-		6541D41F1D4A0870008FFA3C /* MarkdownBold.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownBold.swift; sourceTree = "<group>"; };
-		6541D4201D4A0870008FFA3C /* MarkdownCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownCode.swift; sourceTree = "<group>"; };
-		6541D4211D4A0870008FFA3C /* MarkdownHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownHeader.swift; sourceTree = "<group>"; };
-		6541D4221D4A0870008FFA3C /* MarkdownItalic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownItalic.swift; sourceTree = "<group>"; };
-		6541D4231D4A0870008FFA3C /* MarkdownLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownLink.swift; sourceTree = "<group>"; };
-		6541D4241D4A0870008FFA3C /* MarkdownList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownList.swift; sourceTree = "<group>"; };
-		6541D4251D4A0870008FFA3C /* MarkdownQuote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownQuote.swift; sourceTree = "<group>"; };
-		6541D4271D4A0870008FFA3C /* String+UTF16.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+UTF16.swift"; sourceTree = "<group>"; };
-		6541D4281D4A0870008FFA3C /* MarkdownParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownParser.swift; sourceTree = "<group>"; };
-		6541D42A1D4A0870008FFA3C /* MarkdownCommonElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownCommonElement.swift; sourceTree = "<group>"; };
-		6541D42B1D4A0870008FFA3C /* MarkdownElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownElement.swift; sourceTree = "<group>"; };
-		6541D42C1D4A0870008FFA3C /* MarkdownLevelElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownLevelElement.swift; sourceTree = "<group>"; };
-		6541D42D1D4A0870008FFA3C /* MarkdownLinkElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownLinkElement.swift; sourceTree = "<group>"; };
-		6541D42E1D4A0870008FFA3C /* MarkdownStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownStyle.swift; sourceTree = "<group>"; };
+		6561502C1D7962CE00E3608F /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		6561502F1D7962CE00E3608F /* MarkdownCodeEscaping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownCodeEscaping.swift; sourceTree = "<group>"; };
+		656150301D7962CE00E3608F /* MarkdownEscaping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownEscaping.swift; sourceTree = "<group>"; };
+		656150311D7962CE00E3608F /* MarkdownUnescaping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownUnescaping.swift; sourceTree = "<group>"; };
+		656150321D7962CE00E3608F /* MarkdownAutomaticLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownAutomaticLink.swift; sourceTree = "<group>"; };
+		656150331D7962CE00E3608F /* MarkdownBold.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownBold.swift; sourceTree = "<group>"; };
+		656150341D7962CE00E3608F /* MarkdownCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownCode.swift; sourceTree = "<group>"; };
+		656150351D7962CE00E3608F /* MarkdownHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownHeader.swift; sourceTree = "<group>"; };
+		656150361D7962CE00E3608F /* MarkdownItalic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownItalic.swift; sourceTree = "<group>"; };
+		656150371D7962CE00E3608F /* MarkdownLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownLink.swift; sourceTree = "<group>"; };
+		656150381D7962CE00E3608F /* MarkdownList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownList.swift; sourceTree = "<group>"; };
+		656150391D7962CE00E3608F /* MarkdownQuote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownQuote.swift; sourceTree = "<group>"; };
+		6561503B1D7962CE00E3608F /* String+UTF16.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+UTF16.swift"; sourceTree = "<group>"; };
+		6561503C1D7962CE00E3608F /* MarkdownParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownParser.swift; sourceTree = "<group>"; };
+		6561503E1D7962CE00E3608F /* MarkdownCommonElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownCommonElement.swift; sourceTree = "<group>"; };
+		6561503F1D7962CE00E3608F /* MarkdownElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownElement.swift; sourceTree = "<group>"; };
+		656150401D7962CE00E3608F /* MarkdownLevelElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownLevelElement.swift; sourceTree = "<group>"; };
+		656150411D7962CE00E3608F /* MarkdownLinkElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownLinkElement.swift; sourceTree = "<group>"; };
+		656150421D7962CE00E3608F /* MarkdownStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownStyle.swift; sourceTree = "<group>"; };
 		65BF83081D5AF6A900C6DE89 /* EmailValidationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidationHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,7 +104,7 @@
 		652984F21D41D9E900592F8A /* Wlkthru */ = {
 			isa = PBXGroup;
 			children = (
-				6541D4161D4A0870008FFA3C /* MarkdownKit */,
+				6561502A1D7962CE00E3608F /* MarkdownKit */,
 				652984F31D41D9E900592F8A /* AppDelegate.swift */,
 				652984F51D41D9E900592F8A /* RootViewController.swift */,
 				652984F71D41D9E900592F8A /* Main.storyboard */,
@@ -121,68 +121,68 @@
 			path = Wlkthru;
 			sourceTree = "<group>";
 		};
-		6541D4161D4A0870008FFA3C /* MarkdownKit */ = {
+		6561502A1D7962CE00E3608F /* MarkdownKit */ = {
 			isa = PBXGroup;
 			children = (
-				6541D4171D4A0870008FFA3C /* Classes */,
+				6561502B1D7962CE00E3608F /* Classes */,
 			);
 			path = MarkdownKit;
 			sourceTree = "<group>";
 		};
-		6541D4171D4A0870008FFA3C /* Classes */ = {
+		6561502B1D7962CE00E3608F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				6541D4181D4A0870008FFA3C /* .gitkeep */,
-				6541D4191D4A0870008FFA3C /* Elements */,
-				6541D4261D4A0870008FFA3C /* Extensions */,
-				6541D4281D4A0870008FFA3C /* MarkdownParser.swift */,
-				6541D4291D4A0870008FFA3C /* Protocols */,
+				6561502C1D7962CE00E3608F /* .gitkeep */,
+				6561502D1D7962CE00E3608F /* Elements */,
+				6561503A1D7962CE00E3608F /* Extensions */,
+				6561503C1D7962CE00E3608F /* MarkdownParser.swift */,
+				6561503D1D7962CE00E3608F /* Protocols */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		6541D4191D4A0870008FFA3C /* Elements */ = {
+		6561502D1D7962CE00E3608F /* Elements */ = {
 			isa = PBXGroup;
 			children = (
-				6541D41A1D4A0870008FFA3C /* Escaping */,
-				6541D41E1D4A0870008FFA3C /* MarkdownAutomaticLink.swift */,
-				6541D41F1D4A0870008FFA3C /* MarkdownBold.swift */,
-				6541D4201D4A0870008FFA3C /* MarkdownCode.swift */,
-				6541D4211D4A0870008FFA3C /* MarkdownHeader.swift */,
-				6541D4221D4A0870008FFA3C /* MarkdownItalic.swift */,
-				6541D4231D4A0870008FFA3C /* MarkdownLink.swift */,
-				6541D4241D4A0870008FFA3C /* MarkdownList.swift */,
-				6541D4251D4A0870008FFA3C /* MarkdownQuote.swift */,
+				6561502E1D7962CE00E3608F /* Escaping */,
+				656150321D7962CE00E3608F /* MarkdownAutomaticLink.swift */,
+				656150331D7962CE00E3608F /* MarkdownBold.swift */,
+				656150341D7962CE00E3608F /* MarkdownCode.swift */,
+				656150351D7962CE00E3608F /* MarkdownHeader.swift */,
+				656150361D7962CE00E3608F /* MarkdownItalic.swift */,
+				656150371D7962CE00E3608F /* MarkdownLink.swift */,
+				656150381D7962CE00E3608F /* MarkdownList.swift */,
+				656150391D7962CE00E3608F /* MarkdownQuote.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
 		};
-		6541D41A1D4A0870008FFA3C /* Escaping */ = {
+		6561502E1D7962CE00E3608F /* Escaping */ = {
 			isa = PBXGroup;
 			children = (
-				6541D41B1D4A0870008FFA3C /* MarkdownCodeEscaping.swift */,
-				6541D41C1D4A0870008FFA3C /* MarkdownEscaping.swift */,
-				6541D41D1D4A0870008FFA3C /* MarkdownUnescaping.swift */,
+				6561502F1D7962CE00E3608F /* MarkdownCodeEscaping.swift */,
+				656150301D7962CE00E3608F /* MarkdownEscaping.swift */,
+				656150311D7962CE00E3608F /* MarkdownUnescaping.swift */,
 			);
 			path = Escaping;
 			sourceTree = "<group>";
 		};
-		6541D4261D4A0870008FFA3C /* Extensions */ = {
+		6561503A1D7962CE00E3608F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				6541D4271D4A0870008FFA3C /* String+UTF16.swift */,
+				6561503B1D7962CE00E3608F /* String+UTF16.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		6541D4291D4A0870008FFA3C /* Protocols */ = {
+		6561503D1D7962CE00E3608F /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				6541D42A1D4A0870008FFA3C /* MarkdownCommonElement.swift */,
-				6541D42B1D4A0870008FFA3C /* MarkdownElement.swift */,
-				6541D42C1D4A0870008FFA3C /* MarkdownLevelElement.swift */,
-				6541D42D1D4A0870008FFA3C /* MarkdownLinkElement.swift */,
-				6541D42E1D4A0870008FFA3C /* MarkdownStyle.swift */,
+				6561503E1D7962CE00E3608F /* MarkdownCommonElement.swift */,
+				6561503F1D7962CE00E3608F /* MarkdownElement.swift */,
+				656150401D7962CE00E3608F /* MarkdownLevelElement.swift */,
+				656150411D7962CE00E3608F /* MarkdownLinkElement.swift */,
+				656150421D7962CE00E3608F /* MarkdownStyle.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -215,11 +215,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Yohannes Wijaya";
 				TargetAttributes = {
 					652984EF1D41D9E900592F8A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 4Z5JKF2M6S;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -249,7 +251,7 @@
 				652984FE1D41D9E900592F8A /* LaunchScreen.storyboard in Resources */,
 				652984FB1D41D9E900592F8A /* Assets.xcassets in Resources */,
 				652984F91D41D9E900592F8A /* Main.storyboard in Resources */,
-				6541D42F1D4A0870008FFA3C /* .gitkeep in Resources */,
+				656150431D7962CE00E3608F /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,31 +279,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				652985061D41E9B200592F8A /* PageContentViewController.swift in Sources */,
-				6541D43E1D4A0870008FFA3C /* MarkdownElement.swift in Sources */,
-				6541D4351D4A0870008FFA3C /* MarkdownCode.swift in Sources */,
-				6541D4331D4A0870008FFA3C /* MarkdownAutomaticLink.swift in Sources */,
-				6541D4361D4A0870008FFA3C /* MarkdownHeader.swift in Sources */,
 				652984F61D41D9E900592F8A /* RootViewController.swift in Sources */,
-				6541D43F1D4A0870008FFA3C /* MarkdownLevelElement.swift in Sources */,
-				6541D4391D4A0870008FFA3C /* MarkdownList.swift in Sources */,
 				653A703A1D48964E00F061DB /* ForgotPasswordViewController.swift in Sources */,
+				6561504E1D7962CE00E3608F /* MarkdownQuote.swift in Sources */,
 				652984F41D41D9E900592F8A /* AppDelegate.swift in Sources */,
+				656150501D7962CE00E3608F /* MarkdownParser.swift in Sources */,
+				656150551D7962CE00E3608F /* MarkdownStyle.swift in Sources */,
 				653A70381D4765A700F061DB /* LoginViewController.swift in Sources */,
-				6541D4321D4A0870008FFA3C /* MarkdownUnescaping.swift in Sources */,
-				6541D4301D4A0870008FFA3C /* MarkdownCodeEscaping.swift in Sources */,
-				6541D43D1D4A0870008FFA3C /* MarkdownCommonElement.swift in Sources */,
 				650095E21D49C4ED009C35F3 /* TermsAndConditionsViewController.swift in Sources */,
-				6541D4401D4A0870008FFA3C /* MarkdownLinkElement.swift in Sources */,
-				6541D4341D4A0870008FFA3C /* MarkdownBold.swift in Sources */,
+				656150511D7962CE00E3608F /* MarkdownCommonElement.swift in Sources */,
+				656150471D7962CE00E3608F /* MarkdownAutomaticLink.swift in Sources */,
+				656150451D7962CE00E3608F /* MarkdownEscaping.swift in Sources */,
+				6561504B1D7962CE00E3608F /* MarkdownItalic.swift in Sources */,
+				656150521D7962CE00E3608F /* MarkdownElement.swift in Sources */,
 				65BF83091D5AF6A900C6DE89 /* EmailValidationHelper.swift in Sources */,
-				6541D43B1D4A0870008FFA3C /* String+UTF16.swift in Sources */,
-				6541D43A1D4A0870008FFA3C /* MarkdownQuote.swift in Sources */,
-				6541D4411D4A0870008FFA3C /* MarkdownStyle.swift in Sources */,
-				6541D4371D4A0870008FFA3C /* MarkdownItalic.swift in Sources */,
-				6541D4311D4A0870008FFA3C /* MarkdownEscaping.swift in Sources */,
-				6541D4381D4A0870008FFA3C /* MarkdownLink.swift in Sources */,
+				656150491D7962CE00E3608F /* MarkdownCode.swift in Sources */,
+				6561504A1D7962CE00E3608F /* MarkdownHeader.swift in Sources */,
+				6561504F1D7962CE00E3608F /* String+UTF16.swift in Sources */,
+				656150441D7962CE00E3608F /* MarkdownCodeEscaping.swift in Sources */,
+				656150531D7962CE00E3608F /* MarkdownLevelElement.swift in Sources */,
+				656150461D7962CE00E3608F /* MarkdownUnescaping.swift in Sources */,
+				656150541D7962CE00E3608F /* MarkdownLinkElement.swift in Sources */,
+				6561504D1D7962CE00E3608F /* MarkdownList.swift in Sources */,
+				6561504C1D7962CE00E3608F /* MarkdownLink.swift in Sources */,
+				656150481D7962CE00E3608F /* MarkdownBold.swift in Sources */,
 				653A70361D47514600F061DB /* NewAccountViewController.swift in Sources */,
-				6541D43C1D4A0870008FFA3C /* MarkdownParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,8 +343,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -364,7 +368,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -386,8 +390,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -403,9 +409,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -414,10 +421,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4Z5JKF2M6S;
 				INFOPLIST_FILE = Wlkthru/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = self.fearless.Wlkthru;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -425,10 +434,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4Z5JKF2M6S;
 				INFOPLIST_FILE = Wlkthru/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = self.fearless.Wlkthru;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

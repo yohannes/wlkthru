@@ -10,7 +10,7 @@ import UIKit
 
 public class MarkdownBold: MarkdownCommonElement {
   
-  private static let regex = "(\\*\\*|__)(.+?)(\\1)"
+  private static let regex = "(\\s+|^)(\\*\\*|__)(.+?)(\\2)"
   
   public var font: UIFont?
   public var color: UIColor?
@@ -19,7 +19,7 @@ public class MarkdownBold: MarkdownCommonElement {
     return MarkdownBold.regex
   }
   
-  public init(font: UIFont? = UIFont.boldSystemFontOfSize(UIFont.smallSystemFontSize()),
+  public init(font: UIFont? = UIFont.boldSystemFont(ofSize: UIFont.smallSystemFontSize),
        color: UIColor? = nil) {
     self.font = font
     self.color = color

@@ -18,29 +18,29 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - IBAction Properties
     
-    @IBAction func cancelButtonDidTouch(sender: UIBarButtonItem) {
+    @IBAction func cancelButtonDidTouch(_ sender: UIBarButtonItem) {
         self.view.endEditing(true)
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func checkPasswordTextFieldIsFilled(sender: UITextField) {
-        self.loginButton.enabled = (sender.text?.isEmpty)! ? false : true
+    @IBAction func checkPasswordTextFieldIsFilled(_ sender: UITextField) {
+        self.loginButton.isEnabled = (sender.text?.isEmpty)! ? false : true
     }
     
-    @IBAction func forgotPasswordButtonDidTouch(sender: UITapGestureRecognizer) {
+    @IBAction func forgotPasswordButtonDidTouch(_ sender: UITapGestureRecognizer) {
         self.validateEmailEntry()
-        self.performSegueWithIdentifier("ForgotMyPasswordSegue", sender: self)
+        self.performSegue(withIdentifier: "ForgotMyPasswordSegue", sender: self)
     }
     
-    @IBAction func loginButtonDidTouch(sender: UIButton) {
+    @IBAction func loginButtonDidTouch(_ sender: UIButton) {
         self.validateEmailEntry()
     }
     
-    @IBAction func unwindToLoginViewController(segue: UIStoryboardSegue) {}
+    @IBAction func unwindToLoginViewController(_ segue: UIStoryboardSegue) {}
     
     // MARK: - UITextFieldDelegate Methods
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if !(self.emailTextField.text?.isEmpty)! && !(self.passwordTextField.text?.isEmpty)! {
             self.view.endEditing(true)
         }
@@ -58,13 +58,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
         
-        self.loginButton.enabled = false
+        self.loginButton.isEnabled = false
 
         self.emailTextField.becomeFirstResponder()
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
 
         if NSString(string: self.emailTextField.text!).length > 0 {
@@ -75,24 +75,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ForgotMyPasswordSegue" {
-            guard let validForgotPasswordViewController = segue.destinationViewController as? ForgotPasswordViewController else { return }
+            guard let validForgotPasswordViewController = segue.destination as? ForgotPasswordViewController else { return }
             validForgotPasswordViewController.emailAddress = self.emailTextField.text!
         }
     }
     
     // MARK: - Helper Methods
     
-    // FIXME: Console log error: "pushViewController:animated: called on <UINavigationController 0x7fa0d3866000> while an existing transition or presentation is occurring; the navigation stack will not be updated."
-    
-    private func validateEmailEntry() {
-        guard let nonBlankEmailEntry = self.emailTextField.text where EmailValidationHelper.check(nonBlankEmailEntry) else {
-            let alertController = UIAlertController(title: "Invalid Email Address", message: "Please double check and enter again.", preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: { [unowned self] (_) in
+    fileprivate func validateEmailEntry() {
+        guard let nonBlankEmailEntry = self.emailTextField.text, EmailValidationHelper.check(nonBlankEmailEntry) else {
+            let alertController = UIAlertController(title: "Invalid Email Address", message: "Please double check and enter again.", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { [unowned self] (_) in
                 self.emailTextField.becomeFirstResponder()
             }))
-            self.presentViewController(alertController, animated: true, completion: nil)
+            self.present(alertController, animated: true, completion: nil)
             return
         }
         self.view.endEditing(true)
