@@ -13,7 +13,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     // MARK: - IBOutlet Properties
     
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var passwordTextField: YSWTextFieldWithCharacterCounter!
     @IBOutlet weak var loginButton: UIButton!
     
     // MARK: - IBAction Properties
@@ -34,31 +34,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func unwindToLoginViewController(_ segue: UIStoryboardSegue) {}
     
-    // MARK: - UITextFieldDelegate Methods
-    
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        self.emailTextField.addTarget(self, action: #selector(LoginViewController.checkAllTextFieldsAreFilled), for: UIControlEvents.editingChanged)
-        self.passwordTextField.addTarget(self, action: #selector(LoginViewController.checkAllTextFieldsAreFilled), for: .editingChanged)
-        return true
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if case 0 = textField.tag {
-            self.passwordTextField.becomeFirstResponder()
-        }
-        else if case 1 = textField.tag {
-            self.validateEmailEntry()
-        }
-        return true
-    }
-    
     // MARK: - UIViewController Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.emailTextField.delegate = self
-        self.passwordTextField.delegate = self
+        self.passwordTextField.yswTextFieldWithCharacterCounterDelegate = self
         
         self.loginButton.isEnabled = false
 
@@ -111,5 +93,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         self.view.endEditing(true)
         self.dismiss(animated: true, completion: nil)
+    }
+}
+
+// MARK: - UITextFieldDelegate Extension
+
+extension LoginViewController: YSWTextFieldWithCharacterCounterDelegate {
+    func shouldReturn(_ textField: UITextField) -> Bool {
+        if case 0 = textField.tag {
+            self.passwordTextField.becomeFirstResponder()
+        }
+        else if case 1 = textField.tag {
+            self.validateEmailEntry()
+        }
+        return true
+    }
+    
+    func shouldEndEditing(_ textField: UITextField) -> Bool {
+        self.emailTextField.addTarget(self, action: #selector(LoginViewController.checkAllTextFieldsAreFilled), for: UIControlEvents.editingChanged)
+        self.passwordTextField.addTarget(self, action: #selector(LoginViewController.checkAllTextFieldsAreFilled), for: .editingChanged)
+        return true
     }
 }
