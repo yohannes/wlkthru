@@ -10,11 +10,11 @@ import UIKit
 
 class NewAccountViewController: UIViewController, UITextFieldDelegate {
     
-    // MARK: - IBOutlet Methods
+    // MARK: - IBOutlet Properties
     
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var passwordConfirmationTextField: UITextField!
+    @IBOutlet weak var passwordTextField: YSWTextFieldWithCharacterCounter!
+    @IBOutlet weak var passwordConfirmationTextField: YSWTextFieldWithCharacterCounter!
     @IBOutlet weak var registerButton: UIButton!
     
     // MARK: - IBAction Methods
@@ -38,37 +38,14 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
         self.validateAllTextFieldsAndConfirmAccountCreation()
     }
     
-    // MARK: - UITextFieldDelegate Methods
-    
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        self.emailTextField.addTarget(self, action: #selector(NewAccountViewController.checkAllTextFieldsAreFilled), for: UIControlEvents.editingChanged)
-        self.passwordConfirmationTextField.addTarget(self, action: #selector(NewAccountViewController.checkAllTextFieldsAreFilled), for: .editingChanged)
-        self.passwordTextField.addTarget(self, action: #selector(NewAccountViewController.checkAllTextFieldsAreFilled), for: .editingChanged)
-        
-        return true
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if case 0 = textField.tag {
-            self.passwordTextField.becomeFirstResponder()
-        }
-        else if case 1 = textField.tag {
-            self.passwordConfirmationTextField.becomeFirstResponder()
-        }
-        else if case 2 = textField.tag {
-            self.validateAllTextFieldsAndConfirmAccountCreation()
-        }
-        return true
-    }
-    
     // MARK: - UIViewController Methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.emailTextField.delegate = self
-        self.passwordTextField.delegate = self
-        self.passwordConfirmationTextField.delegate = self
+        self.passwordTextField.yswTextFieldWithCharacterCounterDelegate = self
+        self.passwordConfirmationTextField.yswTextFieldWithCharacterCounterDelegate = self
         
         self.emailTextField.becomeFirstResponder()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
@@ -136,5 +113,30 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
             
             self.present(successfulAccountCreationAlertController, animated: true, completion: nil)
         }
+    }
+}
+
+// MARK: - UITextFieldDelegate Extension
+
+extension NewAccountViewController: YSWTextFieldWithCharacterCounterDelegate {
+    func shouldReturn(_ textField: UITextField) -> Bool {
+        if case 0 = textField.tag {
+            self.passwordTextField.becomeFirstResponder()
+        }
+        else if case 1 = textField.tag {
+            self.passwordConfirmationTextField.becomeFirstResponder()
+        }
+        else if case 2 = textField.tag {
+            self.validateAllTextFieldsAndConfirmAccountCreation()
+        }
+        return true
+    }
+    
+    func shouldEndEditing(_ textField: UITextField) -> Bool {
+        self.emailTextField.addTarget(self, action: #selector(NewAccountViewController.checkAllTextFieldsAreFilled), for: UIControlEvents.editingChanged)
+        self.passwordConfirmationTextField.addTarget(self, action: #selector(NewAccountViewController.checkAllTextFieldsAreFilled), for: .editingChanged)
+        self.passwordTextField.addTarget(self, action: #selector(NewAccountViewController.checkAllTextFieldsAreFilled), for: .editingChanged)
+        
+        return true
     }
 }
