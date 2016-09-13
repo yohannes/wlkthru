@@ -46,6 +46,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
         self.emailTextField.becomeFirstResponder()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        self.passwordTextField.clearsOnBeginEditing = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
