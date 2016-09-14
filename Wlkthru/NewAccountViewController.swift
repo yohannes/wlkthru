@@ -12,7 +12,7 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - IBOutlet Properties
     
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var emailTextField: YSWTextFieldWithCharacterCounter!
     @IBOutlet weak var passwordTextField: YSWTextFieldWithCharacterCounter!
     @IBOutlet weak var passwordConfirmationTextField: YSWTextFieldWithCharacterCounter!
     @IBOutlet weak var registerButton: UIButton!
@@ -43,7 +43,7 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.emailTextField.delegate = self
+        self.emailTextField.yswTextFieldWithCharacterCounterDelegate = self
         self.passwordTextField.yswTextFieldWithCharacterCounterDelegate = self
         self.passwordConfirmationTextField.yswTextFieldWithCharacterCounterDelegate = self
         
@@ -51,6 +51,7 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
         self.registerButton.isEnabled = false
         
+        self.emailTextField.clearsOnBeginEditing = true
         self.passwordTextField.clearsOnBeginEditing = true
         self.passwordConfirmationTextField.clearsOnBeginEditing = true
     }
@@ -72,7 +73,7 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
             if self.presentedViewController == nil {
                 self.emailTextField.becomeFirstResponder()
                 
-                let emailEntryAlertController = UIAlertController(title: "Invalid Email Address", message: "Please double check and enter again.", preferredStyle: UIAlertControllerStyle.alert)
+                let emailEntryAlertController = UIAlertController(title: "Invalid Email Address", message: "Please try again.", preferredStyle: UIAlertControllerStyle.alert)
                 let emailEntryAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
                 emailEntryAlertController.addAction(emailEntryAlertAction)
                 
@@ -85,7 +86,9 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
             if self.presentedViewController == nil {
                 self.passwordTextField.becomeFirstResponder()
                 
-                let passwordEntryAlertController = UIAlertController(title: "Invalid Password Length", message: "Please enter 6 or more characters", preferredStyle: .alert)
+                self.passwordConfirmationTextField.text = nil
+                
+                let passwordEntryAlertController = UIAlertController(title: "Inadequate Password Length", message: "Please enter 6 or more characters.", preferredStyle: .alert)
                 passwordEntryAlertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 
                 self.present(passwordEntryAlertController, animated: true, completion: nil)
@@ -95,9 +98,11 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
         
         guard let nonBlankPasswordConfirmationEntry = self.passwordConfirmationTextField.text, self.passwordTextField.text == nonBlankPasswordConfirmationEntry else {
             if self.presentedViewController == nil {
-                self.passwordConfirmationTextField.becomeFirstResponder()
+                self.passwordTextField.becomeFirstResponder()
                 
-                let passwordReentryAlertController = UIAlertController(title: "Password is Not the Same", message: "Please double check and enter again.", preferredStyle: .alert)
+                self.passwordConfirmationTextField.text = nil
+                
+                let passwordReentryAlertController = UIAlertController(title: "Different Passwords", message: "Please try again.", preferredStyle: .alert)
                 passwordReentryAlertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 
                 self.present(passwordReentryAlertController, animated: true, completion: nil)

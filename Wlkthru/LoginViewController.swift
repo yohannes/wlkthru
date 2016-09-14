@@ -12,7 +12,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     // MARK: - IBOutlet Properties
     
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var emailTextField: YSWTextFieldWithCharacterCounter!
     @IBOutlet weak var passwordTextField: YSWTextFieldWithCharacterCounter!
     @IBOutlet weak var loginButton: UIButton!
     
@@ -39,7 +39,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.emailTextField.delegate = self
+        self.emailTextField.yswTextFieldWithCharacterCounterDelegate = self
         self.passwordTextField.yswTextFieldWithCharacterCounterDelegate = self
         
         self.loginButton.isEnabled = false
@@ -47,6 +47,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.emailTextField.becomeFirstResponder()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
+        self.emailTextField.clearsOnBeginEditing = true
         self.passwordTextField.clearsOnBeginEditing = true
     }
     
@@ -76,19 +77,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     fileprivate func validateEmailEntry() {
         guard let nonBlankEmailEntry = self.emailTextField.text, EmailValidationHelper.check(nonBlankEmailEntry) else {
-            let alertController = UIAlertController(title: "Invalid Email Address", message: "Please double check and enter again.", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { [unowned self] (_) in
-                self.emailTextField.becomeFirstResponder()
-            }))
-            self.present(alertController, animated: true, completion: nil)
+            self.emailTextField.becomeFirstResponder()
+            
+            let emailEntryAlertController = UIAlertController(title: "Invalid Email Address", message: "Please try again.", preferredStyle: UIAlertControllerStyle.alert)
+            emailEntryAlertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(emailEntryAlertController, animated: true, completion: nil)
             return
         }
         
         guard let nonBlankPasswordEntry = self.passwordTextField.text, nonBlankPasswordEntry.characters.count >= 6 else {
-            let passwordEntryAlertController = UIAlertController(title: "Invalid Password Length", message: "Please enter 6 or more characters", preferredStyle: .alert)
-            passwordEntryAlertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { [unowned self] (_) in
-                self.passwordTextField.becomeFirstResponder()
-            }))
+            let passwordEntryAlertController = UIAlertController(title: "Invalid Password Length", message: "Please enter 6 or more characters.", preferredStyle: .alert)
+            passwordEntryAlertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(passwordEntryAlertController, animated: true, completion: nil)
             return
         }
