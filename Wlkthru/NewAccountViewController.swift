@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewAccountViewController: UIViewController, UITextFieldDelegate {
+class NewAccountViewController: UIViewController {
     
     // MARK: - IBOutlet Properties
     
@@ -124,7 +124,7 @@ class NewAccountViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
-// MARK: - UITextFieldDelegate Extension
+// MARK: - UITextFieldDelegate
 
 extension NewAccountViewController: YSWTextFieldWithCharacterCounterDelegate {
     func shouldReturn(_ textField: UITextField) -> Bool {

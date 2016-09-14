@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController {
 
     // MARK: - IBOutlet Properties
     
@@ -97,7 +97,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
-// MARK: - UITextFieldDelegate Extension
+// MARK: - UITextFieldDelegate
 
 extension LoginViewController: YSWTextFieldWithCharacterCounterDelegate {
     func shouldReturn(_ textField: UITextField) -> Bool {
