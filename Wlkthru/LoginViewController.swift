@@ -24,12 +24,12 @@ class LoginViewController: UIViewController {
   }
   
   @IBAction func forgotPasswordButtonDidTouch(_ sender: UITapGestureRecognizer) {
-    self.validateEmailEntry()
+    self.validateTextFieldEntry(includingPasswordTextField: false)
     self.performSegue(withIdentifier: "ForgotMyPasswordSegue", sender: self)
   }
   
   @IBAction func loginButtonDidTouch(_ sender: UIButton) {
-    self.validateEmailEntry()
+    self.validateTextFieldEntry()
   }
   
   @IBAction func unwindToLoginViewController(_ segue: UIStoryboardSegue) {}
@@ -75,25 +75,30 @@ class LoginViewController: UIViewController {
     self.loginButton.isEnabled = (self.emailTextField.text?.isEmpty)! == true || (self.passwordTextField.text?.isEmpty)! == true ? false : true
   }
   
-  fileprivate func validateEmailEntry() {
+  fileprivate func validateTextFieldEntry(includingPasswordTextField: Bool = true) {
     guard let nonBlankEmailEntry = self.emailTextField.text, EmailValidationHelper.check(nonBlankEmailEntry) else {
       self.emailTextField.becomeFirstResponder()
       
       let emailEntryAlertController = UIAlertController(title: "Invalid Email Address", message: "Please try again.", preferredStyle: UIAlertControllerStyle.alert)
       emailEntryAlertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
       self.present(emailEntryAlertController, animated: true, completion: nil)
+      
       return
     }
     
-    guard let nonBlankPasswordEntry = self.passwordTextField.text, nonBlankPasswordEntry.characters.count >= 6 else {
-      let passwordEntryAlertController = UIAlertController(title: "Invalid Password Length", message: "Please enter 6 or more characters.", preferredStyle: .alert)
-      passwordEntryAlertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-      self.present(passwordEntryAlertController, animated: true, completion: nil)
-      return
+    if includingPasswordTextField == true {
+      guard let nonBlankPasswordEntry = self.passwordTextField.text, nonBlankPasswordEntry.characters.count >= 6 else {
+        self.passwordTextField.becomeFirstResponder()
+        
+        let passwordEntryAlertController = UIAlertController(title: "Invalid Password Length", message: "Please enter 6 or more characters.", preferredStyle: .alert)
+        passwordEntryAlertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(passwordEntryAlertController, animated: true, completion: nil)
+        
+        return
+      }
+      self.dismiss(animated: true, completion: nil)
     }
-    
     self.view.endEditing(true)
-    self.dismiss(animated: true, completion: nil)
   }
 }
 
@@ -105,7 +110,7 @@ extension LoginViewController: YSWTextFieldWithCharacterCounterDelegate {
       self.passwordTextField.becomeFirstResponder()
     }
     else if case 1 = textField.tag {
-      self.validateEmailEntry()
+      self.validateTextFieldEntry()
     }
     return true
   }
