@@ -80,9 +80,10 @@ class LoginViewController: UIViewController {
       self.emailTextField.becomeFirstResponder()
       
       let emailEntryAlertController = UIAlertController(title: "Invalid Email Address", message: "Please try again.", preferredStyle: UIAlertControllerStyle.alert)
-      emailEntryAlertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+      emailEntryAlertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (_) -> Void in
+          self.checkAllTextFieldsAreFilled()
+      }))
       self.present(emailEntryAlertController, animated: true, completion: nil)
-      
       return
     }
     
@@ -91,9 +92,10 @@ class LoginViewController: UIViewController {
         self.passwordTextField.becomeFirstResponder()
         
         let passwordEntryAlertController = UIAlertController(title: "Invalid Password Length", message: "Please enter 6 or more characters.", preferredStyle: .alert)
-        passwordEntryAlertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        passwordEntryAlertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
+          self.checkAllTextFieldsAreFilled()
+        }))
         self.present(passwordEntryAlertController, animated: true, completion: nil)
-        
         return
       }
       self.dismiss(animated: true, completion: nil)
