@@ -12,13 +12,15 @@ class RootViewController: UIViewController, UIPageViewControllerDataSource {
   
   // MARK: - Stored Properties
   
-  let headerDescriptions = ["Capture Your Moment",
-                            "Share Your Joy",
-                            "Sync Your Life"]
-  
-  let subheaderDescriptions = ["Take pictures with incredible filters and control.",
-                               "Connect with your friends. Sharing is caring.",
-                               "Synchronize your data across iOS devices seamlessly."]
+  enum SceneDescriptionFor {
+    static let header = ["Capture Your Moment",
+                              "Share Your Joy",
+                              "Sync Your Life"]
+    
+    static let subheader = ["Take pictures with incredible filters and control.",
+                                 "Connect with your friends. Sharing is caring.",
+                                 "Synchronize your data across iOS devices seamlessly."]
+  }
   
   let images = ["Photo1", "Photo2", "Photo3"]
   
@@ -56,11 +58,11 @@ class RootViewController: UIViewController, UIPageViewControllerDataSource {
   func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
     guard let validPageContentViewController = viewController as? PageContentViewController else { return nil }
     var pageIndex = validPageContentViewController.pageIndex
-    guard pageIndex < self.headerDescriptions.count - 1 else {
-      self.pageControl.currentPage = self.headerDescriptions.count - 1
+    guard pageIndex < SceneDescriptionFor.header.count - 1 else {
+      self.pageControl.currentPage = SceneDescriptionFor.header.count - 1
       return nil
     }
-    self.pageControl.currentPage = pageIndex
+    pageControl.currentPage = pageIndex
     pageIndex = pageIndex + 1
     
     return self.viewControllerAtIndex(pageIndex)
@@ -91,12 +93,12 @@ class RootViewController: UIViewController, UIPageViewControllerDataSource {
   // MARK - Helper Methods
   
   fileprivate func viewControllerAtIndex(_ index: Int) -> PageContentViewController? {
-    guard index != NSNotFound || (index >= 0 && index < self.headerDescriptions.count) else { return nil }
+    guard index != NSNotFound || (index >= 0 && index < SceneDescriptionFor.header.count) else { return nil }
     guard let validStoryboard = self.storyboard, let validPageContentViewController = validStoryboard.instantiateViewController(withIdentifier: "PageContentViewController") as? PageContentViewController else { return nil }
     
     validPageContentViewController.pageIndex = index
-    validPageContentViewController.headerDescription = self.headerDescriptions[index]
-    validPageContentViewController.subheaderDescription = self.subheaderDescriptions[index]
+    validPageContentViewController.headerDescription = SceneDescriptionFor.header[index]
+    validPageContentViewController.subheaderDescription = SceneDescriptionFor.subheader[index]
     validPageContentViewController.imageFile = self.images[index]
     
     return validPageContentViewController
