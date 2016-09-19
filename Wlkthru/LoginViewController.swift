@@ -91,7 +91,7 @@ class LoginViewController: UIViewController {
       guard let nonBlankPasswordEntry = self.passwordTextField.text, nonBlankPasswordEntry.characters.count >= 6 else {
         self.passwordTextField.becomeFirstResponder()
         
-        let passwordEntryAlertController = UIAlertController(title: "Invalid Password Length", message: "Please enter 6 or more characters.", preferredStyle: .alert)
+        let passwordEntryAlertController = UIAlertController(title: "Inadequate Password Length", message: "Please enter 6 or more characters.", preferredStyle: .alert)
         passwordEntryAlertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
           self.checkAllTextFieldsAreFilled()
         }))

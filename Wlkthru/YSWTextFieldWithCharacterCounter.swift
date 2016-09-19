@@ -92,6 +92,11 @@ extension YSWTextFieldWithCharacterCounter: UITextFieldDelegate {
     return newLength <= self.lengthLimit
   }
   
+  func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+    self.countLabel.text = "0/\(self.lengthLimit)"
+    return true
+  }
+  
   func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
     guard let validYSWTextFieldWithCharacterCounterDelegate = self.yswTextFieldWithCharacterCounterDelegate else { return false }
     return validYSWTextFieldWithCharacterCounterDelegate.shouldEndEditing(textField)

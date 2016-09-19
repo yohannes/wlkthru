@@ -74,7 +74,9 @@ class NewAccountViewController: UIViewController {
         self.emailTextField.becomeFirstResponder()
         
         let emailEntryAlertController = UIAlertController(title: "Invalid Email Address", message: "Please try again.", preferredStyle: UIAlertControllerStyle.alert)
-        let emailEntryAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+        let emailEntryAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (_) in
+          self.checkAllTextFieldsAreFilled()
+        })
         emailEntryAlertController.addAction(emailEntryAlertAction)
         
         self.present(emailEntryAlertController, animated: true, completion: nil)
@@ -89,7 +91,9 @@ class NewAccountViewController: UIViewController {
         self.passwordConfirmationTextField.text = nil
         
         let passwordEntryAlertController = UIAlertController(title: "Inadequate Password Length", message: "Please enter 6 or more characters.", preferredStyle: .alert)
-        passwordEntryAlertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        passwordEntryAlertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
+          self.checkAllTextFieldsAreFilled()
+        }))
         
         self.present(passwordEntryAlertController, animated: true, completion: nil)
       }
@@ -103,7 +107,9 @@ class NewAccountViewController: UIViewController {
         self.passwordConfirmationTextField.text = nil
         
         let passwordReentryAlertController = UIAlertController(title: "Different Passwords", message: "Please try again.", preferredStyle: .alert)
-        passwordReentryAlertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        passwordReentryAlertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
+          self.checkAllTextFieldsAreFilled()
+        }))
         
         self.present(passwordReentryAlertController, animated: true, completion: nil)
       }
