@@ -59,6 +59,8 @@ class LoginViewController: UIViewController {
     
     self.emailTextField.clearsOnBeginEditing = true
     self.passwordTextField.clearsOnBeginEditing = true
+    
+    self.emailTextField.nextTextField = self.passwordTextField
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -87,7 +89,7 @@ class LoginViewController: UIViewController {
   }
 }
 
-// MARK: - UITextFieldDelegate
+// MARK: - UITextFieldDelegate Extension
 
 extension LoginViewController: YSWTextFieldWithCharacterCounterDelegate {
   func shouldReturn(_ textField: UITextField) -> Bool {

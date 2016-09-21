@@ -38,6 +38,11 @@
 		656150531D7962CE00E3608F /* MarkdownLevelElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150401D7962CE00E3608F /* MarkdownLevelElement.swift */; };
 		656150541D7962CE00E3608F /* MarkdownLinkElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150411D7962CE00E3608F /* MarkdownLinkElement.swift */; };
 		656150551D7962CE00E3608F /* MarkdownStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150421D7962CE00E3608F /* MarkdownStyle.swift */; };
+		65870AE01D92402E00B53C0E /* UITextField+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65870ADB1D92402E00B53C0E /* UITextField+Navigation.swift */; };
+		65870AE11D92402E00B53C0E /* UITextFieldNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65870ADC1D92402E00B53C0E /* UITextFieldNavigationDelegate.swift */; };
+		65870AE21D92402E00B53C0E /* UITextFieldNavigationToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65870ADD1D92402E00B53C0E /* UITextFieldNavigationToolbar.swift */; };
+		65870AE31D92402E00B53C0E /* UITextFieldNavigationToolbarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65870ADE1D92402E00B53C0E /* UITextFieldNavigationToolbarButtonItem.swift */; };
+		65870AE41D92402E00B53C0E /* WeakObjectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65870ADF1D92402E00B53C0E /* WeakObjectContainer.swift */; };
 		65BF83091D5AF6A900C6DE89 /* EmailValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BF83081D5AF6A900C6DE89 /* EmailValidationHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +80,11 @@
 		656150401D7962CE00E3608F /* MarkdownLevelElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownLevelElement.swift; sourceTree = "<group>"; };
 		656150411D7962CE00E3608F /* MarkdownLinkElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownLinkElement.swift; sourceTree = "<group>"; };
 		656150421D7962CE00E3608F /* MarkdownStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownStyle.swift; sourceTree = "<group>"; };
+		65870ADB1D92402E00B53C0E /* UITextField+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Navigation.swift"; sourceTree = "<group>"; };
+		65870ADC1D92402E00B53C0E /* UITextFieldNavigationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldNavigationDelegate.swift; sourceTree = "<group>"; };
+		65870ADD1D92402E00B53C0E /* UITextFieldNavigationToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldNavigationToolbar.swift; sourceTree = "<group>"; };
+		65870ADE1D92402E00B53C0E /* UITextFieldNavigationToolbarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldNavigationToolbarButtonItem.swift; sourceTree = "<group>"; };
+		65870ADF1D92402E00B53C0E /* WeakObjectContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakObjectContainer.swift; sourceTree = "<group>"; };
 		65BF83081D5AF6A900C6DE89 /* EmailValidationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidationHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,8 +118,9 @@
 		652984F21D41D9E900592F8A /* Wlkthru */ = {
 			isa = PBXGroup;
 			children = (
-				652085BB1D7E7E6200B3436D /* YSWTextFieldWithCharacterCounter.swift */,
+				65870AD91D92402E00B53C0E /* UITextField_Navigation */,
 				6561502A1D7962CE00E3608F /* MarkdownKit */,
+				652085BB1D7E7E6200B3436D /* YSWTextFieldWithCharacterCounter.swift */,
 				652984F31D41D9E900592F8A /* AppDelegate.swift */,
 				652984F51D41D9E900592F8A /* RootViewController.swift */,
 				652984F71D41D9E900592F8A /* Main.storyboard */,
@@ -191,6 +202,27 @@
 				656150421D7962CE00E3608F /* MarkdownStyle.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		65870AD91D92402E00B53C0E /* UITextField_Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				65870ADA1D92402E00B53C0E /* Classes */,
+			);
+			name = UITextField_Navigation;
+			path = "UITextField-Navigation";
+			sourceTree = "<group>";
+		};
+		65870ADA1D92402E00B53C0E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				65870ADB1D92402E00B53C0E /* UITextField+Navigation.swift */,
+				65870ADC1D92402E00B53C0E /* UITextFieldNavigationDelegate.swift */,
+				65870ADD1D92402E00B53C0E /* UITextFieldNavigationToolbar.swift */,
+				65870ADE1D92402E00B53C0E /* UITextFieldNavigationToolbarButtonItem.swift */,
+				65870ADF1D92402E00B53C0E /* WeakObjectContainer.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,8 +327,11 @@
 				650095E21D49C4ED009C35F3 /* TermsAndConditionsViewController.swift in Sources */,
 				656150511D7962CE00E3608F /* MarkdownCommonElement.swift in Sources */,
 				656150471D7962CE00E3608F /* MarkdownAutomaticLink.swift in Sources */,
+				65870AE21D92402E00B53C0E /* UITextFieldNavigationToolbar.swift in Sources */,
 				656150451D7962CE00E3608F /* MarkdownEscaping.swift in Sources */,
+				65870AE41D92402E00B53C0E /* WeakObjectContainer.swift in Sources */,
 				6561504B1D7962CE00E3608F /* MarkdownItalic.swift in Sources */,
+				65870AE01D92402E00B53C0E /* UITextField+Navigation.swift in Sources */,
 				656150521D7962CE00E3608F /* MarkdownElement.swift in Sources */,
 				655045321D8FAF5D001B66F1 /* TextFieldValidationHelper.swift in Sources */,
 				65BF83091D5AF6A900C6DE89 /* EmailValidationHelper.swift in Sources */,
@@ -305,10 +340,12 @@
 				6561504A1D7962CE00E3608F /* MarkdownHeader.swift in Sources */,
 				6561504F1D7962CE00E3608F /* String+UTF16.swift in Sources */,
 				656150441D7962CE00E3608F /* MarkdownCodeEscaping.swift in Sources */,
+				65870AE11D92402E00B53C0E /* UITextFieldNavigationDelegate.swift in Sources */,
 				656150531D7962CE00E3608F /* MarkdownLevelElement.swift in Sources */,
 				656150461D7962CE00E3608F /* MarkdownUnescaping.swift in Sources */,
 				656150541D7962CE00E3608F /* MarkdownLinkElement.swift in Sources */,
 				6561504D1D7962CE00E3608F /* MarkdownList.swift in Sources */,
+				65870AE31D92402E00B53C0E /* UITextFieldNavigationToolbarButtonItem.swift in Sources */,
 				6561504C1D7962CE00E3608F /* MarkdownLink.swift in Sources */,
 				656150481D7962CE00E3608F /* MarkdownBold.swift in Sources */,
 				653A70361D47514600F061DB /* NewAccountViewController.swift in Sources */,

@@ -58,6 +58,9 @@ class NewAccountViewController: UIViewController {
     self.emailTextField.clearsOnBeginEditing = true
     self.passwordTextField.clearsOnBeginEditing = true
     self.passwordConfirmationTextField.clearsOnBeginEditing = true
+    
+    self.emailTextField.nextTextField = self.passwordTextField
+    self.passwordTextField.nextTextField = self.passwordConfirmationTextField
   }
   
   override func viewDidAppear(_ animated: Bool) {
