@@ -30,8 +30,6 @@ class LoginViewController: UIViewController {
                                        beforeActivatingButton: loginButton,
                                        insideViewController: self,
                                        alsoCheckPasswordTextField: false)
-
-    self.performSegue(withIdentifier: "ForgotMyPasswordSegue", sender: self)
   }
   
   @IBAction func loginButtonDidTouch(_ sender: UIButton) {

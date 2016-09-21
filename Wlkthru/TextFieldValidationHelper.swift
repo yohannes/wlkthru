@@ -54,6 +54,10 @@ class TextFieldValidationHelper {
         viewController.view.endEditing(true)
       }
     }
+      
+    else {
+      viewController.performSegue(withIdentifier: "ForgotMyPasswordSegue", sender: viewController)
+    }
     
     if viewController is NewAccountViewController {
       guard let nonBlankPasswordConfirmationEntry = passwordConfirmationTextField?.text, passwordTextField.text == nonBlankPasswordConfirmationEntry else {
