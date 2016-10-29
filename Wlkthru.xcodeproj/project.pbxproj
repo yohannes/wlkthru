@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		650095E21D49C4ED009C35F3 /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650095E11D49C4ED009C35F3 /* TermsAndConditionsViewController.swift */; };
+		651A26F21DC4A6B5008E586A /* TextFieldPlaceholderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651A26F11DC4A6B5008E586A /* TextFieldPlaceholderHelper.swift */; };
 		652085BC1D7E7E6200B3436D /* YSWTextFieldWithCharacterCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652085BB1D7E7E6200B3436D /* YSWTextFieldWithCharacterCounter.swift */; };
 		652984F41D41D9E900592F8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652984F31D41D9E900592F8A /* AppDelegate.swift */; };
 		652984F61D41D9E900592F8A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652984F51D41D9E900592F8A /* RootViewController.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		650095E11D49C4ED009C35F3 /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
+		651A26F11DC4A6B5008E586A /* TextFieldPlaceholderHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldPlaceholderHelper.swift; sourceTree = "<group>"; };
 		652085BB1D7E7E6200B3436D /* YSWTextFieldWithCharacterCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSWTextFieldWithCharacterCounter.swift; sourceTree = "<group>"; };
 		652984F01D41D9E900592F8A /* Wlkthru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wlkthru.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		652984F31D41D9E900592F8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				650095E11D49C4ED009C35F3 /* TermsAndConditionsViewController.swift */,
 				653A70391D48964E00F061DB /* ForgotPasswordViewController.swift */,
 				653A70371D4765A700F061DB /* LoginViewController.swift */,
+				651A26F11DC4A6B5008E586A /* TextFieldPlaceholderHelper.swift */,
 				65BF83081D5AF6A900C6DE89 /* EmailValidationHelper.swift */,
 				653A70351D47514600F061DB /* NewAccountViewController.swift */,
 				655045311D8FAF5D001B66F1 /* TextFieldValidationHelper.swift */,
@@ -328,6 +331,7 @@
 				656150511D7962CE00E3608F /* MarkdownCommonElement.swift in Sources */,
 				656150471D7962CE00E3608F /* MarkdownAutomaticLink.swift in Sources */,
 				65870AE21D92402E00B53C0E /* UITextFieldNavigationToolbar.swift in Sources */,
+				651A26F21DC4A6B5008E586A /* TextFieldPlaceholderHelper.swift in Sources */,
 				656150451D7962CE00E3608F /* MarkdownEscaping.swift in Sources */,
 				65870AE41D92402E00B53C0E /* WeakObjectContainer.swift in Sources */,
 				6561504B1D7962CE00E3608F /* MarkdownItalic.swift in Sources */,

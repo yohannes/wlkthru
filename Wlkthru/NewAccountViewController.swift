@@ -61,6 +61,10 @@ class NewAccountViewController: UIViewController {
     
     self.emailTextField.nextTextField = self.passwordTextField
     self.passwordTextField.nextTextField = self.passwordConfirmationTextField
+    
+    self.emailTextField.attributedPlaceholder = TextFieldPlaceHolderHelper.createAttributedString(from: "Email")
+    self.passwordTextField.attributedPlaceholder = TextFieldPlaceHolderHelper.createAttributedString(from: "Password (Min. 6 characters)")
+    self.passwordConfirmationTextField.attributedPlaceholder = TextFieldPlaceHolderHelper.createAttributedString(from: "Confirm Password")
   }
   
   override func viewDidAppear(_ animated: Bool) {

@@ -59,6 +59,9 @@ class LoginViewController: UIViewController {
     self.passwordTextField.clearsOnBeginEditing = true
     
     self.emailTextField.nextTextField = self.passwordTextField
+    
+    self.emailTextField.attributedPlaceholder = TextFieldPlaceHolderHelper.createAttributedString(from: "Email")
+    self.passwordTextField.attributedPlaceholder = TextFieldPlaceHolderHelper.createAttributedString(from: "Password")
   }
   
   override func viewDidAppear(_ animated: Bool) {
