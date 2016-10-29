@@ -19,6 +19,9 @@
 		653A70361D47514600F061DB /* NewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A70351D47514600F061DB /* NewAccountViewController.swift */; };
 		653A70381D4765A700F061DB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A70371D4765A700F061DB /* LoginViewController.swift */; };
 		653A703A1D48964E00F061DB /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A70391D48964E00F061DB /* ForgotPasswordViewController.swift */; };
+		653D602D1DC50D0A00099260 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 653D602A1DC50D0A00099260 /* Info.plist */; };
+		653D602E1DC50D0A00099260 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653D602B1DC50D0A00099260 /* SCLAlertView.swift */; };
+		653D602F1DC50D0A00099260 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653D602C1DC50D0A00099260 /* SCLExtensions.swift */; };
 		655045321D8FAF5D001B66F1 /* TextFieldValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655045311D8FAF5D001B66F1 /* TextFieldValidationHelper.swift */; };
 		656150431D7962CE00E3608F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 6561502C1D7962CE00E3608F /* .gitkeep */; };
 		656150441D7962CE00E3608F /* MarkdownCodeEscaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6561502F1D7962CE00E3608F /* MarkdownCodeEscaping.swift */; };
@@ -62,6 +65,9 @@
 		653A70351D47514600F061DB /* NewAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAccountViewController.swift; sourceTree = "<group>"; };
 		653A70371D4765A700F061DB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		653A70391D48964E00F061DB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		653D602A1DC50D0A00099260 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		653D602B1DC50D0A00099260 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
+		653D602C1DC50D0A00099260 /* SCLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLExtensions.swift; sourceTree = "<group>"; };
 		655045311D8FAF5D001B66F1 /* TextFieldValidationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldValidationHelper.swift; sourceTree = "<group>"; };
 		6561502C1D7962CE00E3608F /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		6561502F1D7962CE00E3608F /* MarkdownCodeEscaping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownCodeEscaping.swift; sourceTree = "<group>"; };
@@ -122,23 +128,34 @@
 			children = (
 				65870AD91D92402E00B53C0E /* UITextField_Navigation */,
 				6561502A1D7962CE00E3608F /* MarkdownKit */,
-				652085BB1D7E7E6200B3436D /* YSWTextFieldWithCharacterCounter.swift */,
+				653D60291DC50D0A00099260 /* SCLAlertView */,
 				652984F31D41D9E900592F8A /* AppDelegate.swift */,
-				652984F51D41D9E900592F8A /* RootViewController.swift */,
 				652984F71D41D9E900592F8A /* Main.storyboard */,
-				650095E11D49C4ED009C35F3 /* TermsAndConditionsViewController.swift */,
-				653A70391D48964E00F061DB /* ForgotPasswordViewController.swift */,
-				653A70371D4765A700F061DB /* LoginViewController.swift */,
-				651A26F11DC4A6B5008E586A /* TextFieldPlaceholderHelper.swift */,
-				65BF83081D5AF6A900C6DE89 /* EmailValidationHelper.swift */,
+				652984F51D41D9E900592F8A /* RootViewController.swift */,
 				653A70351D47514600F061DB /* NewAccountViewController.swift */,
-				655045311D8FAF5D001B66F1 /* TextFieldValidationHelper.swift */,
+				653A70371D4765A700F061DB /* LoginViewController.swift */,
+				653A70391D48964E00F061DB /* ForgotPasswordViewController.swift */,
+				650095E11D49C4ED009C35F3 /* TermsAndConditionsViewController.swift */,
 				652985051D41E9B200592F8A /* PageContentViewController.swift */,
+				652085BB1D7E7E6200B3436D /* YSWTextFieldWithCharacterCounter.swift */,
+				65BF83081D5AF6A900C6DE89 /* EmailValidationHelper.swift */,
+				651A26F11DC4A6B5008E586A /* TextFieldPlaceholderHelper.swift */,
+				655045311D8FAF5D001B66F1 /* TextFieldValidationHelper.swift */,
 				652984FA1D41D9E900592F8A /* Assets.xcassets */,
 				652984FC1D41D9E900592F8A /* LaunchScreen.storyboard */,
 				652984FF1D41D9E900592F8A /* Info.plist */,
 			);
 			path = Wlkthru;
+			sourceTree = "<group>";
+		};
+		653D60291DC50D0A00099260 /* SCLAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				653D602A1DC50D0A00099260 /* Info.plist */,
+				653D602B1DC50D0A00099260 /* SCLAlertView.swift */,
+				653D602C1DC50D0A00099260 /* SCLExtensions.swift */,
+			);
+			path = SCLAlertView;
 			sourceTree = "<group>";
 		};
 		6561502A1D7962CE00E3608F /* MarkdownKit */ = {
@@ -292,6 +309,7 @@
 				652984FE1D41D9E900592F8A /* LaunchScreen.storyboard in Resources */,
 				652984FB1D41D9E900592F8A /* Assets.xcassets in Resources */,
 				652984F91D41D9E900592F8A /* Main.storyboard in Resources */,
+				653D602D1DC50D0A00099260 /* Info.plist in Resources */,
 				656150431D7962CE00E3608F /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +349,8 @@
 				656150511D7962CE00E3608F /* MarkdownCommonElement.swift in Sources */,
 				656150471D7962CE00E3608F /* MarkdownAutomaticLink.swift in Sources */,
 				65870AE21D92402E00B53C0E /* UITextFieldNavigationToolbar.swift in Sources */,
+				653D602F1DC50D0A00099260 /* SCLExtensions.swift in Sources */,
+				653D602E1DC50D0A00099260 /* SCLAlertView.swift in Sources */,
 				651A26F21DC4A6B5008E586A /* TextFieldPlaceholderHelper.swift in Sources */,
 				656150451D7962CE00E3608F /* MarkdownEscaping.swift in Sources */,
 				65870AE41D92402E00B53C0E /* WeakObjectContainer.swift in Sources */,

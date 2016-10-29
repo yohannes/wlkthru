@@ -21,6 +21,7 @@ class ForgotPasswordViewController: UIViewController {
   // MARK: - IBAction Properties
   
   @IBAction func resetPasswordButtonDidTouch(_ sender: UIButton) {
+    // TODO: - Implement FCAlertView
     let alertController = UIAlertController(title: "Request Sent", message: "Please check \(self.emailAddress) for verification link.", preferredStyle: .alert)
     let alertAction = UIAlertAction(title: "OK", style: .default) { [unowned self] (_) in
       self.performSegue(withIdentifier: "unwindToLoginViewController", sender: self)
