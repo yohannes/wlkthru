@@ -14,20 +14,20 @@ class ForgotPasswordViewController: UIViewController {
   
   var emailAddress = ""
   
+  let customAlertViewAppearance = SCLAlertView.SCLAppearance(
+    kTitleFont: UIFont(name: "AvenirNext-Medium", size: 19)!,
+    kTextFont: UIFont(name: "AvenirNext-Regular", size: 15)!,
+    kButtonFont: UIFont(name: "AvenirNext-Bold", size: 19)!
+  )
+  
   // MARK: - IBOutlet Properties
   
   @IBOutlet weak var emailLabel: UILabel!
   
   // MARK: - IBAction Properties
   
-  @IBAction func resetPasswordButtonDidTouch(_ sender: UIButton) {
-    // TODO: - Implement FCAlertView
-    let alertController = UIAlertController(title: "Request Sent", message: "Please check \(self.emailAddress) for verification link.", preferredStyle: .alert)
-    let alertAction = UIAlertAction(title: "OK", style: .default) { [unowned self] (_) in
-      self.performSegue(withIdentifier: "unwindToLoginViewController", sender: self)
-    }
-    alertController.addAction(alertAction)
-    self.present(alertController, animated: true, completion: nil)
+  @IBAction func resetPasswordButtonDidTouch(_ sender: UIButton) {    
+    _ = SCLAlertView(appearance: self.customAlertViewAppearance).showTitle("Request Sent", subTitle: "Please check \(self.emailAddress) for verification link.", style: .info, closeButtonTitle: "UNDERSTOOD", colorStyle: 0x7AD8C0)
   }
   
   // MARK: - UIViewController Methods

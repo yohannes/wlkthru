@@ -86,7 +86,6 @@ class LoginViewController: UIViewController {
   
   func checkAllTextFieldsAreFilled() {
     TextFieldValidationHelper.toggleStateFor(button: loginButton, dependingOn: emailTextField, passwordTextField: passwordTextField, passwordConfirmationTextField: nil)
-
   }
 }
 
