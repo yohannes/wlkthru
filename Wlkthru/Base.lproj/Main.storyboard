@@ -264,7 +264,7 @@
                                     <constraint firstAttribute="width" constant="259" id="ZEQ-Rg-589"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="19"/>
-                                <state key="normal" title="LOG IN">
+                                <state key="normal" title="LET ME IN">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>

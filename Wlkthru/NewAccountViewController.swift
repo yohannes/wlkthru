@@ -65,6 +65,11 @@ class NewAccountViewController: UIViewController {
     self.emailTextField.attributedPlaceholder = TextFieldPlaceHolderHelper.createAttributedString(from: "Email")
     self.passwordTextField.attributedPlaceholder = TextFieldPlaceHolderHelper.createAttributedString(from: "Password (Min. 6 characters)")
     self.passwordConfirmationTextField.attributedPlaceholder = TextFieldPlaceHolderHelper.createAttributedString(from: "Confirm Password")
+    
+    TextFieldValidationHelper.emailEntryAlertView.delegate = self
+    TextFieldValidationHelper.passwordEntryAlertView.delegate = self
+    TextFieldValidationHelper.passwordReEntryAlertView.delegate = self
+    TextFieldValidationHelper.successfulAccountCreationAlertView.delegate = self
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -106,5 +111,30 @@ extension NewAccountViewController: YSWTextFieldWithCharacterCounterDelegate {
     self.passwordTextField.addTarget(self, action: #selector(NewAccountViewController.validateAllTextFieldsAreFilled), for: .editingChanged)
     
     return true
+  }
+}
+
+// MARK: - FCAlertViewDelegate
+
+extension NewAccountViewController: FCAlertViewDelegate {
+  func alertView(_ alertView: FCAlertView, clickedButtonIndex index: Int, buttonTitle title: String) {
+    TextFieldValidationHelper.toggleStateFor(button: registerButton, dependingOn: emailTextField, passwordTextField: passwordTextField, passwordConfirmationTextField: passwordConfirmationTextField)
+    if title == "UNDERSTOOD" {
+      self.emailTextField.becomeFirstResponder()
+    }
+    else if title == "GOT IT" {
+      self.passwordTextField.becomeFirstResponder()
+    }
+    else if title == "OKIE DOKIE" {
+      self.passwordTextField.becomeFirstResponder()
+    }
+  }
+  
+  func FCAlertViewWillAppear(_ alertView: FCAlertView) {
+    self.view.endEditing(true)
+  }
+  
+  func FCAlertDoneButtonClicked(_ alertView: FCAlertView) {
+    self.dismiss(animated: true, completion: nil)
   }
 }

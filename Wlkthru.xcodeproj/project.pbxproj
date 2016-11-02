@@ -19,9 +19,6 @@
 		653A70361D47514600F061DB /* NewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A70351D47514600F061DB /* NewAccountViewController.swift */; };
 		653A70381D4765A700F061DB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A70371D4765A700F061DB /* LoginViewController.swift */; };
 		653A703A1D48964E00F061DB /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A70391D48964E00F061DB /* ForgotPasswordViewController.swift */; };
-		653D602D1DC50D0A00099260 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 653D602A1DC50D0A00099260 /* Info.plist */; };
-		653D602E1DC50D0A00099260 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653D602B1DC50D0A00099260 /* SCLAlertView.swift */; };
-		653D602F1DC50D0A00099260 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653D602C1DC50D0A00099260 /* SCLExtensions.swift */; };
 		655045321D8FAF5D001B66F1 /* TextFieldValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655045311D8FAF5D001B66F1 /* TextFieldValidationHelper.swift */; };
 		656150431D7962CE00E3608F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 6561502C1D7962CE00E3608F /* .gitkeep */; };
 		656150441D7962CE00E3608F /* MarkdownCodeEscaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6561502F1D7962CE00E3608F /* MarkdownCodeEscaping.swift */; };
@@ -48,6 +45,13 @@
 		65870AE31D92402E00B53C0E /* UITextFieldNavigationToolbarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65870ADE1D92402E00B53C0E /* UITextFieldNavigationToolbarButtonItem.swift */; };
 		65870AE41D92402E00B53C0E /* WeakObjectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65870ADF1D92402E00B53C0E /* WeakObjectContainer.swift */; };
 		65BF83091D5AF6A900C6DE89 /* EmailValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BF83081D5AF6A900C6DE89 /* EmailValidationHelper.swift */; };
+		65BF9DDF1DC8A1B0005B0901 /* alert-round.png in Resources */ = {isa = PBXBuildFile; fileRef = 65BF9DD71DC8A1B0005B0901 /* alert-round.png */; };
+		65BF9DE01DC8A1B0005B0901 /* checkmark-round.png in Resources */ = {isa = PBXBuildFile; fileRef = 65BF9DD81DC8A1B0005B0901 /* checkmark-round.png */; };
+		65BF9DE11DC8A1B0005B0901 /* close-round.png in Resources */ = {isa = PBXBuildFile; fileRef = 65BF9DD91DC8A1B0005B0901 /* close-round.png */; };
+		65BF9DE21DC8A1B0005B0901 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BF9DDA1DC8A1B0005B0901 /* Colors.swift */; };
+		65BF9DE31DC8A1B0005B0901 /* FCAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BF9DDC1DC8A1B0005B0901 /* FCAlertView.swift */; };
+		65BF9DE41DC8A1B0005B0901 /* FCAlertViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BF9DDD1DC8A1B0005B0901 /* FCAlertViewDelegate.swift */; };
+		65BF9DE51DC8A1B0005B0901 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65BF9DDE1DC8A1B0005B0901 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,9 +69,6 @@
 		653A70351D47514600F061DB /* NewAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAccountViewController.swift; sourceTree = "<group>"; };
 		653A70371D4765A700F061DB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		653A70391D48964E00F061DB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
-		653D602A1DC50D0A00099260 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		653D602B1DC50D0A00099260 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
-		653D602C1DC50D0A00099260 /* SCLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLExtensions.swift; sourceTree = "<group>"; };
 		655045311D8FAF5D001B66F1 /* TextFieldValidationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldValidationHelper.swift; sourceTree = "<group>"; };
 		6561502C1D7962CE00E3608F /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		6561502F1D7962CE00E3608F /* MarkdownCodeEscaping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownCodeEscaping.swift; sourceTree = "<group>"; };
@@ -94,6 +95,14 @@
 		65870ADE1D92402E00B53C0E /* UITextFieldNavigationToolbarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldNavigationToolbarButtonItem.swift; sourceTree = "<group>"; };
 		65870ADF1D92402E00B53C0E /* WeakObjectContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakObjectContainer.swift; sourceTree = "<group>"; };
 		65BF83081D5AF6A900C6DE89 /* EmailValidationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidationHelper.swift; sourceTree = "<group>"; };
+		65BF9DD71DC8A1B0005B0901 /* alert-round.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alert-round.png"; sourceTree = "<group>"; };
+		65BF9DD81DC8A1B0005B0901 /* checkmark-round.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark-round.png"; sourceTree = "<group>"; };
+		65BF9DD91DC8A1B0005B0901 /* close-round.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close-round.png"; sourceTree = "<group>"; };
+		65BF9DDA1DC8A1B0005B0901 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		65BF9DDB1DC8A1B0005B0901 /* FCAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCAlertView.h; sourceTree = "<group>"; };
+		65BF9DDC1DC8A1B0005B0901 /* FCAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCAlertView.swift; sourceTree = "<group>"; };
+		65BF9DDD1DC8A1B0005B0901 /* FCAlertViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCAlertViewDelegate.swift; sourceTree = "<group>"; };
+		65BF9DDE1DC8A1B0005B0901 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,9 +135,9 @@
 		652984F21D41D9E900592F8A /* Wlkthru */ = {
 			isa = PBXGroup;
 			children = (
+				65BF9DD61DC8A1B0005B0901 /* FCAlertView */,
 				65870AD91D92402E00B53C0E /* UITextField_Navigation */,
 				6561502A1D7962CE00E3608F /* MarkdownKit */,
-				653D60291DC50D0A00099260 /* SCLAlertView */,
 				652984F31D41D9E900592F8A /* AppDelegate.swift */,
 				652984F71D41D9E900592F8A /* Main.storyboard */,
 				652984F51D41D9E900592F8A /* RootViewController.swift */,
@@ -146,16 +155,6 @@
 				652984FF1D41D9E900592F8A /* Info.plist */,
 			);
 			path = Wlkthru;
-			sourceTree = "<group>";
-		};
-		653D60291DC50D0A00099260 /* SCLAlertView */ = {
-			isa = PBXGroup;
-			children = (
-				653D602A1DC50D0A00099260 /* Info.plist */,
-				653D602B1DC50D0A00099260 /* SCLAlertView.swift */,
-				653D602C1DC50D0A00099260 /* SCLExtensions.swift */,
-			);
-			path = SCLAlertView;
 			sourceTree = "<group>";
 		};
 		6561502A1D7962CE00E3608F /* MarkdownKit */ = {
@@ -245,6 +244,21 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		65BF9DD61DC8A1B0005B0901 /* FCAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				65BF9DD71DC8A1B0005B0901 /* alert-round.png */,
+				65BF9DD81DC8A1B0005B0901 /* checkmark-round.png */,
+				65BF9DD91DC8A1B0005B0901 /* close-round.png */,
+				65BF9DDA1DC8A1B0005B0901 /* Colors.swift */,
+				65BF9DDB1DC8A1B0005B0901 /* FCAlertView.h */,
+				65BF9DDC1DC8A1B0005B0901 /* FCAlertView.swift */,
+				65BF9DDD1DC8A1B0005B0901 /* FCAlertViewDelegate.swift */,
+				65BF9DDE1DC8A1B0005B0901 /* Info.plist */,
+			);
+			path = FCAlertView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -306,11 +320,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65BF9DE51DC8A1B0005B0901 /* Info.plist in Resources */,
 				652984FE1D41D9E900592F8A /* LaunchScreen.storyboard in Resources */,
 				652984FB1D41D9E900592F8A /* Assets.xcassets in Resources */,
+				65BF9DE01DC8A1B0005B0901 /* checkmark-round.png in Resources */,
 				652984F91D41D9E900592F8A /* Main.storyboard in Resources */,
-				653D602D1DC50D0A00099260 /* Info.plist in Resources */,
 				656150431D7962CE00E3608F /* .gitkeep in Resources */,
+				65BF9DDF1DC8A1B0005B0901 /* alert-round.png in Resources */,
+				65BF9DE11DC8A1B0005B0901 /* close-round.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +358,7 @@
 				652984F61D41D9E900592F8A /* RootViewController.swift in Sources */,
 				653A703A1D48964E00F061DB /* ForgotPasswordViewController.swift in Sources */,
 				6561504E1D7962CE00E3608F /* MarkdownQuote.swift in Sources */,
+				65BF9DE31DC8A1B0005B0901 /* FCAlertView.swift in Sources */,
 				652984F41D41D9E900592F8A /* AppDelegate.swift in Sources */,
 				656150501D7962CE00E3608F /* MarkdownParser.swift in Sources */,
 				656150551D7962CE00E3608F /* MarkdownStyle.swift in Sources */,
@@ -349,8 +367,6 @@
 				656150511D7962CE00E3608F /* MarkdownCommonElement.swift in Sources */,
 				656150471D7962CE00E3608F /* MarkdownAutomaticLink.swift in Sources */,
 				65870AE21D92402E00B53C0E /* UITextFieldNavigationToolbar.swift in Sources */,
-				653D602F1DC50D0A00099260 /* SCLExtensions.swift in Sources */,
-				653D602E1DC50D0A00099260 /* SCLAlertView.swift in Sources */,
 				651A26F21DC4A6B5008E586A /* TextFieldPlaceholderHelper.swift in Sources */,
 				656150451D7962CE00E3608F /* MarkdownEscaping.swift in Sources */,
 				65870AE41D92402E00B53C0E /* WeakObjectContainer.swift in Sources */,
@@ -364,12 +380,14 @@
 				6561504A1D7962CE00E3608F /* MarkdownHeader.swift in Sources */,
 				6561504F1D7962CE00E3608F /* String+UTF16.swift in Sources */,
 				656150441D7962CE00E3608F /* MarkdownCodeEscaping.swift in Sources */,
+				65BF9DE41DC8A1B0005B0901 /* FCAlertViewDelegate.swift in Sources */,
 				65870AE11D92402E00B53C0E /* UITextFieldNavigationDelegate.swift in Sources */,
 				656150531D7962CE00E3608F /* MarkdownLevelElement.swift in Sources */,
 				656150461D7962CE00E3608F /* MarkdownUnescaping.swift in Sources */,
 				656150541D7962CE00E3608F /* MarkdownLinkElement.swift in Sources */,
 				6561504D1D7962CE00E3608F /* MarkdownList.swift in Sources */,
 				65870AE31D92402E00B53C0E /* UITextFieldNavigationToolbarButtonItem.swift in Sources */,
+				65BF9DE21DC8A1B0005B0901 /* Colors.swift in Sources */,
 				6561504C1D7962CE00E3608F /* MarkdownLink.swift in Sources */,
 				656150481D7962CE00E3608F /* MarkdownBold.swift in Sources */,
 				653A70361D47514600F061DB /* NewAccountViewController.swift in Sources */,

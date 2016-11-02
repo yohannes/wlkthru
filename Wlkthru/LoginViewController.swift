@@ -62,6 +62,9 @@ class LoginViewController: UIViewController {
     
     self.emailTextField.attributedPlaceholder = TextFieldPlaceHolderHelper.createAttributedString(from: "Email")
     self.passwordTextField.attributedPlaceholder = TextFieldPlaceHolderHelper.createAttributedString(from: "Password")
+    
+    TextFieldValidationHelper.emailEntryAlertView.delegate = self
+    TextFieldValidationHelper.passwordEntryAlertView.delegate = self
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -89,7 +92,7 @@ class LoginViewController: UIViewController {
   }
 }
 
-// MARK: - UITextFieldDelegate Extension
+// MARK: - UITextFieldDelegate
 
 extension LoginViewController: YSWTextFieldWithCharacterCounterDelegate {
   func shouldReturn(_ textField: UITextField) -> Bool {
@@ -110,5 +113,21 @@ extension LoginViewController: YSWTextFieldWithCharacterCounterDelegate {
     self.emailTextField.addTarget(self, action: #selector(LoginViewController.checkAllTextFieldsAreFilled), for: UIControlEvents.editingChanged)
     self.passwordTextField.addTarget(self, action: #selector(LoginViewController.checkAllTextFieldsAreFilled), for: .editingChanged)
     return true
+  }
+}
+
+extension LoginViewController: FCAlertViewDelegate {
+  func alertView(_ alertView: FCAlertView, clickedButtonIndex index: Int, buttonTitle title: String) {
+    TextFieldValidationHelper.toggleStateFor(button: loginButton, dependingOn: emailTextField, passwordTextField: passwordTextField, passwordConfirmationTextField: nil)
+    if title == "UNDERSTOOD" {
+      self.emailTextField.becomeFirstResponder()
+    }
+    else if title == "GOT IT" {
+      self.passwordTextField.becomeFirstResponder()
+    }
+  }
+  
+  func FCAlertViewWillAppear(_ alertView: FCAlertView) {
+    self.view.endEditing(true)
   }
 }

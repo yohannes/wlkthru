@@ -14,11 +14,11 @@ class ForgotPasswordViewController: UIViewController {
   
   var emailAddress = ""
   
-  let customAlertViewAppearance = SCLAlertView.SCLAppearance(
-    kTitleFont: UIFont(name: "AvenirNext-Medium", size: 19)!,
-    kTextFont: UIFont(name: "AvenirNext-Regular", size: 15)!,
-    kButtonFont: UIFont(name: "AvenirNext-Bold", size: 19)!
-  )
+  let resetEmailRequestAlertView: FCAlertView = {
+    let alertView = FCAlertView(type: .success)
+    alertView.colorScheme = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
+    return alertView
+  }()
   
   // MARK: - IBOutlet Properties
   
@@ -27,7 +27,12 @@ class ForgotPasswordViewController: UIViewController {
   // MARK: - IBAction Properties
   
   @IBAction func resetPasswordButtonDidTouch(_ sender: UIButton) {    
-    _ = SCLAlertView(appearance: self.customAlertViewAppearance).showTitle("Request Sent", subTitle: "Please check \(self.emailAddress) for verification link.", style: .info, closeButtonTitle: "UNDERSTOOD", colorStyle: 0x7AD8C0)
+    self.resetEmailRequestAlertView.showAlert(inView: self,
+                                              withTitle: "Request Sent",
+                                              withSubtitle: "Please check \(self.emailAddress) for verification link.",
+                                              withCustomImage: nil,
+                                              withDoneButtonTitle: "UNDERSTOOD",
+                                              andButtons: nil)
   }
   
   // MARK: - UIViewController Methods
@@ -36,5 +41,15 @@ class ForgotPasswordViewController: UIViewController {
     super.viewDidLoad()
     
     self.emailLabel.text = self.emailAddress
+    self.resetEmailRequestAlertView.delegate = self
+  }
+}
+
+// MARK: - FCAlertViewDelegate Extension
+
+extension ForgotPasswordViewController: FCAlertViewDelegate {
+  func alertView(_ alertView: FCAlertView, clickedButtonIndex index: Int, buttonTitle title: String) {}
+  func FCAlertDoneButtonClicked(alertView: FCAlertView) {
+    self.performSegue(withIdentifier: "unwindToLoginViewController", sender: self)
   }
 }

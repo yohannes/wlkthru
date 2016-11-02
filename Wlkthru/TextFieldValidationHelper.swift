@@ -10,6 +10,34 @@ import UIKit
 
 class TextFieldValidationHelper {
   
+  // MARK: - Stored Properties
+  
+  static let emailEntryAlertView: FCAlertView = {
+    let alertView = FCAlertView(type: FCAlertType.warning)
+    alertView.hideDoneButton = true
+    return alertView
+  }()
+  
+  static let passwordEntryAlertView: FCAlertView = {
+    let alertView = FCAlertView(type: .warning)
+    alertView.hideDoneButton = true
+    return alertView
+  }()
+  
+  static let passwordReEntryAlertView: FCAlertView = {
+    let alertView = FCAlertView(type: .warning)
+    alertView.hideDoneButton = true
+    return alertView
+  }()
+  
+  static let successfulAccountCreationAlertView: FCAlertView = {
+    let alertView = FCAlertView(type: .success)
+    alertView.colorScheme = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
+    return alertView
+  }()
+  
+  // MARK: - Class Methods
+  
   static func toggleStateFor(button: UIButton, dependingOn emailTextField: UITextField, passwordTextField: UITextField, passwordConfirmationTextField: UITextField?) {
     if passwordConfirmationTextField == nil {
       button.isEnabled = emailTextField.text?.isEmpty == true || passwordTextField.text?.isEmpty == true ? false : true
@@ -24,13 +52,12 @@ class TextFieldValidationHelper {
     guard let nonBlankEmailEntry = emailTextField.text, EmailValidationHelper.check(nonBlankEmailEntry) else {
       emailTextField.becomeFirstResponder()
       
-      // TODO: - Implement FCAlertView
-      let emailEntryAlertController = UIAlertController(title: "Invalid Email Address", message: "Please try again.", preferredStyle: UIAlertControllerStyle.alert)
-      let emailEntryAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (_) in
-        toggleStateFor(button: button, dependingOn: emailTextField, passwordTextField: passwordTextField, passwordConfirmationTextField: passwordConfirmationTextField)
-      })
-      emailEntryAlertController.addAction(emailEntryAlertAction)
-      viewController.present(emailEntryAlertController, animated: true, completion: nil)
+      self.emailEntryAlertView.showAlert(inView: viewController,
+                                    withTitle: "Invalid Email Address",
+                                    withSubtitle: "Please try again.",
+                                    withCustomImage: nil,
+                                    withDoneButtonTitle: nil,
+                                    andButtons: ["UNDERSTOOD"])
       
       return
     }
@@ -38,15 +65,14 @@ class TextFieldValidationHelper {
     if alsoCheckPasswordTextField == true {
       guard let nonBlankPasswordEntry = passwordTextField.text, nonBlankPasswordEntry.characters.count >= 6 else {
         passwordTextField.becomeFirstResponder()
-        
         passwordConfirmationTextField?.text = nil
         
-        // TODO: - Implement FCAlertView
-        let passwordEntryAlertController = UIAlertController(title: "Inadequate Password Length", message: "Please enter 6 or more characters.", preferredStyle: .alert)
-        passwordEntryAlertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
-          toggleStateFor(button: button, dependingOn: emailTextField, passwordTextField: passwordTextField, passwordConfirmationTextField: passwordConfirmationTextField)
-        }))
-        viewController.present(passwordEntryAlertController, animated: true, completion: nil)
+        self.passwordEntryAlertView.showAlert(inView: viewController,
+                                              withTitle: "Password is Too Short",
+                                              withSubtitle: "Please enter 6 or more characters.",
+                                              withCustomImage: nil,
+                                              withDoneButtonTitle: nil,
+                                              andButtons: ["GOT IT"])
         
         return
       }
@@ -64,28 +90,24 @@ class TextFieldValidationHelper {
     if viewController is NewAccountViewController {
       guard let nonBlankPasswordConfirmationEntry = passwordConfirmationTextField?.text, passwordTextField.text == nonBlankPasswordConfirmationEntry else {
         passwordTextField.becomeFirstResponder()
-        
         passwordConfirmationTextField?.text = nil
         
-        // TODO: - Implement FCAlertView
-        let passwordReentryAlertController = UIAlertController(title: "Different Passwords", message: "Please try again.", preferredStyle: .alert)
-        passwordReentryAlertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
-          toggleStateFor(button: button, dependingOn: emailTextField, passwordTextField: passwordTextField, passwordConfirmationTextField: passwordConfirmationTextField)
-        }))
-        viewController.present(passwordReentryAlertController, animated: true, completion: nil)
+        self.passwordReEntryAlertView.showAlert(inView: viewController,
+                                              withTitle: "Different Passwords",
+                                              withSubtitle: "Please retype both passwords.",
+                                              withCustomImage: nil,
+                                              withDoneButtonTitle: nil,
+                                              andButtons: ["OKIE DOKIE"])
+        
         return
       }
-    
-      viewController.view.endEditing(true)
       
-      guard let validEmail = emailTextField.text else { return }
-      
-      // TODO: - Implement FCAlertView
-      let successfulAccountCreationAlertController = UIAlertController(title: "Account Successfully Created", message: "Please check \(validEmail) for email verification.", preferredStyle: .alert)
-      successfulAccountCreationAlertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
-        viewController.dismiss(animated: true, completion: nil)
-      }))
-      viewController.present(successfulAccountCreationAlertController, animated: true, completion: nil)
+      self.successfulAccountCreationAlertView.showAlert(inView: viewController,
+                                                        withTitle: "Account Created",
+                                                        withSubtitle: "Please check \(nonBlankEmailEntry) for email verification.",
+                                                        withCustomImage: nil,
+                                                        withDoneButtonTitle: "AWESOME",
+                                                        andButtons: nil)
     }
   }
 }
