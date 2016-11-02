@@ -49,7 +49,7 @@ class ForgotPasswordViewController: UIViewController {
 
 extension ForgotPasswordViewController: FCAlertViewDelegate {
   func alertView(_ alertView: FCAlertView, clickedButtonIndex index: Int, buttonTitle title: String) {}
-  func FCAlertDoneButtonClicked(alertView: FCAlertView) {
+  func FCAlertDoneButtonClicked(_ alertView: FCAlertView) {
     self.performSegue(withIdentifier: "unwindToLoginViewController", sender: self)
   }
 }
