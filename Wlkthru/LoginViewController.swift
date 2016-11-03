@@ -50,9 +50,13 @@ class LoginViewController: UIViewController {
     self.emailTextField.yswTextFieldWithCharacterCounterDelegate = self
     self.passwordTextField.yswTextFieldWithCharacterCounterDelegate = self
     
+    TextFieldValidationHelper.emailEntryAlertView.delegate = self
+    TextFieldValidationHelper.passwordEntryAlertView.delegate = self
+    
     self.loginButton.isEnabled = false
     
     self.emailTextField.becomeFirstResponder()
+  
     self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     
     self.emailTextField.clearsOnBeginEditing = true
@@ -60,11 +64,13 @@ class LoginViewController: UIViewController {
     
     self.emailTextField.nextTextField = self.passwordTextField
     
+    self.emailTextField.font = UIFont(name: "AvenirNext-Bold", size: 19)
+    self.emailTextField.textColor = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
+    self.passwordTextField.font = UIFont(name: "AvenirNext-Bold", size: 19)
+    self.passwordTextField.textColor = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
+    
     self.emailTextField.attributedPlaceholder = TextFieldPlaceHolderHelper.createAttributedString(from: "Email")
     self.passwordTextField.attributedPlaceholder = TextFieldPlaceHolderHelper.createAttributedString(from: "Password")
-    
-    TextFieldValidationHelper.emailEntryAlertView.delegate = self
-    TextFieldValidationHelper.passwordEntryAlertView.delegate = self
   }
   
   override func viewDidAppear(_ animated: Bool) {

@@ -17,6 +17,8 @@ class ForgotPasswordViewController: UIViewController {
   let resetEmailRequestAlertView: FCAlertView = {
     let alertView = FCAlertView(type: .success)
     alertView.colorScheme = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
+    alertView.titleColor = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
+    alertView.subTitleColor = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
     return alertView
   }()
   
@@ -40,7 +42,10 @@ class ForgotPasswordViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    self.emailLabel.font = UIFont(name: "AvenirNext-Bold", size: 19)
+    self.emailLabel.textColor = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
     self.emailLabel.text = self.emailAddress
+    
     self.resetEmailRequestAlertView.delegate = self
   }
 }

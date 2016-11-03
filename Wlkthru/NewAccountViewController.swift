@@ -51,8 +51,15 @@ class NewAccountViewController: UIViewController {
     self.passwordTextField.yswTextFieldWithCharacterCounterDelegate = self
     self.passwordConfirmationTextField.yswTextFieldWithCharacterCounterDelegate = self
     
+    TextFieldValidationHelper.emailEntryAlertView.delegate = self
+    TextFieldValidationHelper.passwordEntryAlertView.delegate = self
+    TextFieldValidationHelper.passwordReEntryAlertView.delegate = self
+    TextFieldValidationHelper.successfulAccountCreationAlertView.delegate = self
+
     self.emailTextField.becomeFirstResponder()
+    
     self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
+    
     self.registerButton.isEnabled = false
     
     self.emailTextField.clearsOnBeginEditing = true
@@ -62,14 +69,17 @@ class NewAccountViewController: UIViewController {
     self.emailTextField.nextTextField = self.passwordTextField
     self.passwordTextField.nextTextField = self.passwordConfirmationTextField
     
+    self.emailTextField.font = UIFont(name: "AvenirNext-Bold", size: 19)
+    self.emailTextField.textColor = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
+    self.passwordTextField.font = UIFont(name: "AvenirNext-Bold", size: 19)
+    self.passwordTextField.textColor = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
+    self.passwordConfirmationTextField.font = UIFont(name: "AvenirNext-Bold", size: 19)
+    self.passwordConfirmationTextField.textColor = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
+    
     self.emailTextField.attributedPlaceholder = TextFieldPlaceHolderHelper.createAttributedString(from: "Email")
     self.passwordTextField.attributedPlaceholder = TextFieldPlaceHolderHelper.createAttributedString(from: "Password (Min. 6 characters)")
     self.passwordConfirmationTextField.attributedPlaceholder = TextFieldPlaceHolderHelper.createAttributedString(from: "Confirm Password")
     
-    TextFieldValidationHelper.emailEntryAlertView.delegate = self
-    TextFieldValidationHelper.passwordEntryAlertView.delegate = self
-    TextFieldValidationHelper.passwordReEntryAlertView.delegate = self
-    TextFieldValidationHelper.successfulAccountCreationAlertView.delegate = self
   }
   
   override func viewDidAppear(_ animated: Bool) {

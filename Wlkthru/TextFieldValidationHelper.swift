@@ -15,24 +15,32 @@ class TextFieldValidationHelper {
   static let emailEntryAlertView: FCAlertView = {
     let alertView = FCAlertView(type: FCAlertType.warning)
     alertView.hideDoneButton = true
+    alertView.titleColor = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
+    alertView.subTitleColor = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
     return alertView
   }()
   
   static let passwordEntryAlertView: FCAlertView = {
     let alertView = FCAlertView(type: .warning)
     alertView.hideDoneButton = true
+    alertView.titleColor = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
+    alertView.subTitleColor = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
     return alertView
   }()
   
   static let passwordReEntryAlertView: FCAlertView = {
     let alertView = FCAlertView(type: .warning)
     alertView.hideDoneButton = true
+    alertView.titleColor = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
+    alertView.subTitleColor = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
     return alertView
   }()
   
   static let successfulAccountCreationAlertView: FCAlertView = {
     let alertView = FCAlertView(type: .success)
     alertView.colorScheme = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
+    alertView.titleColor = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
+    alertView.subTitleColor = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
     return alertView
   }()
   

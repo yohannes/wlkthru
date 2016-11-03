@@ -23,7 +23,8 @@ open class FCAlertView: UIView {
   var alertViewContents: UIView?
   let circleLayer: CAShapeLayer = {
     let circle = CAShapeLayer()
-    circle.fillColor = UIColor.white.cgColor
+//    circle.fillColor = UIColor.white.cgColor
+    circle.fillColor = UIColor(red: 220/255, green: 1, blue: 247/255, alpha: 1).cgColor
     return circle
   }()
   
@@ -44,7 +45,8 @@ open class FCAlertView: UIView {
   // AlertView Background : Probably take frame out & make it constant
   let alertBackground: UIView = {
     let alertBackgroundView = UIView()
-    alertBackgroundView.backgroundColor = UIColor(white: 0, alpha: 0.35)
+//    alertBackgroundView.backgroundColor = UIColor(white: 0, alpha: 0.35)
+    alertBackgroundView.backgroundColor = UIColor(white: 0, alpha: 0.50)
     
     return alertBackgroundView
   }()
@@ -213,7 +215,8 @@ open class FCAlertView: UIView {
     let fillLayer = CAShapeLayer()
     fillLayer.path = rectPath.cgPath
     fillLayer.fillRule = kCAFillRuleEvenOdd
-    fillLayer.fillColor = UIColor.white.cgColor
+//    fillLayer.fillColor = UIColor.white.cgColor
+    fillLayer.fillColor = UIColor(red: 220/255, green: 1, blue: 247/255, alpha: 1).cgColor
     fillLayer.opacity = 1
     
     alertView!.layer.addSublayer(fillLayer)
@@ -226,7 +229,7 @@ open class FCAlertView: UIView {
       width: alertViewFrame.size.width - 30.0,
       height: 20.0))
 //    titleLabel.font = UIFont.systemFont(ofSize: 18, weight: UIFontWeightMedium)
-    titleLabel.font = UIFont(name: "AvenirNext-Medium", size: 19)
+    titleLabel.font = UIFont(name: "AvenirNext-Bold", size: 19)
     titleLabel.numberOfLines = 1
     titleLabel.textColor = titleColor
     titleLabel.text = title
@@ -240,8 +243,8 @@ open class FCAlertView: UIView {
       height: 60.0))
 //    descriptionLabel.font = (title == nil) ? UIFont.systemFont(ofSize: 16, weight: UIFontWeightRegular) :
 //      UIFont.systemFont(ofSize: 15, weight: UIFontWeightLight)
-    descriptionLabel.font = (title == nil) ? UIFont(name: "AvenirNext-Regular", size: 17) :
-      UIFont(name: "AvenirNext-Regular", size: 16)
+    descriptionLabel.font = (title == nil) ? UIFont(name: "AvenirNext-Bold", size: 17) :
+      UIFont(name: "AvenirNext-Bold", size: 16)
     
     descriptionLabel.numberOfLines = 4
     descriptionLabel.textColor = subTitleColor
@@ -325,7 +328,7 @@ open class FCAlertView: UIView {
       doneButton.setTitle(doneTitle, for: UIControlState())
       doneButton.addTarget(self, action: #selector(donePressed(_:)), for: .touchUpInside)
 //      doneButton.titleLabel!.font = UIFont.systemFont(ofSize: 18, weight: UIFontWeightMedium)
-      doneButton.titleLabel!.font = UIFont(name: "AvenirNext-Medium", size: 19)
+      doneButton.titleLabel!.font = UIFont(name: "AvenirNext-Bold", size: 19)
       
       
       alertView!.addSubview(doneButton)
@@ -334,12 +337,13 @@ open class FCAlertView: UIView {
       
       // Render user button
       let otherButton = UIButton(type: .system)
-      otherButton.backgroundColor = UIColor.white
+//      otherButton.backgroundColor = UIColor.white
+      otherButton.backgroundColor = UIColor(red: 220/255, green: 1, blue: 247/255, alpha: 1)
       
       otherButton.setTitle(buttonTitles![0], for: UIControlState())
       otherButton.addTarget(self, action: #selector(handleButton(_:)), for: .touchUpInside)
 //      otherButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: UIFontWeightRegular)
-      otherButton.titleLabel?.font = UIFont(name: "AvenirNext-Medium", size: 17)
+      otherButton.titleLabel?.font = UIFont(name: "AvenirNext-Bold", size: 17)
       otherButton.tintColor = colorScheme
       otherButton.titleLabel?.adjustsFontSizeToFitWidth = true
       otherButton.titleLabel?.minimumScaleFactor = 0.8
@@ -369,7 +373,7 @@ open class FCAlertView: UIView {
         doneButton.setTitle(doneTitle, for: UIControlState())
         doneButton.addTarget(self, action: #selector(donePressed(_:)), for: .touchUpInside)
 //        doneButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: UIFontWeightMedium)
-        doneButton.titleLabel?.font = UIFont(name: "AvenirNext-Medium", size: 17)
+        doneButton.titleLabel?.font = UIFont(name: "AvenirNext-Bold", size: 17)
         
         let horizontalSeparator = UIView(frame: CGRect(x: alertViewFrame.size.width/2 - 1,
           y: otherButton.frame.origin.y - 2,
@@ -414,7 +418,7 @@ open class FCAlertView: UIView {
       firstButton.setTitle(buttonTitles![0], for: UIControlState())
       firstButton.addTarget(self, action: #selector(handleButton(_:)), for: .touchUpInside)
 //      firstButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: UIFontWeightRegular)
-      firstButton.titleLabel?.font = UIFont(name: "AvenirNext-Medium", size: 17)
+      firstButton.titleLabel?.font = UIFont(name: "AvenirNext-Bold", size: 17)
       firstButton.tintColor = colorScheme
       firstButton.titleLabel?.adjustsFontSizeToFitWidth = true
       firstButton.titleLabel?.minimumScaleFactor = 0.8
@@ -425,7 +429,7 @@ open class FCAlertView: UIView {
       secondButton.setTitle(buttonTitles![1], for: UIControlState())
       secondButton.addTarget(self, action: #selector(handleButton(_:)), for: .touchUpInside)
 //      secondButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: UIFontWeightRegular)
-      secondButton.titleLabel?.font = UIFont(name: "AvenirNext-Medium", size: 17)
+      secondButton.titleLabel?.font = UIFont(name: "AvenirNext-Bold", size: 17)
       secondButton.tintColor = colorScheme
       secondButton.titleLabel?.adjustsFontSizeToFitWidth = true
       secondButton.titleLabel?.minimumScaleFactor = 0.8
@@ -476,7 +480,7 @@ open class FCAlertView: UIView {
         doneButton.setTitle(doneTitle, for: UIControlState())
         doneButton.addTarget(self, action: #selector(donePressed(_:)), for: .touchUpInside)
 //        doneButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: UIFontWeightMedium)
-        doneButton.titleLabel?.font = UIFont(name: "AvenirNext-Medium", size: 19)
+        doneButton.titleLabel?.font = UIFont(name: "AvenirNext-Bold", size: 19)
         
         alertView!.addSubview(doneButton)
       }else {
