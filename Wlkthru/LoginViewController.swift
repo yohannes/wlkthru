@@ -50,9 +50,6 @@ class LoginViewController: UIViewController {
     self.emailTextField.yswTextFieldWithCharacterCounterDelegate = self
     self.passwordTextField.yswTextFieldWithCharacterCounterDelegate = self
     
-    TextFieldValidationHelper.emailEntryAlertView.delegate = self
-    TextFieldValidationHelper.passwordEntryAlertView.delegate = self
-    
     self.loginButton.isEnabled = false
     
     self.emailTextField.becomeFirstResponder()
@@ -114,21 +111,5 @@ extension LoginViewController: YSWTextFieldWithCharacterCounterDelegate {
     self.emailTextField.addTarget(self, action: #selector(LoginViewController.checkAllTextFieldsAreFilled), for: UIControlEvents.editingChanged)
     self.passwordTextField.addTarget(self, action: #selector(LoginViewController.checkAllTextFieldsAreFilled), for: .editingChanged)
     return true
-  }
-}
-
-extension LoginViewController: FCAlertViewDelegate {
-  func alertView(_ alertView: FCAlertView, clickedButtonIndex index: Int, buttonTitle title: String) {
-    TextFieldValidationHelper.toggleStateFor(button: loginButton, dependingOn: emailTextField, passwordTextField: passwordTextField, passwordConfirmationTextField: nil)
-    if title == "UNDERSTOOD" {
-      self.emailTextField.becomeFirstResponder()
-    }
-    else if title == "GOT IT" {
-      self.passwordTextField.becomeFirstResponder()
-    }
-  }
-  
-  func FCAlertViewWillAppear(_ alertView: FCAlertView) {
-    self.view.endEditing(true)
   }
 }

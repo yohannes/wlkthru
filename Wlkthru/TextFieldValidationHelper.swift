@@ -10,40 +10,6 @@ import UIKit
 
 class TextFieldValidationHelper {
   
-  // MARK: - Stored Properties
-  
-  static let emailEntryAlertView: FCAlertView = {
-    let alertView = FCAlertView(type: FCAlertType.warning)
-    alertView.hideDoneButton = true
-    alertView.titleColor = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
-    alertView.subTitleColor = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
-    return alertView
-  }()
-  
-  static let passwordEntryAlertView: FCAlertView = {
-    let alertView = FCAlertView(type: .warning)
-    alertView.hideDoneButton = true
-    alertView.titleColor = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
-    alertView.subTitleColor = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
-    return alertView
-  }()
-  
-  static let passwordReEntryAlertView: FCAlertView = {
-    let alertView = FCAlertView(type: .warning)
-    alertView.hideDoneButton = true
-    alertView.titleColor = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
-    alertView.subTitleColor = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
-    return alertView
-  }()
-  
-  static let successfulAccountCreationAlertView: FCAlertView = {
-    let alertView = FCAlertView(type: .success)
-    alertView.colorScheme = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
-    alertView.titleColor = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
-    alertView.subTitleColor = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
-    return alertView
-  }()
-  
   // MARK: - Class Methods
   
   static func toggleStateFor(button: UIButton, dependingOn emailTextField: UITextField, passwordTextField: UITextField, passwordConfirmationTextField: UITextField?) {
@@ -57,30 +23,37 @@ class TextFieldValidationHelper {
   
   static func validate(email emailTextField: UITextField, password passwordTextField: UITextField, passwordConfirmation passwordConfirmationTextField: UITextField?, beforeActivatingButton button: UIButton, insideViewController viewController: UIViewController, alsoCheckPasswordTextField: Bool = true) {
     
+    let alertView: SCLAlertView = {
+      let appearance = SCLAlertView.SCLAppearance(kTitleFont: UIFont(name: "AvenirNext-Bold", size: 20)!,
+                                                  kTextFont: UIFont(name: "AvenirNext-Bold", size: 16)!,
+                                                  kButtonFont: UIFont(name: "AvenirNext-Bold", size: 20)!,
+                                                  showCloseButton: false,
+                                                  contentViewColor: UIColor(red: 220/255, green: 1, blue: 247/255, alpha: 1),
+                                                  titleColor: UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1))
+      let alertView = SCLAlertView(appearance: appearance)
+      return alertView
+    }()
+    
+    viewController.view.endEditing(true)
+    
     guard let nonBlankEmailEntry = emailTextField.text, EmailValidationHelper.check(nonBlankEmailEntry) else {
-      emailTextField.becomeFirstResponder()
       
-      self.emailEntryAlertView.showAlert(inView: viewController,
-                                    withTitle: "Invalid Email Address",
-                                    withSubtitle: "Please try again.",
-                                    withCustomImage: nil,
-                                    withDoneButtonTitle: nil,
-                                    andButtons: ["UNDERSTOOD"])
+      alertView.addButton("NOTED",
+                          backgroundColor: UIColor(red: 193/255, green: 39/255, blue: 45/255, alpha: 1),
+                          textColor: UIColor.white) { emailTextField.becomeFirstResponder() }
+      alertView.showError("Invalid Email Address", subTitle: "Please try again.")
       
       return
     }
     
     if alsoCheckPasswordTextField == true {
       guard let nonBlankPasswordEntry = passwordTextField.text, nonBlankPasswordEntry.characters.count >= 6 else {
-        passwordTextField.becomeFirstResponder()
         passwordConfirmationTextField?.text = nil
         
-        self.passwordEntryAlertView.showAlert(inView: viewController,
-                                              withTitle: "Password is Too Short",
-                                              withSubtitle: "Please enter 6 or more characters.",
-                                              withCustomImage: nil,
-                                              withDoneButtonTitle: nil,
-                                              andButtons: ["GOT IT"])
+        alertView.addButton("GOT IT",
+                            backgroundColor: UIColor(red: 193/255, green: 39/255, blue: 45/255, alpha: 1),
+                            textColor: UIColor.white) { passwordTextField.becomeFirstResponder() }
+        alertView.showError("Password is Too Short", subTitle: "Please enter 6 or more characters.")
         
         return
       }
@@ -97,25 +70,23 @@ class TextFieldValidationHelper {
     
     if viewController is NewAccountViewController {
       guard let nonBlankPasswordConfirmationEntry = passwordConfirmationTextField?.text, passwordTextField.text == nonBlankPasswordConfirmationEntry else {
-        passwordTextField.becomeFirstResponder()
         passwordConfirmationTextField?.text = nil
         
-        self.passwordReEntryAlertView.showAlert(inView: viewController,
-                                              withTitle: "Different Passwords",
-                                              withSubtitle: "Please retype both passwords.",
-                                              withCustomImage: nil,
-                                              withDoneButtonTitle: nil,
-                                              andButtons: ["OKIE DOKIE"])
+        alertView.addButton("OKIE DOKIE",
+                            backgroundColor: UIColor(red: 193/255, green: 39/255, blue: 45/255, alpha: 1),
+                            textColor: UIColor.white) { passwordTextField.becomeFirstResponder() }
+        alertView.showError("Different Passwords", subTitle: "Please retype both passwords.")
         
         return
       }
       
-      self.successfulAccountCreationAlertView.showAlert(inView: viewController,
-                                                        withTitle: "Account Created",
-                                                        withSubtitle: "Please check \(nonBlankEmailEntry) for email verification.",
-                                                        withCustomImage: nil,
-                                                        withDoneButtonTitle: "AWESOME",
-                                                        andButtons: nil)
+      alertView.addButton("AWESOME",
+                          backgroundColor: UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1),
+                          textColor: UIColor.white) { viewController.dismiss(animated: true, completion: nil) }
+      alertView.showTitle("Account Created",
+                          subTitle: "Please check \(nonBlankEmailEntry) for email verification.",
+                          style: SCLAlertViewStyle.success,
+                          colorStyle: 0x7AD8C0)
     }
   }
 }

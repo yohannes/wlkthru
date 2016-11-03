@@ -15,26 +15,13 @@ class ForgotPasswordViewController: UIViewController {
   var emailAddress = ""
   var resetEmailRequestAlertView: SCLAlertView!
   
-//  let resetEmailRequestAlertView: FCAlertView = {
-//    let alertView = FCAlertView(type: .success)
-//    alertView.colorScheme = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
-//    return alertView
-//  }()
-  
   // MARK: - IBOutlet Properties
   
   @IBOutlet weak var emailLabel: UILabel!
   
   // MARK: - IBAction Properties
   
-  @IBAction func resetPasswordButtonDidTouch(_ sender: UIButton) {    
-//    self.resetEmailRequestAlertView.showAlert(inView: self,
-//                                              withTitle: "Request Sent",
-//                                              withSubtitle: "Please check \(self.emailAddress) for verification link.",
-//                                              withCustomImage: nil,
-//                                              withDoneButtonTitle: "UNDERSTOOD",
-//                                              andButtons: nil)
-    
+  @IBAction func resetPasswordButtonDidTouch(_ sender: UIButton) {
     self.resetEmailRequestAlertView.showTitle("Request Sent",
                                               subTitle: "Please check \(self.emailAddress) for verification link.",
                                               style: SCLAlertViewStyle.success,
@@ -67,12 +54,3 @@ class ForgotPasswordViewController: UIViewController {
     }()
   }
 }
-
-// MARK: - FCAlertViewDelegate Extension
-
-//extension ForgotPasswordViewController: FCAlertViewDelegate {
-//  func alertView(_ alertView: FCAlertView, clickedButtonIndex index: Int, buttonTitle title: String) {}
-//  func FCAlertDoneButtonClicked(_ alertView: FCAlertView) {
-//    self.performSegue(withIdentifier: "unwindToLoginViewController", sender: self)
-//  }
-//}
