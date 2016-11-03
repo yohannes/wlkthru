@@ -64,11 +64,6 @@ class LoginViewController: UIViewController {
     
     self.emailTextField.nextTextField = self.passwordTextField
     
-    self.emailTextField.font = UIFont(name: "AvenirNext-Bold", size: 19)
-    self.emailTextField.textColor = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
-    self.passwordTextField.font = UIFont(name: "AvenirNext-Bold", size: 19)
-    self.passwordTextField.textColor = UIColor(red: 122/255, green: 216/255, blue: 192/255, alpha: 1)
-    
     self.emailTextField.attributedPlaceholder = TextFieldPlaceHolderHelper.createAttributedString(from: "Email")
     self.passwordTextField.attributedPlaceholder = TextFieldPlaceHolderHelper.createAttributedString(from: "Password")
   }
