@@ -1,8 +1,10 @@
 # wlkthru
 
-<img src="https://img.shields.io/badge/platform-iOS-blue.svg?style=flat" alt="Platform iOS" />
-<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift3-compatible-4BC51D.svg?style=flat" alt="Swift 3 compatible" /></a>
-<a href="https://raw.githubusercontent.com/candostdagdeviren/CDAlertView/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="License: MIT" /></a>
+[![Platform iOS](https://img.shields.io/badge/platform-iOS-blue.svg?style=flat)](http://developer.apple.com/ios)
+[![Language](http://img.shields.io/badge/language-swift-orange.svg?style=flat)](https://developer.apple.com/swift)
+[![Swift 3 Compatible](https://img.shields.io/badge/swift3-compatible-4BC51D.svg?style=flat)](https://swift.org/blog/swift-3-0-released/)
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/yoha/wlkthru/blob/master/LICENSE)
+[![Issues](https://img.shields.io/github/issues/yoha/wlkthru.svg?style=flat)](https://github.com/yoha/wlkthru/issues)
 
 ### An iOS app that display swipeable walkthrough screens with working Registration &amp; Login page.
 
