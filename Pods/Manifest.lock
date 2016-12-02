@@ -1,0 +1,18 @@
+PODS:
+  - MarkdownKit (1.2)
+  - SCLAlertView (0.7.0)
+  - UITextField-Navigation (2.0.0)
+
+DEPENDENCIES:
+  - MarkdownKit (~> 1.2)
+  - SCLAlertView (~> 0.7)
+  - UITextField-Navigation (~> 2.0)
+
+SPEC CHECKSUMS:
+  MarkdownKit: 5ff9659d414f9a677b62667f4507766369d32129
+  SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
+  UITextField-Navigation: 8c1b614136dc07f5f3cc43de63d79fb515c81206
+
+PODFILE CHECKSUM: 04d4d65a367f09c28630829397eba38281011b15
+
+COCOAPODS: 1.1.1

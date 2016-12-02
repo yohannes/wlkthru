@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>MarkdownKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Wlkthru.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SCLAlertView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>UITextField-Navigation.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>02956DD2C5D4766BB2A3F00ABB6BDC08</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1DABB12A63AA76DB586AC571DA1E1863</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>58085D44374CB8AE95E3C58E2753C9C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BA441BB44AD6AE0B1BCAE1A7CDCD6F66</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MarkdownKit
 
 class TermsAndConditionsViewController: UIViewController {
   
@@ -51,6 +52,6 @@ class TermsAndConditionsViewController: UIViewController {
     super.viewDidLoad()
     
     let markdownParser = MarkdownParser()
-    self.termsAndConditionsLabel.attributedText = markdownParser.parse(markdown: termsAndConditions)
+    self.termsAndConditionsLabel.attributedText = markdownParser.parse(termsAndConditions)
   }
 }

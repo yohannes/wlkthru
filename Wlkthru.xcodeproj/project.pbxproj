@@ -20,37 +20,13 @@
 		653A70381D4765A700F061DB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A70371D4765A700F061DB /* LoginViewController.swift */; };
 		653A703A1D48964E00F061DB /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A70391D48964E00F061DB /* ForgotPasswordViewController.swift */; };
 		655045321D8FAF5D001B66F1 /* TextFieldValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655045311D8FAF5D001B66F1 /* TextFieldValidationHelper.swift */; };
-		655AC53D1DCB24C200073D0B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 655AC53A1DCB24C200073D0B /* Info.plist */; };
-		655AC53E1DCB24C200073D0B /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655AC53B1DCB24C200073D0B /* SCLAlertView.swift */; };
-		655AC53F1DCB24C200073D0B /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655AC53C1DCB24C200073D0B /* SCLExtensions.swift */; };
-		656150431D7962CE00E3608F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 6561502C1D7962CE00E3608F /* .gitkeep */; };
-		656150441D7962CE00E3608F /* MarkdownCodeEscaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6561502F1D7962CE00E3608F /* MarkdownCodeEscaping.swift */; };
-		656150451D7962CE00E3608F /* MarkdownEscaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150301D7962CE00E3608F /* MarkdownEscaping.swift */; };
-		656150461D7962CE00E3608F /* MarkdownUnescaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150311D7962CE00E3608F /* MarkdownUnescaping.swift */; };
-		656150471D7962CE00E3608F /* MarkdownAutomaticLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150321D7962CE00E3608F /* MarkdownAutomaticLink.swift */; };
-		656150481D7962CE00E3608F /* MarkdownBold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150331D7962CE00E3608F /* MarkdownBold.swift */; };
-		656150491D7962CE00E3608F /* MarkdownCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150341D7962CE00E3608F /* MarkdownCode.swift */; };
-		6561504A1D7962CE00E3608F /* MarkdownHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150351D7962CE00E3608F /* MarkdownHeader.swift */; };
-		6561504B1D7962CE00E3608F /* MarkdownItalic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150361D7962CE00E3608F /* MarkdownItalic.swift */; };
-		6561504C1D7962CE00E3608F /* MarkdownLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150371D7962CE00E3608F /* MarkdownLink.swift */; };
-		6561504D1D7962CE00E3608F /* MarkdownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150381D7962CE00E3608F /* MarkdownList.swift */; };
-		6561504E1D7962CE00E3608F /* MarkdownQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150391D7962CE00E3608F /* MarkdownQuote.swift */; };
-		6561504F1D7962CE00E3608F /* String+UTF16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6561503B1D7962CE00E3608F /* String+UTF16.swift */; };
-		656150501D7962CE00E3608F /* MarkdownParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6561503C1D7962CE00E3608F /* MarkdownParser.swift */; };
-		656150511D7962CE00E3608F /* MarkdownCommonElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6561503E1D7962CE00E3608F /* MarkdownCommonElement.swift */; };
-		656150521D7962CE00E3608F /* MarkdownElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6561503F1D7962CE00E3608F /* MarkdownElement.swift */; };
-		656150531D7962CE00E3608F /* MarkdownLevelElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150401D7962CE00E3608F /* MarkdownLevelElement.swift */; };
-		656150541D7962CE00E3608F /* MarkdownLinkElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150411D7962CE00E3608F /* MarkdownLinkElement.swift */; };
-		656150551D7962CE00E3608F /* MarkdownStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656150421D7962CE00E3608F /* MarkdownStyle.swift */; };
-		65870AE01D92402E00B53C0E /* UITextField+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65870ADB1D92402E00B53C0E /* UITextField+Navigation.swift */; };
-		65870AE11D92402E00B53C0E /* UITextFieldNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65870ADC1D92402E00B53C0E /* UITextFieldNavigationDelegate.swift */; };
-		65870AE21D92402E00B53C0E /* UITextFieldNavigationToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65870ADD1D92402E00B53C0E /* UITextFieldNavigationToolbar.swift */; };
-		65870AE31D92402E00B53C0E /* UITextFieldNavigationToolbarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65870ADE1D92402E00B53C0E /* UITextFieldNavigationToolbarButtonItem.swift */; };
-		65870AE41D92402E00B53C0E /* WeakObjectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65870ADF1D92402E00B53C0E /* WeakObjectContainer.swift */; };
 		65BF83091D5AF6A900C6DE89 /* EmailValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BF83081D5AF6A900C6DE89 /* EmailValidationHelper.swift */; };
+		CA720BEB36EF2114D2F05561 /* Pods_Wlkthru.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00279E15BB0ADB767ECC581F /* Pods_Wlkthru.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00279E15BB0ADB767ECC581F /* Pods_Wlkthru.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wlkthru.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D0B31C8C71B085AB6788DE2 /* Pods-Wlkthru.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wlkthru.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wlkthru/Pods-Wlkthru.release.xcconfig"; sourceTree = "<group>"; };
 		650095E11D49C4ED009C35F3 /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
 		651A26F11DC4A6B5008E586A /* TextFieldPlaceholderHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldPlaceholderHelper.swift; sourceTree = "<group>"; };
 		652085BB1D7E7E6200B3436D /* YSWTextFieldWithCharacterCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSWTextFieldWithCharacterCounter.swift; sourceTree = "<group>"; };
@@ -66,34 +42,8 @@
 		653A70371D4765A700F061DB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		653A70391D48964E00F061DB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		655045311D8FAF5D001B66F1 /* TextFieldValidationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldValidationHelper.swift; sourceTree = "<group>"; };
-		655AC53A1DCB24C200073D0B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		655AC53B1DCB24C200073D0B /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
-		655AC53C1DCB24C200073D0B /* SCLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLExtensions.swift; sourceTree = "<group>"; };
-		6561502C1D7962CE00E3608F /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		6561502F1D7962CE00E3608F /* MarkdownCodeEscaping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownCodeEscaping.swift; sourceTree = "<group>"; };
-		656150301D7962CE00E3608F /* MarkdownEscaping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownEscaping.swift; sourceTree = "<group>"; };
-		656150311D7962CE00E3608F /* MarkdownUnescaping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownUnescaping.swift; sourceTree = "<group>"; };
-		656150321D7962CE00E3608F /* MarkdownAutomaticLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownAutomaticLink.swift; sourceTree = "<group>"; };
-		656150331D7962CE00E3608F /* MarkdownBold.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownBold.swift; sourceTree = "<group>"; };
-		656150341D7962CE00E3608F /* MarkdownCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownCode.swift; sourceTree = "<group>"; };
-		656150351D7962CE00E3608F /* MarkdownHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownHeader.swift; sourceTree = "<group>"; };
-		656150361D7962CE00E3608F /* MarkdownItalic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownItalic.swift; sourceTree = "<group>"; };
-		656150371D7962CE00E3608F /* MarkdownLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownLink.swift; sourceTree = "<group>"; };
-		656150381D7962CE00E3608F /* MarkdownList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownList.swift; sourceTree = "<group>"; };
-		656150391D7962CE00E3608F /* MarkdownQuote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownQuote.swift; sourceTree = "<group>"; };
-		6561503B1D7962CE00E3608F /* String+UTF16.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+UTF16.swift"; sourceTree = "<group>"; };
-		6561503C1D7962CE00E3608F /* MarkdownParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownParser.swift; sourceTree = "<group>"; };
-		6561503E1D7962CE00E3608F /* MarkdownCommonElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownCommonElement.swift; sourceTree = "<group>"; };
-		6561503F1D7962CE00E3608F /* MarkdownElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownElement.swift; sourceTree = "<group>"; };
-		656150401D7962CE00E3608F /* MarkdownLevelElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownLevelElement.swift; sourceTree = "<group>"; };
-		656150411D7962CE00E3608F /* MarkdownLinkElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownLinkElement.swift; sourceTree = "<group>"; };
-		656150421D7962CE00E3608F /* MarkdownStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownStyle.swift; sourceTree = "<group>"; };
-		65870ADB1D92402E00B53C0E /* UITextField+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Navigation.swift"; sourceTree = "<group>"; };
-		65870ADC1D92402E00B53C0E /* UITextFieldNavigationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldNavigationDelegate.swift; sourceTree = "<group>"; };
-		65870ADD1D92402E00B53C0E /* UITextFieldNavigationToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldNavigationToolbar.swift; sourceTree = "<group>"; };
-		65870ADE1D92402E00B53C0E /* UITextFieldNavigationToolbarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldNavigationToolbarButtonItem.swift; sourceTree = "<group>"; };
-		65870ADF1D92402E00B53C0E /* WeakObjectContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakObjectContainer.swift; sourceTree = "<group>"; };
 		65BF83081D5AF6A900C6DE89 /* EmailValidationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidationHelper.swift; sourceTree = "<group>"; };
+		F779281360D3440B04537CB5 /* Pods-Wlkthru.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wlkthru.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wlkthru/Pods-Wlkthru.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,17 +51,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA720BEB36EF2114D2F05561 /* Pods_Wlkthru.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15BDEFE61B8448330A5C2E09 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F779281360D3440B04537CB5 /* Pods-Wlkthru.debug.xcconfig */,
+				1D0B31C8C71B085AB6788DE2 /* Pods-Wlkthru.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		25B96FE3D66BD71BB74AF1E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00279E15BB0ADB767ECC581F /* Pods_Wlkthru.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		652984E71D41D9E900592F8A = {
 			isa = PBXGroup;
 			children = (
 				652984F21D41D9E900592F8A /* Wlkthru */,
 				652984F11D41D9E900592F8A /* Products */,
+				15BDEFE61B8448330A5C2E09 /* Pods */,
+				25B96FE3D66BD71BB74AF1E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,9 +96,6 @@
 		652984F21D41D9E900592F8A /* Wlkthru */ = {
 			isa = PBXGroup;
 			children = (
-				655AC5391DCB24C200073D0B /* SCLAlertView */,
-				65870AD91D92402E00B53C0E /* UITextField_Navigation */,
-				6561502A1D7962CE00E3608F /* MarkdownKit */,
 				652984F31D41D9E900592F8A /* AppDelegate.swift */,
 				652984F71D41D9E900592F8A /* Main.storyboard */,
 				652984F51D41D9E900592F8A /* RootViewController.swift */,
@@ -148,103 +115,6 @@
 			path = Wlkthru;
 			sourceTree = "<group>";
 		};
-		655AC5391DCB24C200073D0B /* SCLAlertView */ = {
-			isa = PBXGroup;
-			children = (
-				655AC53A1DCB24C200073D0B /* Info.plist */,
-				655AC53B1DCB24C200073D0B /* SCLAlertView.swift */,
-				655AC53C1DCB24C200073D0B /* SCLExtensions.swift */,
-			);
-			path = SCLAlertView;
-			sourceTree = "<group>";
-		};
-		6561502A1D7962CE00E3608F /* MarkdownKit */ = {
-			isa = PBXGroup;
-			children = (
-				6561502B1D7962CE00E3608F /* Classes */,
-			);
-			path = MarkdownKit;
-			sourceTree = "<group>";
-		};
-		6561502B1D7962CE00E3608F /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				6561502C1D7962CE00E3608F /* .gitkeep */,
-				6561502D1D7962CE00E3608F /* Elements */,
-				6561503A1D7962CE00E3608F /* Extensions */,
-				6561503C1D7962CE00E3608F /* MarkdownParser.swift */,
-				6561503D1D7962CE00E3608F /* Protocols */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		6561502D1D7962CE00E3608F /* Elements */ = {
-			isa = PBXGroup;
-			children = (
-				6561502E1D7962CE00E3608F /* Escaping */,
-				656150321D7962CE00E3608F /* MarkdownAutomaticLink.swift */,
-				656150331D7962CE00E3608F /* MarkdownBold.swift */,
-				656150341D7962CE00E3608F /* MarkdownCode.swift */,
-				656150351D7962CE00E3608F /* MarkdownHeader.swift */,
-				656150361D7962CE00E3608F /* MarkdownItalic.swift */,
-				656150371D7962CE00E3608F /* MarkdownLink.swift */,
-				656150381D7962CE00E3608F /* MarkdownList.swift */,
-				656150391D7962CE00E3608F /* MarkdownQuote.swift */,
-			);
-			path = Elements;
-			sourceTree = "<group>";
-		};
-		6561502E1D7962CE00E3608F /* Escaping */ = {
-			isa = PBXGroup;
-			children = (
-				6561502F1D7962CE00E3608F /* MarkdownCodeEscaping.swift */,
-				656150301D7962CE00E3608F /* MarkdownEscaping.swift */,
-				656150311D7962CE00E3608F /* MarkdownUnescaping.swift */,
-			);
-			path = Escaping;
-			sourceTree = "<group>";
-		};
-		6561503A1D7962CE00E3608F /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				6561503B1D7962CE00E3608F /* String+UTF16.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		6561503D1D7962CE00E3608F /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				6561503E1D7962CE00E3608F /* MarkdownCommonElement.swift */,
-				6561503F1D7962CE00E3608F /* MarkdownElement.swift */,
-				656150401D7962CE00E3608F /* MarkdownLevelElement.swift */,
-				656150411D7962CE00E3608F /* MarkdownLinkElement.swift */,
-				656150421D7962CE00E3608F /* MarkdownStyle.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		65870AD91D92402E00B53C0E /* UITextField_Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				65870ADA1D92402E00B53C0E /* Classes */,
-			);
-			name = UITextField_Navigation;
-			path = "UITextField-Navigation";
-			sourceTree = "<group>";
-		};
-		65870ADA1D92402E00B53C0E /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				65870ADB1D92402E00B53C0E /* UITextField+Navigation.swift */,
-				65870ADC1D92402E00B53C0E /* UITextFieldNavigationDelegate.swift */,
-				65870ADD1D92402E00B53C0E /* UITextFieldNavigationToolbar.swift */,
-				65870ADE1D92402E00B53C0E /* UITextFieldNavigationToolbarButtonItem.swift */,
-				65870ADF1D92402E00B53C0E /* WeakObjectContainer.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -252,10 +122,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 652985021D41D9E900592F8A /* Build configuration list for PBXNativeTarget "Wlkthru" */;
 			buildPhases = (
+				49586F71F7A11516EF37DE9A /* [CP] Check Pods Manifest.lock */,
 				652984EC1D41D9E900592F8A /* Sources */,
 				652984ED1D41D9E900592F8A /* Frameworks */,
 				652984EE1D41D9E900592F8A /* Resources */,
 				65610CC91D54843A003E0882 /* ShellScript */,
+				8D056FA92B6FE0C8CBF9A119 /* [CP] Embed Pods Frameworks */,
+				27D79010A2FC063DD813DA18 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -273,7 +146,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Yohannes Wijaya";
 				TargetAttributes = {
 					652984EF1D41D9E900592F8A = {
@@ -307,16 +180,44 @@
 			buildActionMask = 2147483647;
 			files = (
 				652984FE1D41D9E900592F8A /* LaunchScreen.storyboard in Resources */,
-				655AC53D1DCB24C200073D0B /* Info.plist in Resources */,
 				652984FB1D41D9E900592F8A /* Assets.xcassets in Resources */,
 				652984F91D41D9E900592F8A /* Main.storyboard in Resources */,
-				656150431D7962CE00E3608F /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		27D79010A2FC063DD813DA18 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wlkthru/Pods-Wlkthru-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49586F71F7A11516EF37DE9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		65610CC91D54843A003E0882 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -330,6 +231,21 @@
 			shellPath = /bin/sh;
 			shellScript = "TAGS=\"TODO:|FIXME:\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"";
 		};
+		8D056FA92B6FE0C8CBF9A119 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wlkthru/Pods-Wlkthru-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -340,38 +256,13 @@
 				652985061D41E9B200592F8A /* PageContentViewController.swift in Sources */,
 				652984F61D41D9E900592F8A /* RootViewController.swift in Sources */,
 				653A703A1D48964E00F061DB /* ForgotPasswordViewController.swift in Sources */,
-				6561504E1D7962CE00E3608F /* MarkdownQuote.swift in Sources */,
-				655AC53E1DCB24C200073D0B /* SCLAlertView.swift in Sources */,
 				652984F41D41D9E900592F8A /* AppDelegate.swift in Sources */,
-				656150501D7962CE00E3608F /* MarkdownParser.swift in Sources */,
-				656150551D7962CE00E3608F /* MarkdownStyle.swift in Sources */,
 				653A70381D4765A700F061DB /* LoginViewController.swift in Sources */,
 				650095E21D49C4ED009C35F3 /* TermsAndConditionsViewController.swift in Sources */,
-				656150511D7962CE00E3608F /* MarkdownCommonElement.swift in Sources */,
-				656150471D7962CE00E3608F /* MarkdownAutomaticLink.swift in Sources */,
-				65870AE21D92402E00B53C0E /* UITextFieldNavigationToolbar.swift in Sources */,
 				651A26F21DC4A6B5008E586A /* TextFieldPlaceholderHelper.swift in Sources */,
-				656150451D7962CE00E3608F /* MarkdownEscaping.swift in Sources */,
-				65870AE41D92402E00B53C0E /* WeakObjectContainer.swift in Sources */,
-				6561504B1D7962CE00E3608F /* MarkdownItalic.swift in Sources */,
-				65870AE01D92402E00B53C0E /* UITextField+Navigation.swift in Sources */,
-				656150521D7962CE00E3608F /* MarkdownElement.swift in Sources */,
 				655045321D8FAF5D001B66F1 /* TextFieldValidationHelper.swift in Sources */,
 				65BF83091D5AF6A900C6DE89 /* EmailValidationHelper.swift in Sources */,
 				652085BC1D7E7E6200B3436D /* YSWTextFieldWithCharacterCounter.swift in Sources */,
-				656150491D7962CE00E3608F /* MarkdownCode.swift in Sources */,
-				6561504A1D7962CE00E3608F /* MarkdownHeader.swift in Sources */,
-				6561504F1D7962CE00E3608F /* String+UTF16.swift in Sources */,
-				656150441D7962CE00E3608F /* MarkdownCodeEscaping.swift in Sources */,
-				65870AE11D92402E00B53C0E /* UITextFieldNavigationDelegate.swift in Sources */,
-				656150531D7962CE00E3608F /* MarkdownLevelElement.swift in Sources */,
-				656150461D7962CE00E3608F /* MarkdownUnescaping.swift in Sources */,
-				656150541D7962CE00E3608F /* MarkdownLinkElement.swift in Sources */,
-				6561504D1D7962CE00E3608F /* MarkdownList.swift in Sources */,
-				65870AE31D92402E00B53C0E /* UITextFieldNavigationToolbarButtonItem.swift in Sources */,
-				6561504C1D7962CE00E3608F /* MarkdownLink.swift in Sources */,
-				655AC53F1DCB24C200073D0B /* SCLExtensions.swift in Sources */,
-				656150481D7962CE00E3608F /* MarkdownBold.swift in Sources */,
 				653A70361D47514600F061DB /* NewAccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,7 +379,9 @@
 		};
 		652985031D41D9E900592F8A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F779281360D3440B04537CB5 /* Pods-Wlkthru.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4Z5JKF2M6S;
 				INFOPLIST_FILE = Wlkthru/Info.plist;
@@ -501,7 +394,9 @@
 		};
 		652985041D41D9E900592F8A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D0B31C8C71B085AB6788DE2 /* Pods-Wlkthru.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4Z5JKF2M6S;
 				INFOPLIST_FILE = Wlkthru/Info.plist;

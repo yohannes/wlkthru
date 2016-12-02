@@ -1,0 +1,6 @@
+framework module Pods_Wlkthru {
+  umbrella header "Pods-Wlkthru-umbrella.h"
+
+  export *
+  module * { export * }
+}
