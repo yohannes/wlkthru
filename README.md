@@ -1,4 +1,4 @@
-# wlkthru
+# Wlkthru
 
 [![Platform iOS](https://img.shields.io/badge/platform-iOS-blue.svg?style=flat)](http://developer.apple.com/ios)
 [![Language](http://img.shields.io/badge/language-swift-orange.svg?style=flat)](https://developer.apple.com/swift)
@@ -18,7 +18,7 @@
 4. Open Xcode's Preferences -> Accounts -> add your Apple ID
 5. In Xcode's project navigator, click Wlkthru on the very top and go to Targets list -> Wlkthru -> General -> Identity and add a word to the end of the entry in Bundle Identifier to make it unique. Also select your Apple ID in Signing -> Team
 6. Connect your iPhone and select it in Xcode's Product menu -> Destination
-7. Press CMD+R or Product -> Run to install Thoughtless
+7. Press CMD+R or Product -> Run to install Wlkthru
 
 ---
 
