@@ -61,8 +61,8 @@ class NewAccountViewController: UIViewController {
     self.passwordTextField.clearsOnBeginEditing = true
     self.passwordConfirmationTextField.clearsOnBeginEditing = true
     
-    self.emailTextField.nextTextField = self.passwordTextField
-    self.passwordTextField.nextTextField = self.passwordConfirmationTextField
+    self.emailTextField.nextNavigationField = self.passwordTextField
+    self.passwordTextField.nextNavigationField = self.passwordConfirmationTextField
     
     self.emailTextField.attributedPlaceholder = TextFieldPlaceHolderHelper.createAttributedString(from: "Email")
     self.passwordTextField.attributedPlaceholder = TextFieldPlaceHolderHelper.createAttributedString(from: "Password (Min. 6 characters)")

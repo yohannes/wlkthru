@@ -60,7 +60,7 @@ class LoginViewController: UIViewController {
     self.emailTextField.clearsOnBeginEditing = true
     self.passwordTextField.clearsOnBeginEditing = true
     
-    self.emailTextField.nextTextField = self.passwordTextField
+    self.emailTextField.nextNavigationField = self.passwordTextField
     
     self.emailTextField.attributedPlaceholder = TextFieldPlaceHolderHelper.createAttributedString(from: "Email")
     self.passwordTextField.attributedPlaceholder = TextFieldPlaceHolderHelper.createAttributedString(from: "Password")

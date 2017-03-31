@@ -7,46 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C17DDA86DF98838AA9F2C216A498386 /* MarkdownElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9EAB314C2DC26C2E18A5011B4FB325 /* MarkdownElement.swift */; };
+		0C17DDA86DF98838AA9F2C216A498386 /* MarkdownElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E2125C888EED2625ED1B08A2C577A /* MarkdownElement.swift */; };
 		0D303ED098F4D90A345C61BDFBFD6AA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
 		11D35E93060E3C98279E868847893374 /* Pods-Wlkthru-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2825F62E38103009F7FC77D286E4C554 /* Pods-Wlkthru-dummy.m */; };
 		1B01718FB41EE91CB3871947DA3D1540 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
-		32E317E38590F4C0493BCF21F6A7EBE9 /* MarkdownCommonElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224727F09B4521AFA06AFDE4E568CF03 /* MarkdownCommonElement.swift */; };
+		2F5CA810EE25CE0F1BFF4FD84713E7BA /* WeakObjectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E0765C3618601845F56A6A1F76E520 /* WeakObjectContainer.swift */; };
+		32E317E38590F4C0493BCF21F6A7EBE9 /* MarkdownCommonElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D8A194F2E9319196DE5E0597688A70 /* MarkdownCommonElement.swift */; };
 		3A935DF2FE694231DB230D55C73ADC0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
-		4318342702F3E368C9CA677BA891780B /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29523DDD35C78B2C5B9B2A0407BF72A7 /* SCLExtensions.swift */; };
-		436DAB90079CFBD650C6819D7F338230 /* String+UTF16.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF88887DC6B50F11D55D18EFE02B73 /* String+UTF16.swift */; };
-		447EE09128E5F3D69EE87D67A630FC30 /* UITextField-Navigation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C6CD5B134323F169AFA1BE7F9997E1BD /* UITextField-Navigation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		469122CE1926BFEF3DB4B310A2E3FBB5 /* UITextFieldNavigationToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813A74F438E181456FDF9CFDED3E65C3 /* UITextFieldNavigationToolbar.swift */; };
-		4BB1DAADB2F8561010B38CB65F94AB9D /* MarkdownCodeEscaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8878C8428978BE61853922FE8D707284 /* MarkdownCodeEscaping.swift */; };
-		5351D77BFF9161FE4786C689799DC52A /* MarkdownStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAAFB196A0B5C9D9961919B1CA7B46D /* MarkdownStyle.swift */; };
-		568E701517CDE0E19B5C5FBD15C6F150 /* MarkdownBold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9781B2667B42A850A63028EECE7E7AF0 /* MarkdownBold.swift */; };
-		58056406F9FF8760EA1719386E842538 /* MarkdownLinkElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F8081F80B193D6476204F11826C9F6 /* MarkdownLinkElement.swift */; };
-		6098AD7D2417C8FBBFF1AA080141BB50 /* UITextFieldNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970A2296FDACAE2BC36E407CF8644225 /* UITextFieldNavigationDelegate.swift */; };
-		66417904BEC2AC0EB4F422A6E41ECA45 /* MarkdownEscaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB0089A36E89B7FB4DFD1ED89AB5D99 /* MarkdownEscaping.swift */; };
-		725C121B85CB91B2DC26B409E44CBECE /* SCLAlertView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A912717404429B5A7B1D498F264F76B /* SCLAlertView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		741CDDA42538501F67AA50084B7E2E11 /* MarkdownHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE5F2E429A9E62DAF06860F2241A476 /* MarkdownHeader.swift */; };
-		756484B8A292B3FA30F29BF5FA192357 /* UITextFieldNavigationToolbarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D941CEAA315175CD01084B0957C3214 /* UITextFieldNavigationToolbarButtonItem.swift */; };
+		417A6AB4C5DD82DEF4B17A987A486A7C /* UITextField-Navigation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF646CF0FA23312C435DB37159990AD9 /* UITextField-Navigation-dummy.m */; };
+		4318342702F3E368C9CA677BA891780B /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E636FBE4DC240F7CAF463E996A5874B /* SCLExtensions.swift */; };
+		436DAB90079CFBD650C6819D7F338230 /* String+UTF16.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D279B16DB2D1A9E03999F24F5E1A73 /* String+UTF16.swift */; };
+		447EE09128E5F3D69EE87D67A630FC30 /* UITextField-Navigation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 877D7C703366E54ABF603182FC67EBCB /* UITextField-Navigation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4BB1DAADB2F8561010B38CB65F94AB9D /* MarkdownCodeEscaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8276916491EBEBEB7E7C15FCCE578A21 /* MarkdownCodeEscaping.swift */; };
+		5351D77BFF9161FE4786C689799DC52A /* MarkdownStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC475BEA7E85FC0AFE788BDEC71F92D0 /* MarkdownStyle.swift */; };
+		568E701517CDE0E19B5C5FBD15C6F150 /* MarkdownBold.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C5C1C8232211B2B2C122D60A833449 /* MarkdownBold.swift */; };
+		58056406F9FF8760EA1719386E842538 /* MarkdownLinkElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3F09C525AAA0FF4A026A7949A6DF15 /* MarkdownLinkElement.swift */; };
+		5E158530A97B38286EE54CA56213A10C /* NavigationFieldToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BD1CF630F6E3AF6AA20DD137B104E /* NavigationFieldToolbar.swift */; };
+		66417904BEC2AC0EB4F422A6E41ECA45 /* MarkdownEscaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20036AD08871E40E727C20C4CC9A8D11 /* MarkdownEscaping.swift */; };
+		725C121B85CB91B2DC26B409E44CBECE /* SCLAlertView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 536C088F3DEC20076F42898245F66650 /* SCLAlertView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		741CDDA42538501F67AA50084B7E2E11 /* MarkdownHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE4F34AC83E97D27BDA61531F1D803B /* MarkdownHeader.swift */; };
 		7577FA5504D9832D30B24D3209B19F01 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */; };
-		7A13F873BFF551950C8B0EC35A5B946B /* MarkdownCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6E16A5EF398A12D09213639ACC19F /* MarkdownCode.swift */; };
+		7A13F873BFF551950C8B0EC35A5B946B /* MarkdownCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E1C9C1EF04E1646484EEF83422A57E /* MarkdownCode.swift */; };
 		7B395BC944F5D4A925223FEFFE995B8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
-		8A627115EB4735ACF32F72FBF3A1DC05 /* MarkdownLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = C326392ACCFF534E3F7F1341A254E715 /* MarkdownLink.swift */; };
-		8D0EE977E3082A6FFEB8DDAAD1FEE44B /* MarkdownLevelElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F3682C0AF8F5F8AA39BBE6434F719 /* MarkdownLevelElement.swift */; };
+		85FFE6AB59468841AA40E6C63D20D58D /* NavigationFieldInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28AD011DA909A0471BC70859B0F4C95 /* NavigationFieldInternal.swift */; };
+		87A21BCD3D5C0815C720C2C919F8C4B1 /* NavigationFieldImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C97E135CBE214A022F399AE07EE1DE /* NavigationFieldImplementations.swift */; };
+		8A627115EB4735ACF32F72FBF3A1DC05 /* MarkdownLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6304EE976B39688C196D87DF120F1BE5 /* MarkdownLink.swift */; };
+		8D0EE977E3082A6FFEB8DDAAD1FEE44B /* MarkdownLevelElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904D668FD859C540CFE0C13B0923916E /* MarkdownLevelElement.swift */; };
 		9203F8380EAE6605C8433720A5E75B52 /* Pods-Wlkthru-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CCCD3FE63EE9EA4CF4B1E32554EA5B06 /* Pods-Wlkthru-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9D46F1D61C69FE5F3D48272856CF2B2C /* MarkdownKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F180DE020D1CFC45A4B00A066B2069A /* MarkdownKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AFAB65342EF2CA1FC186449A3A6C85A2 /* MarkdownQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1152BDA562A748ABF26A8CC276548AEB /* MarkdownQuote.swift */; };
-		B8BE39858DB05ADEF9383F60F07BD760 /* MarkdownAutomaticLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868EA6E99ECD9EDE6E90ACE989462611 /* MarkdownAutomaticLink.swift */; };
-		B93559F08634B5E1F8C85B4A937837F0 /* SCLAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E6CF4D51F48EB30B50554FA22D91DE /* SCLAlertView-dummy.m */; };
-		BE42BEC16FEDBDCBDBE3DE15332FE62E /* MarkdownItalic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD550E5ED2E1ED72BB0BC627C27F1253 /* MarkdownItalic.swift */; };
+		9D46F1D61C69FE5F3D48272856CF2B2C /* MarkdownKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D110A9683EBB2FBCB2029FB56F32F52A /* MarkdownKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AFAB65342EF2CA1FC186449A3A6C85A2 /* MarkdownQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F44E69B1A9A9242E8428E78A5DA6CD /* MarkdownQuote.swift */; };
+		B14E7BF6373B6A610477A6C2539C6CCB /* NavigationFieldToolbarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA28D61AC1248F06790D525DBE0B057C /* NavigationFieldToolbarButtonItem.swift */; };
+		B8BE39858DB05ADEF9383F60F07BD760 /* MarkdownAutomaticLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCB388347B126596512922D73D395B1 /* MarkdownAutomaticLink.swift */; };
+		B93559F08634B5E1F8C85B4A937837F0 /* SCLAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5489EA05AE8E5BA3AC08A1F787EF0A9C /* SCLAlertView-dummy.m */; };
+		BE42BEC16FEDBDCBDBE3DE15332FE62E /* MarkdownItalic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83607E6B99E8C68D9383EE40A88AA6A /* MarkdownItalic.swift */; };
 		C8A1987B0192D0D81D47000755421D2D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */; };
-		CB08CE08982BAABF4578FD852179B46C /* UITextField+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1CDBC567C851F9548316D363143B9E /* UITextField+Navigation.swift */; };
-		DA8A576F68F1AB0C14D7C061D70F83EA /* MarkdownUnescaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716827B8E0E96F02C3D4A410606FFCF7 /* MarkdownUnescaping.swift */; };
-		DD0AF1C2607FEB39577835E4BD4AA489 /* UIFont+Traits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B92BB37AB79C68BC73647E5311CD3CE /* UIFont+Traits.swift */; };
-		E83114A9BF7F252BD24B22FFAE264406 /* MarkdownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9802772C4C7648AA4CDCFF777E0DBDF /* MarkdownList.swift */; };
-		E86129C3F9713F67EF451CF28C1F447A /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1721DDD71A46580BBC722A343AFF02 /* SCLAlertView.swift */; };
-		EC2AADCD3557FB8A73CE35C00A62DB90 /* MarkdownKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A436786551211608A4E09F809FFA6155 /* MarkdownKit-dummy.m */; };
-		ECE3F5CA07D42F6BC95B20FD3E3C5DA6 /* MarkdownParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64118EBA5936D564D406F3571F760B57 /* MarkdownParser.swift */; };
-		F1CABE530B113C675BC3A9475849FF6C /* UITextField-Navigation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDAA1FEC3867AAB09C7EBCA66959726 /* UITextField-Navigation-dummy.m */; };
-		FE7B971DB0F15308E520373714DE4773 /* WeakObjectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846FF58DD557D7DBCA5F072B1C9674C4 /* WeakObjectContainer.swift */; };
+		D1A12DE5B1D5E33939DA285901C5F87C /* NavigationField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A714775692139923BC112A369DD4A6B /* NavigationField.swift */; };
+		DA8A576F68F1AB0C14D7C061D70F83EA /* MarkdownUnescaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81709DF2821BFCFC46DFB0A11B84D14A /* MarkdownUnescaping.swift */; };
+		DD0AF1C2607FEB39577835E4BD4AA489 /* UIFont+Traits.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C592479CB1B39B6CAC0FCD3EF98DEF /* UIFont+Traits.swift */; };
+		E83114A9BF7F252BD24B22FFAE264406 /* MarkdownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94007E54340DFC3C96F86CDB5E88B0 /* MarkdownList.swift */; };
+		E86129C3F9713F67EF451CF28C1F447A /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0981E9D39937EF0981A96157EA1C24 /* SCLAlertView.swift */; };
+		EC2AADCD3557FB8A73CE35C00A62DB90 /* MarkdownKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E51501BE93CC64C8D9D2E0799EC76030 /* MarkdownKit-dummy.m */; };
+		ECE3F5CA07D42F6BC95B20FD3E3C5DA6 /* MarkdownParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA96EE3A39524D3B8D75D472292BF6 /* MarkdownParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,67 +75,68 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0FF52BC9973E4DEEA65A7E53B26224CF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1152BDA562A748ABF26A8CC276548AEB /* MarkdownQuote.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownQuote.swift; path = MarkdownKit/Classes/Elements/MarkdownQuote.swift; sourceTree = "<group>"; };
-		14BB5BDD917EF7FB85969B844A92D907 /* UITextField-Navigation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "UITextField-Navigation.modulemap"; sourceTree = "<group>"; };
+		147E5647CA7BB93DFC8A02E4630A2005 /* SCLAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-prefix.pch"; sourceTree = "<group>"; };
+		15F44E69B1A9A9242E8428E78A5DA6CD /* MarkdownQuote.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownQuote.swift; path = MarkdownKit/Classes/Elements/MarkdownQuote.swift; sourceTree = "<group>"; };
+		18A87C3AA9FCB2F1D9154D0935B53ED7 /* SCLAlertView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SCLAlertView.modulemap; sourceTree = "<group>"; };
 		1B09EFE55C1A9351939EF13EAD08C53D /* Pods_Wlkthru.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Wlkthru.framework; path = "Pods-Wlkthru.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B92BB37AB79C68BC73647E5311CD3CE /* UIFont+Traits.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIFont+Traits.swift"; path = "MarkdownKit/Classes/Extensions/UIFont+Traits.swift"; sourceTree = "<group>"; };
-		1BAAFB196A0B5C9D9961919B1CA7B46D /* MarkdownStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownStyle.swift; path = MarkdownKit/Classes/Protocols/MarkdownStyle.swift; sourceTree = "<group>"; };
 		1C554B8628E59E9D970D3401DBA8A28F /* Pods-Wlkthru-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Wlkthru-acknowledgements.markdown"; sourceTree = "<group>"; };
-		224727F09B4521AFA06AFDE4E568CF03 /* MarkdownCommonElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownCommonElement.swift; path = MarkdownKit/Classes/Protocols/MarkdownCommonElement.swift; sourceTree = "<group>"; };
-		23F8081F80B193D6476204F11826C9F6 /* MarkdownLinkElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownLinkElement.swift; path = MarkdownKit/Classes/Protocols/MarkdownLinkElement.swift; sourceTree = "<group>"; };
-		273A67B276E8E0880E65C5EAD00FC1C2 /* MarkdownKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MarkdownKit-prefix.pch"; sourceTree = "<group>"; };
+		1F60C848BDE217A5594F22A448318FC8 /* MarkdownKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MarkdownKit.xcconfig; sourceTree = "<group>"; };
+		20036AD08871E40E727C20C4CC9A8D11 /* MarkdownEscaping.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownEscaping.swift; path = MarkdownKit/Classes/Elements/Escaping/MarkdownEscaping.swift; sourceTree = "<group>"; };
+		207BD1CF630F6E3AF6AA20DD137B104E /* NavigationFieldToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationFieldToolbar.swift; path = "UITextField-Navigation/Classes/NavigationFieldToolbar.swift"; sourceTree = "<group>"; };
+		229DDD69E7FDAE76B55C6751DDDB24FC /* UITextField-Navigation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextField-Navigation-prefix.pch"; sourceTree = "<group>"; };
+		245C745C782EC8C571499601DBB9B2CF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2825F62E38103009F7FC77D286E4C554 /* Pods-Wlkthru-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Wlkthru-dummy.m"; sourceTree = "<group>"; };
-		29523DDD35C78B2C5B9B2A0407BF72A7 /* SCLExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCLExtensions.swift; path = SCLAlertView/SCLExtensions.swift; sourceTree = "<group>"; };
+		2AB7BBA925A7A8AF29B40F648BCB3657 /* UITextField-Navigation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "UITextField-Navigation.modulemap"; sourceTree = "<group>"; };
 		2EFB2C8AD78F3D94A052B966D76F7805 /* MarkdownKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MarkdownKit.framework; path = MarkdownKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		304EBF7604866BF7323FE88A54CBFD81 /* Pods-Wlkthru-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Wlkthru-acknowledgements.plist"; sourceTree = "<group>"; };
-		3294142C8781BDA83C69548CEBD96989 /* UITextField-Navigation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UITextField-Navigation.xcconfig"; sourceTree = "<group>"; };
-		3B1721DDD71A46580BBC722A343AFF02 /* SCLAlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCLAlertView.swift; path = SCLAlertView/SCLAlertView.swift; sourceTree = "<group>"; };
+		33E0765C3618601845F56A6A1F76E520 /* WeakObjectContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WeakObjectContainer.swift; path = "UITextField-Navigation/Classes/WeakObjectContainer.swift"; sourceTree = "<group>"; };
+		397E2125C888EED2625ED1B08A2C577A /* MarkdownElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownElement.swift; path = MarkdownKit/Classes/Protocols/MarkdownElement.swift; sourceTree = "<group>"; };
+		3DE45D2B7F828649802CC6C4F909EDBE /* MarkdownKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MarkdownKit-prefix.pch"; sourceTree = "<group>"; };
 		3ED118F98C82246AB5A0EC77624B3262 /* Pods-Wlkthru.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Wlkthru.debug.xcconfig"; sourceTree = "<group>"; };
-		404F3682C0AF8F5F8AA39BBE6434F719 /* MarkdownLevelElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownLevelElement.swift; path = MarkdownKit/Classes/Protocols/MarkdownLevelElement.swift; sourceTree = "<group>"; };
-		5F180DE020D1CFC45A4B00A066B2069A /* MarkdownKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MarkdownKit-umbrella.h"; sourceTree = "<group>"; };
+		44720A36713A1E9DB9F878B45F574708 /* MarkdownKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MarkdownKit.modulemap; sourceTree = "<group>"; };
+		49E1C9C1EF04E1646484EEF83422A57E /* MarkdownCode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownCode.swift; path = MarkdownKit/Classes/Elements/MarkdownCode.swift; sourceTree = "<group>"; };
+		4E636FBE4DC240F7CAF463E996A5874B /* SCLExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCLExtensions.swift; path = SCLAlertView/SCLExtensions.swift; sourceTree = "<group>"; };
+		536C088F3DEC20076F42898245F66650 /* SCLAlertView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-umbrella.h"; sourceTree = "<group>"; };
+		5373EB9062CA14D68EFDBFA491639B5A /* SCLAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCLAlertView.xcconfig; sourceTree = "<group>"; };
+		5489EA05AE8E5BA3AC08A1F787EF0A9C /* SCLAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCLAlertView-dummy.m"; sourceTree = "<group>"; };
+		60C97E135CBE214A022F399AE07EE1DE /* NavigationFieldImplementations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationFieldImplementations.swift; path = "UITextField-Navigation/Classes/NavigationFieldImplementations.swift"; sourceTree = "<group>"; };
 		616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		64118EBA5936D564D406F3571F760B57 /* MarkdownParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownParser.swift; path = MarkdownKit/Classes/MarkdownParser.swift; sourceTree = "<group>"; };
-		6D941CEAA315175CD01084B0957C3214 /* UITextFieldNavigationToolbarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITextFieldNavigationToolbarButtonItem.swift; path = "UITextField-Navigation/Classes/UITextFieldNavigationToolbarButtonItem.swift"; sourceTree = "<group>"; };
-		716827B8E0E96F02C3D4A410606FFCF7 /* MarkdownUnescaping.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownUnescaping.swift; path = MarkdownKit/Classes/Elements/Escaping/MarkdownUnescaping.swift; sourceTree = "<group>"; };
+		6304EE976B39688C196D87DF120F1BE5 /* MarkdownLink.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownLink.swift; path = MarkdownKit/Classes/Elements/MarkdownLink.swift; sourceTree = "<group>"; };
 		71ED63F1BBCCD563DAF25B67F8819AEB /* Pods-Wlkthru-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Wlkthru-resources.sh"; sourceTree = "<group>"; };
-		748C340ABC53D7681CAB1A731A3C5673 /* SCLAlertView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SCLAlertView.modulemap; sourceTree = "<group>"; };
-		7BE5F2E429A9E62DAF06860F2241A476 /* MarkdownHeader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownHeader.swift; path = MarkdownKit/Classes/Elements/MarkdownHeader.swift; sourceTree = "<group>"; };
 		7DD2C85197E7627E9A3CCEE42E0DEDFF /* UITextField_Navigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UITextField_Navigation.framework; path = "UITextField-Navigation.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E1CDBC567C851F9548316D363143B9E /* UITextField+Navigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+Navigation.swift"; path = "UITextField-Navigation/Classes/UITextField+Navigation.swift"; sourceTree = "<group>"; };
 		7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		813A74F438E181456FDF9CFDED3E65C3 /* UITextFieldNavigationToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITextFieldNavigationToolbar.swift; path = "UITextField-Navigation/Classes/UITextFieldNavigationToolbar.swift"; sourceTree = "<group>"; };
-		846FF58DD557D7DBCA5F072B1C9674C4 /* WeakObjectContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WeakObjectContainer.swift; path = "UITextField-Navigation/Classes/WeakObjectContainer.swift"; sourceTree = "<group>"; };
-		868EA6E99ECD9EDE6E90ACE989462611 /* MarkdownAutomaticLink.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownAutomaticLink.swift; path = MarkdownKit/Classes/Elements/MarkdownAutomaticLink.swift; sourceTree = "<group>"; };
-		8878C8428978BE61853922FE8D707284 /* MarkdownCodeEscaping.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownCodeEscaping.swift; path = MarkdownKit/Classes/Elements/Escaping/MarkdownCodeEscaping.swift; sourceTree = "<group>"; };
-		8CB0089A36E89B7FB4DFD1ED89AB5D99 /* MarkdownEscaping.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownEscaping.swift; path = MarkdownKit/Classes/Elements/Escaping/MarkdownEscaping.swift; sourceTree = "<group>"; };
-		8DD6E16A5EF398A12D09213639ACC19F /* MarkdownCode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownCode.swift; path = MarkdownKit/Classes/Elements/MarkdownCode.swift; sourceTree = "<group>"; };
-		8E0758DA72F3BDEDDB65FC0D892150AE /* SCLAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCLAlertView.xcconfig; sourceTree = "<group>"; };
+		81709DF2821BFCFC46DFB0A11B84D14A /* MarkdownUnescaping.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownUnescaping.swift; path = MarkdownKit/Classes/Elements/Escaping/MarkdownUnescaping.swift; sourceTree = "<group>"; };
+		8276916491EBEBEB7E7C15FCCE578A21 /* MarkdownCodeEscaping.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownCodeEscaping.swift; path = MarkdownKit/Classes/Elements/Escaping/MarkdownCodeEscaping.swift; sourceTree = "<group>"; };
+		877D7C703366E54ABF603182FC67EBCB /* UITextField-Navigation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextField-Navigation-umbrella.h"; sourceTree = "<group>"; };
+		8A714775692139923BC112A369DD4A6B /* NavigationField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationField.swift; path = "UITextField-Navigation/Classes/NavigationField.swift"; sourceTree = "<group>"; };
+		904D668FD859C540CFE0C13B0923916E /* MarkdownLevelElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownLevelElement.swift; path = MarkdownKit/Classes/Protocols/MarkdownLevelElement.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		970A2296FDACAE2BC36E407CF8644225 /* UITextFieldNavigationDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITextFieldNavigationDelegate.swift; path = "UITextField-Navigation/Classes/UITextFieldNavigationDelegate.swift"; sourceTree = "<group>"; };
-		9781B2667B42A850A63028EECE7E7AF0 /* MarkdownBold.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownBold.swift; path = MarkdownKit/Classes/Elements/MarkdownBold.swift; sourceTree = "<group>"; };
-		992124635D14CAE32F45CDF72C35FA48 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9A912717404429B5A7B1D498F264F76B /* SCLAlertView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-umbrella.h"; sourceTree = "<group>"; };
-		9D0152825C18E1D3626A76B0AB4957BC /* UITextField-Navigation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextField-Navigation-prefix.pch"; sourceTree = "<group>"; };
+		94D8A194F2E9319196DE5E0597688A70 /* MarkdownCommonElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownCommonElement.swift; path = MarkdownKit/Classes/Protocols/MarkdownCommonElement.swift; sourceTree = "<group>"; };
 		9DC2FCC93CD2343226BED36E144AC90B /* SCLAlertView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SCLAlertView.framework; path = SCLAlertView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1FD32358D1291C5D439144490164A2C /* SCLAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-prefix.pch"; sourceTree = "<group>"; };
-		A436786551211608A4E09F809FFA6155 /* MarkdownKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MarkdownKit-dummy.m"; sourceTree = "<group>"; };
-		A9802772C4C7648AA4CDCFF777E0DBDF /* MarkdownList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownList.swift; path = MarkdownKit/Classes/Elements/MarkdownList.swift; sourceTree = "<group>"; };
+		A240C9C9AC5B8342FF990E20DDEE3BEC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A83607E6B99E8C68D9383EE40A88AA6A /* MarkdownItalic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownItalic.swift; path = MarkdownKit/Classes/Elements/MarkdownItalic.swift; sourceTree = "<group>"; };
 		AAA1B97B92A7F04301818077D32DF420 /* Pods-Wlkthru.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Wlkthru.modulemap"; sourceTree = "<group>"; };
-		B3A39BBE75525C72E3EFE77DEA2949D8 /* MarkdownKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MarkdownKit.modulemap; sourceTree = "<group>"; };
-		C326392ACCFF534E3F7F1341A254E715 /* MarkdownLink.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownLink.swift; path = MarkdownKit/Classes/Elements/MarkdownLink.swift; sourceTree = "<group>"; };
-		C6CD5B134323F169AFA1BE7F9997E1BD /* UITextField-Navigation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextField-Navigation-umbrella.h"; sourceTree = "<group>"; };
-		CC58D81D3AF0A119A0F600D9A0C80A47 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC3F09C525AAA0FF4A026A7949A6DF15 /* MarkdownLinkElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownLinkElement.swift; path = MarkdownKit/Classes/Protocols/MarkdownLinkElement.swift; sourceTree = "<group>"; };
+		B28AD011DA909A0471BC70859B0F4C95 /* NavigationFieldInternal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationFieldInternal.swift; path = "UITextField-Navigation/Classes/NavigationFieldInternal.swift"; sourceTree = "<group>"; };
+		B4C592479CB1B39B6CAC0FCD3EF98DEF /* UIFont+Traits.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIFont+Traits.swift"; path = "MarkdownKit/Classes/Extensions/UIFont+Traits.swift"; sourceTree = "<group>"; };
+		BE0981E9D39937EF0981A96157EA1C24 /* SCLAlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCLAlertView.swift; path = SCLAlertView/SCLAlertView.swift; sourceTree = "<group>"; };
+		BFCB388347B126596512922D73D395B1 /* MarkdownAutomaticLink.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownAutomaticLink.swift; path = MarkdownKit/Classes/Elements/MarkdownAutomaticLink.swift; sourceTree = "<group>"; };
+		C8D279B16DB2D1A9E03999F24F5E1A73 /* String+UTF16.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+UTF16.swift"; path = "MarkdownKit/Classes/Extensions/String+UTF16.swift"; sourceTree = "<group>"; };
+		CC475BEA7E85FC0AFE788BDEC71F92D0 /* MarkdownStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownStyle.swift; path = MarkdownKit/Classes/Protocols/MarkdownStyle.swift; sourceTree = "<group>"; };
 		CCCD3FE63EE9EA4CF4B1E32554EA5B06 /* Pods-Wlkthru-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Wlkthru-umbrella.h"; sourceTree = "<group>"; };
-		D2E6CF4D51F48EB30B50554FA22D91DE /* SCLAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCLAlertView-dummy.m"; sourceTree = "<group>"; };
+		D110A9683EBB2FBCB2029FB56F32F52A /* MarkdownKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MarkdownKit-umbrella.h"; sourceTree = "<group>"; };
 		D3D3F42C7A3D9B23BA9CB38B52BC25F0 /* Pods-Wlkthru.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Wlkthru.release.xcconfig"; sourceTree = "<group>"; };
 		D3D699E8C9F110AA2EE204C1BA4E8AF2 /* Pods-Wlkthru-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Wlkthru-frameworks.sh"; sourceTree = "<group>"; };
-		DD9EAB314C2DC26C2E18A5011B4FB325 /* MarkdownElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownElement.swift; path = MarkdownKit/Classes/Protocols/MarkdownElement.swift; sourceTree = "<group>"; };
-		E8EF88887DC6B50F11D55D18EFE02B73 /* String+UTF16.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+UTF16.swift"; path = "MarkdownKit/Classes/Extensions/String+UTF16.swift"; sourceTree = "<group>"; };
-		E98F68F0599174C10B961C77CB416947 /* MarkdownKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MarkdownKit.xcconfig; sourceTree = "<group>"; };
+		D9C5C1C8232211B2B2C122D60A833449 /* MarkdownBold.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownBold.swift; path = MarkdownKit/Classes/Elements/MarkdownBold.swift; sourceTree = "<group>"; };
+		DAE4F34AC83E97D27BDA61531F1D803B /* MarkdownHeader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownHeader.swift; path = MarkdownKit/Classes/Elements/MarkdownHeader.swift; sourceTree = "<group>"; };
+		DBC6356E02889C61E7B517F8FA9449C3 /* UITextField-Navigation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UITextField-Navigation.xcconfig"; sourceTree = "<group>"; };
+		DF646CF0FA23312C435DB37159990AD9 /* UITextField-Navigation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITextField-Navigation-dummy.m"; sourceTree = "<group>"; };
+		E51501BE93CC64C8D9D2E0799EC76030 /* MarkdownKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MarkdownKit-dummy.m"; sourceTree = "<group>"; };
+		E5377764650B0D859BB02477EDCAD2E0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5AA96EE3A39524D3B8D75D472292BF6 /* MarkdownParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownParser.swift; path = MarkdownKit/Classes/MarkdownParser.swift; sourceTree = "<group>"; };
+		EA28D61AC1248F06790D525DBE0B057C /* NavigationFieldToolbarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationFieldToolbarButtonItem.swift; path = "UITextField-Navigation/Classes/NavigationFieldToolbarButtonItem.swift"; sourceTree = "<group>"; };
+		EA94007E54340DFC3C96F86CDB5E88B0 /* MarkdownList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownList.swift; path = MarkdownKit/Classes/Elements/MarkdownList.swift; sourceTree = "<group>"; };
 		EF234840DCB8ED3C179F0787D617142D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD550E5ED2E1ED72BB0BC627C27F1253 /* MarkdownItalic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownItalic.swift; path = MarkdownKit/Classes/Elements/MarkdownItalic.swift; sourceTree = "<group>"; };
-		FEDAA1FEC3867AAB09C7EBCA66959726 /* UITextField-Navigation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITextField-Navigation-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,26 +177,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3409246742A52843D4E07A2DC3946483 /* UITextField-Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				7E1CDBC567C851F9548316D363143B9E /* UITextField+Navigation.swift */,
-				970A2296FDACAE2BC36E407CF8644225 /* UITextFieldNavigationDelegate.swift */,
-				813A74F438E181456FDF9CFDED3E65C3 /* UITextFieldNavigationToolbar.swift */,
-				6D941CEAA315175CD01084B0957C3214 /* UITextFieldNavigationToolbarButtonItem.swift */,
-				846FF58DD557D7DBCA5F072B1C9674C4 /* WeakObjectContainer.swift */,
-				9C40DDD4E2610A85804ABC4573E531DD /* Support Files */,
-			);
-			name = "UITextField-Navigation";
-			path = "UITextField-Navigation";
-			sourceTree = "<group>";
-		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				E6EE98446B568159EE277B68FD442AF0 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		49014BA4A20ED0C6583818D5D56A0B83 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				245C745C782EC8C571499601DBB9B2CF /* Info.plist */,
+				2AB7BBA925A7A8AF29B40F648BCB3657 /* UITextField-Navigation.modulemap */,
+				DBC6356E02889C61E7B517F8FA9449C3 /* UITextField-Navigation.xcconfig */,
+				DF646CF0FA23312C435DB37159990AD9 /* UITextField-Navigation-dummy.m */,
+				229DDD69E7FDAE76B55C6751DDDB24FC /* UITextField-Navigation-prefix.pch */,
+				877D7C703366E54ABF603182FC67EBCB /* UITextField-Navigation-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UITextField-Navigation";
+			sourceTree = "<group>";
+		};
+		49DABD3E4EE8AE017FC447615F71ADA6 /* MarkdownKit */ = {
+			isa = PBXGroup;
+			children = (
+				BFCB388347B126596512922D73D395B1 /* MarkdownAutomaticLink.swift */,
+				D9C5C1C8232211B2B2C122D60A833449 /* MarkdownBold.swift */,
+				49E1C9C1EF04E1646484EEF83422A57E /* MarkdownCode.swift */,
+				8276916491EBEBEB7E7C15FCCE578A21 /* MarkdownCodeEscaping.swift */,
+				94D8A194F2E9319196DE5E0597688A70 /* MarkdownCommonElement.swift */,
+				397E2125C888EED2625ED1B08A2C577A /* MarkdownElement.swift */,
+				20036AD08871E40E727C20C4CC9A8D11 /* MarkdownEscaping.swift */,
+				DAE4F34AC83E97D27BDA61531F1D803B /* MarkdownHeader.swift */,
+				A83607E6B99E8C68D9383EE40A88AA6A /* MarkdownItalic.swift */,
+				904D668FD859C540CFE0C13B0923916E /* MarkdownLevelElement.swift */,
+				6304EE976B39688C196D87DF120F1BE5 /* MarkdownLink.swift */,
+				AC3F09C525AAA0FF4A026A7949A6DF15 /* MarkdownLinkElement.swift */,
+				EA94007E54340DFC3C96F86CDB5E88B0 /* MarkdownList.swift */,
+				E5AA96EE3A39524D3B8D75D472292BF6 /* MarkdownParser.swift */,
+				15F44E69B1A9A9242E8428E78A5DA6CD /* MarkdownQuote.swift */,
+				CC475BEA7E85FC0AFE788BDEC71F92D0 /* MarkdownStyle.swift */,
+				81709DF2821BFCFC46DFB0A11B84D14A /* MarkdownUnescaping.swift */,
+				C8D279B16DB2D1A9E03999F24F5E1A73 /* String+UTF16.swift */,
+				B4C592479CB1B39B6CAC0FCD3EF98DEF /* UIFont+Traits.swift */,
+				C6F1435B0429A5B906D6AF6596DB0109 /* Support Files */,
+			);
+			name = MarkdownKit;
+			path = MarkdownKit;
 			sourceTree = "<group>";
 		};
 		4BD67E21AE30D809206664285AF3EA45 /* Targets Support Files */ = {
@@ -205,26 +235,12 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		59A0E131E19926F95C8F6EA6DC445143 /* Support Files */ = {
+		649F42857D471D46DB348B3DB119771C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				992124635D14CAE32F45CDF72C35FA48 /* Info.plist */,
-				B3A39BBE75525C72E3EFE77DEA2949D8 /* MarkdownKit.modulemap */,
-				E98F68F0599174C10B961C77CB416947 /* MarkdownKit.xcconfig */,
-				A436786551211608A4E09F809FFA6155 /* MarkdownKit-dummy.m */,
-				273A67B276E8E0880E65C5EAD00FC1C2 /* MarkdownKit-prefix.pch */,
-				5F180DE020D1CFC45A4B00A066B2069A /* MarkdownKit-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/MarkdownKit";
-			sourceTree = "<group>";
-		};
-		6559DFC3A3D26F5C1F2CA508D5D903A4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				FC81788F9812A919C6B1D32CB00B64B2 /* MarkdownKit */,
-				8E9C2745488330DF3B959BF32759BBD9 /* SCLAlertView */,
-				3409246742A52843D4E07A2DC3946483 /* UITextField-Navigation */,
+				49DABD3E4EE8AE017FC447615F71ADA6 /* MarkdownKit */,
+				95A8222E44CD82292984D3E6E0B4D742 /* SCLAlertView */,
+				DEAF63B6C1F789A43EDE548DF81E282F /* UITextField-Navigation */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -252,32 +268,18 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				6559DFC3A3D26F5C1F2CA508D5D903A4 /* Pods */,
+				649F42857D471D46DB348B3DB119771C /* Pods */,
 				98A2EA416368256685E2CCA4BA8720E1 /* Products */,
 				4BD67E21AE30D809206664285AF3EA45 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		80AA0AF17E71361989454A7C63024414 /* Support Files */ = {
+		95A8222E44CD82292984D3E6E0B4D742 /* SCLAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				0FF52BC9973E4DEEA65A7E53B26224CF /* Info.plist */,
-				748C340ABC53D7681CAB1A731A3C5673 /* SCLAlertView.modulemap */,
-				8E0758DA72F3BDEDDB65FC0D892150AE /* SCLAlertView.xcconfig */,
-				D2E6CF4D51F48EB30B50554FA22D91DE /* SCLAlertView-dummy.m */,
-				A1FD32358D1291C5D439144490164A2C /* SCLAlertView-prefix.pch */,
-				9A912717404429B5A7B1D498F264F76B /* SCLAlertView-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SCLAlertView";
-			sourceTree = "<group>";
-		};
-		8E9C2745488330DF3B959BF32759BBD9 /* SCLAlertView */ = {
-			isa = PBXGroup;
-			children = (
-				3B1721DDD71A46580BBC722A343AFF02 /* SCLAlertView.swift */,
-				29523DDD35C78B2C5B9B2A0407BF72A7 /* SCLExtensions.swift */,
-				80AA0AF17E71361989454A7C63024414 /* Support Files */,
+				BE0981E9D39937EF0981A96157EA1C24 /* SCLAlertView.swift */,
+				4E636FBE4DC240F7CAF463E996A5874B /* SCLExtensions.swift */,
+				DB5797552E2FCD1BABB83FF8AF416227 /* Support Files */,
 			);
 			name = SCLAlertView;
 			path = SCLAlertView;
@@ -294,18 +296,47 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9C40DDD4E2610A85804ABC4573E531DD /* Support Files */ = {
+		C6F1435B0429A5B906D6AF6596DB0109 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CC58D81D3AF0A119A0F600D9A0C80A47 /* Info.plist */,
-				14BB5BDD917EF7FB85969B844A92D907 /* UITextField-Navigation.modulemap */,
-				3294142C8781BDA83C69548CEBD96989 /* UITextField-Navigation.xcconfig */,
-				FEDAA1FEC3867AAB09C7EBCA66959726 /* UITextField-Navigation-dummy.m */,
-				9D0152825C18E1D3626A76B0AB4957BC /* UITextField-Navigation-prefix.pch */,
-				C6CD5B134323F169AFA1BE7F9997E1BD /* UITextField-Navigation-umbrella.h */,
+				E5377764650B0D859BB02477EDCAD2E0 /* Info.plist */,
+				44720A36713A1E9DB9F878B45F574708 /* MarkdownKit.modulemap */,
+				1F60C848BDE217A5594F22A448318FC8 /* MarkdownKit.xcconfig */,
+				E51501BE93CC64C8D9D2E0799EC76030 /* MarkdownKit-dummy.m */,
+				3DE45D2B7F828649802CC6C4F909EDBE /* MarkdownKit-prefix.pch */,
+				D110A9683EBB2FBCB2029FB56F32F52A /* MarkdownKit-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/UITextField-Navigation";
+			path = "../Target Support Files/MarkdownKit";
+			sourceTree = "<group>";
+		};
+		DB5797552E2FCD1BABB83FF8AF416227 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A240C9C9AC5B8342FF990E20DDEE3BEC /* Info.plist */,
+				18A87C3AA9FCB2F1D9154D0935B53ED7 /* SCLAlertView.modulemap */,
+				5373EB9062CA14D68EFDBFA491639B5A /* SCLAlertView.xcconfig */,
+				5489EA05AE8E5BA3AC08A1F787EF0A9C /* SCLAlertView-dummy.m */,
+				147E5647CA7BB93DFC8A02E4630A2005 /* SCLAlertView-prefix.pch */,
+				536C088F3DEC20076F42898245F66650 /* SCLAlertView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SCLAlertView";
+			sourceTree = "<group>";
+		};
+		DEAF63B6C1F789A43EDE548DF81E282F /* UITextField-Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				8A714775692139923BC112A369DD4A6B /* NavigationField.swift */,
+				60C97E135CBE214A022F399AE07EE1DE /* NavigationFieldImplementations.swift */,
+				B28AD011DA909A0471BC70859B0F4C95 /* NavigationFieldInternal.swift */,
+				207BD1CF630F6E3AF6AA20DD137B104E /* NavigationFieldToolbar.swift */,
+				EA28D61AC1248F06790D525DBE0B057C /* NavigationFieldToolbarButtonItem.swift */,
+				33E0765C3618601845F56A6A1F76E520 /* WeakObjectContainer.swift */,
+				49014BA4A20ED0C6583818D5D56A0B83 /* Support Files */,
+			);
+			name = "UITextField-Navigation";
+			path = "UITextField-Navigation";
 			sourceTree = "<group>";
 		};
 		E6EE98446B568159EE277B68FD442AF0 /* iOS */ = {
@@ -315,34 +346,6 @@
 				7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		FC81788F9812A919C6B1D32CB00B64B2 /* MarkdownKit */ = {
-			isa = PBXGroup;
-			children = (
-				868EA6E99ECD9EDE6E90ACE989462611 /* MarkdownAutomaticLink.swift */,
-				9781B2667B42A850A63028EECE7E7AF0 /* MarkdownBold.swift */,
-				8DD6E16A5EF398A12D09213639ACC19F /* MarkdownCode.swift */,
-				8878C8428978BE61853922FE8D707284 /* MarkdownCodeEscaping.swift */,
-				224727F09B4521AFA06AFDE4E568CF03 /* MarkdownCommonElement.swift */,
-				DD9EAB314C2DC26C2E18A5011B4FB325 /* MarkdownElement.swift */,
-				8CB0089A36E89B7FB4DFD1ED89AB5D99 /* MarkdownEscaping.swift */,
-				7BE5F2E429A9E62DAF06860F2241A476 /* MarkdownHeader.swift */,
-				FD550E5ED2E1ED72BB0BC627C27F1253 /* MarkdownItalic.swift */,
-				404F3682C0AF8F5F8AA39BBE6434F719 /* MarkdownLevelElement.swift */,
-				C326392ACCFF534E3F7F1341A254E715 /* MarkdownLink.swift */,
-				23F8081F80B193D6476204F11826C9F6 /* MarkdownLinkElement.swift */,
-				A9802772C4C7648AA4CDCFF777E0DBDF /* MarkdownList.swift */,
-				64118EBA5936D564D406F3571F760B57 /* MarkdownParser.swift */,
-				1152BDA562A748ABF26A8CC276548AEB /* MarkdownQuote.swift */,
-				1BAAFB196A0B5C9D9961919B1CA7B46D /* MarkdownStyle.swift */,
-				716827B8E0E96F02C3D4A410606FFCF7 /* MarkdownUnescaping.swift */,
-				E8EF88887DC6B50F11D55D18EFE02B73 /* String+UTF16.swift */,
-				1B92BB37AB79C68BC73647E5311CD3CE /* UIFont+Traits.swift */,
-				59A0E131E19926F95C8F6EA6DC445143 /* Support Files */,
-			);
-			name = MarkdownKit;
-			path = MarkdownKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,7 +410,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BC094D5E58B51956EB41011763996BD /* Build configuration list for PBXNativeTarget "UITextField-Navigation" */;
 			buildPhases = (
-				47CF2FAF3A621F3B6A797FB5758F081F /* Sources */,
+				1DBADF0433C458F72B8A05E72CBCC4F4 /* Sources */,
 				BB99C52DE9B1CCB8D908F0165246813F /* Frameworks */,
 				4BC45B53089E55EDD388A7BE60069FCD /* Headers */,
 			);
@@ -492,16 +495,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		47CF2FAF3A621F3B6A797FB5758F081F /* Sources */ = {
+		1DBADF0433C458F72B8A05E72CBCC4F4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB08CE08982BAABF4578FD852179B46C /* UITextField+Navigation.swift in Sources */,
-				F1CABE530B113C675BC3A9475849FF6C /* UITextField-Navigation-dummy.m in Sources */,
-				6098AD7D2417C8FBBFF1AA080141BB50 /* UITextFieldNavigationDelegate.swift in Sources */,
-				469122CE1926BFEF3DB4B310A2E3FBB5 /* UITextFieldNavigationToolbar.swift in Sources */,
-				756484B8A292B3FA30F29BF5FA192357 /* UITextFieldNavigationToolbarButtonItem.swift in Sources */,
-				FE7B971DB0F15308E520373714DE4773 /* WeakObjectContainer.swift in Sources */,
+				D1A12DE5B1D5E33939DA285901C5F87C /* NavigationField.swift in Sources */,
+				87A21BCD3D5C0815C720C2C919F8C4B1 /* NavigationFieldImplementations.swift in Sources */,
+				85FFE6AB59468841AA40E6C63D20D58D /* NavigationFieldInternal.swift in Sources */,
+				5E158530A97B38286EE54CA56213A10C /* NavigationFieldToolbar.swift in Sources */,
+				B14E7BF6373B6A610477A6C2539C6CCB /* NavigationFieldToolbarButtonItem.swift in Sources */,
+				417A6AB4C5DD82DEF4B17A987A486A7C /* UITextField-Navigation-dummy.m in Sources */,
+				2F5CA810EE25CE0F1BFF4FD84713E7BA /* WeakObjectContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,7 +652,7 @@
 		};
 		17E33E67A143347C28CC5EC03070DC59 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8E0758DA72F3BDEDDB65FC0D892150AE /* SCLAlertView.xcconfig */;
+			baseConfigurationReference = 5373EB9062CA14D68EFDBFA491639B5A /* SCLAlertView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -680,7 +684,7 @@
 		};
 		1B9EAF97C8DEF2DFA51A590C91DA0EDF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3294142C8781BDA83C69548CEBD96989 /* UITextField-Navigation.xcconfig */;
+			baseConfigurationReference = DBC6356E02889C61E7B517F8FA9449C3 /* UITextField-Navigation.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -712,7 +716,7 @@
 		};
 		74F29342BDDB462EA749597642B8881D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3294142C8781BDA83C69548CEBD96989 /* UITextField-Navigation.xcconfig */;
+			baseConfigurationReference = DBC6356E02889C61E7B517F8FA9449C3 /* UITextField-Navigation.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -745,7 +749,7 @@
 		};
 		8BA3073CAFCD5DE91DF923103F9DDB3B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8E0758DA72F3BDEDDB65FC0D892150AE /* SCLAlertView.xcconfig */;
+			baseConfigurationReference = 5373EB9062CA14D68EFDBFA491639B5A /* SCLAlertView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -778,7 +782,7 @@
 		};
 		8C77CF477C561AE3AE11141B601C6C8E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E98F68F0599174C10B961C77CB416947 /* MarkdownKit.xcconfig */;
+			baseConfigurationReference = 1F60C848BDE217A5594F22A448318FC8 /* MarkdownKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -886,7 +890,7 @@
 		};
 		F13191C34EC01FAAC0A3FC54673C48A7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E98F68F0599174C10B961C77CB416947 /* MarkdownKit.xcconfig */;
+			baseConfigurationReference = 1F60C848BDE217A5594F22A448318FC8 /* MarkdownKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";

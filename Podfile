@@ -6,7 +6,7 @@ target 'Wlkthru' do
   	use_frameworks!
 
   	# Pods for Wlkthru
-	pod 'SCLAlertView', '~> 0.7'
-	pod 'UITextField-Navigation', '~> 2.0'
-	pod 'MarkdownKit', '~> 1.2'
+	pod 'SCLAlertView'
+	pod 'UITextField-Navigation'
+	pod 'MarkdownKit'
 end
