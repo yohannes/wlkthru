@@ -8,7 +8,13 @@
 
 ### An iOS app that display swipeable walkthrough screens with working Registration &amp; Login page.
 
-![WLKTHRU GIF](http://i.giphy.com/3owypguWaS3xpQ7qwM.gif)
+![Walkthru0](http://i.imgur.com/kQKHPr2.png)
+![Walkthru1](http://i.imgur.com/Rl8bvrA.png)
+![Walkthru2](http://i.imgur.com/HKbwRD4.png)
+
+![NewAccount](http://i.imgur.com/X9TBRAX.png)
+![T&C](http://i.imgur.com/m5Aln2X.png)
+![LogIn](http://i.imgur.com/TdrZxkW.png)
 
 ### Installation Instructions:
 
@@ -21,8 +27,6 @@
 7. Press CMD+R or Product -> Run to install Wlkthru
 
 ---
-
-Gif created with [GIPHY](http://giphy.com)
 
 3rd-party libraries used in this app:
 - [SCAlertView](https://github.com/vikmeup/SCLAlertView-Swift) by [Viktor Radchenko](https://github.com/vikmeup)
