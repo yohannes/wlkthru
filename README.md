@@ -6,7 +6,7 @@
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/yoha/wlkthru/blob/master/LICENSE)
 [![Issues](https://img.shields.io/github/issues/yoha/wlkthru.svg?style=flat)](https://github.com/yoha/wlkthru/issues)
 
-### An iOS app that display swipeable walkthrough screens with working Registration &amp; Login page.
+## An iOS app that display swipeable walkthrough screens with working registration &amp; login page.
 
 ![Walkthru0](http://i.imgur.com/kQKHPr2.png)
 ![Walkthru1](http://i.imgur.com/Rl8bvrA.png)
@@ -16,7 +16,7 @@
 ![T&C](http://i.imgur.com/m5Aln2X.png)
 ![LogIn](http://i.imgur.com/TdrZxkW.png)
 
-### Installation Instructions:
+## Installation Instructions:
 
 1. Install [Xcode 8](https://developer.apple.com/xcode/)
 2. Download [Wlkthru source code](https://github.com/yoha/wlkthru/releases/latest)
@@ -26,7 +26,7 @@
 6. Connect your iPhone and select it in Xcode's Product menu -> Destination
 7. Press CMD+R or Product -> Run to install Wlkthru
 
----
+## Credits
 
 3rd-party libraries used in this app:
 - [SCAlertView](https://github.com/vikmeup/SCLAlertView-Swift) by [Viktor Radchenko](https://github.com/vikmeup)
@@ -35,3 +35,15 @@
 
 Icon used in this app:
 - [Waypoint Map](https://icons8.com/web-app/2502/waypoint-map#filled) by [Icons8](https://icons8.co)
+
+## License
+
+MIT License
+
+Copyright (c) 2017 Yohannes Wijaya. All respective rights reserved.  
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
